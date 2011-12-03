@@ -31,7 +31,7 @@
 
   $(document).ready(function () {
 
-    $('body > .topbar').scrollSpy();
+    $('#menubar').scrollSpy();
 
     var
       downloadFileName = 'jquery.ninjaui.js',
@@ -61,7 +61,7 @@
         id: 'appMenuDownload'
       });
 
-    $('#download').append($appMenuDownload.fadeIn('fast'));
+    $('#menubarMenu').append($appMenuDownload.fadeIn('fast'));
 
     $.ajax({
       url: 'https://api.github.com/repos/ninja/ui',

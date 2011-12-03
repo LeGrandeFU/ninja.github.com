@@ -6,50 +6,35 @@
     <meta name="description" content="Ninja User Interface"/>
     <meta name="author" content="Jamie Hoover"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/themes.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/css/style.css"/>
   </head>
   <body>
-    <div class="topbar" data-scrollspy="scrollspy" >
-      <div class="topbar-inner">
-        <div class="container">
-          <a class="brand" href="#">Ninja UI</a>
-          <ul class="nav">
-            <li id="homeTab"><a href="#home">&nbsp;</a></li>
-            <li><a href="#usage">Usage</a></li>
-            <li><a href="#autocomplete">Autocomplete</a></li>
-            <li><a href="#button">Button</a></li>
-            <li><a href="#dialog">Dialog</a></li>
-            <li><a href="#drawer">Drawer</a></li>
-            <li><a href="#icon">Icons</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#slider">Slider</a></li>
-            <li><a href="#tabs">Tabs</a></li>
-            <li><a href="#themes">Themes</a></li>
-          </ul>
-          <div class="pull-right" id="download"></div>
-        </div>
-      </div>
-    </div>
-    <div class="jumbotron masthead" id="home">
-      <div class="inner">
-        <div class="container">
-          <div class="logo">
-            <img height="128" src="img/logo.png" width="128"/>
-            <div class="copy">
-              <h1>Ninja</h1>
-              <p class="lead">User Interface</p>
-              <p>the jQuery plugin for <strong>lethal</strong> interaction</p>
-            </div>
-          </div>
-        </div>
+    <ul id="menubar" data-scrollspy="scrollspy" >
+      <li class="active"><a href="#header">Ninja UI</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#autocomplete">Autocomplete</a></li>
+      <li><a href="#button">Button</a></li>
+      <li><a href="#dialog">Dialog</a></li>
+      <li><a href="#drawer">Drawer</a></li>
+      <li><a href="#icon">Icons</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#slider">Slider</a></li>
+      <li><a href="#tabs">Tabs</a></li>
+      <li><a href="#themes">Themes</a></li>
+      <li id="menubarMenu"></li>
+    </ul>
+    <div id="header">
+      <img height="128" src="img/logo.png" width="128"/>
+      <div id="logo">
+        <h1>Ninja<small> User Interface</small></h1>
+        <p>the jQuery plugin for <strong>lethal</strong> interaction</p>
       </div>
     </div>
     <div class="container" id="content">
       {{ content }}
     </div>
-    <div class="footer">
+    <div id="footer">
       <div class="container">
         <p>&copy; 2010-2011 Jamie Hoover</p>
         <p>Bonsai, Kakejiku, Katana, Kimono and Shodou illustrations used with permission by Gary Gehiere.</p>

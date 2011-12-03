@@ -4,10 +4,10 @@ layout: default
 ---
 
 
-#About<img alt="bonsai" class="sectionImage" src="/img/about.png">
+##About<img alt="bonsai" class="sectionImage" src="/img/about.png">
 
 <div class="row">
-  <div class="span-one-third">
+  <div class="one-third column">
     <h3>Intuitive</h3>
     <p>Clear syntax, extending what you already know and love about jQuery.</p>
     <h3>Fast</h3>
@@ -18,7 +18,7 @@ layout: default
       <li>25k</li>
     </ul>
   </div>
-  <div class="span-one-third">
+  <div class="one-third column">
     <h3>Source Code</h3>
     <p>
       <a href="https://github.com/ninja/ui/">Github repository</a>
@@ -31,7 +31,7 @@ layout: default
     <h3>Authors</h3>
     <p>Jamie R. Hoover and Faisal N. Jawdat</p>
   </div>
-  <div class="span-one-third">
+  <div class="one-third column">
     <h3>Support</h3>
     <img src="/img/browsers.png" alt="Chrome, Safari, Firefox, Internet Explorer, and Opera">
     <p>Ninja UI is built for today's browsers: Chrome, Safari, Firefox, Internet Explorer *, and Opera while compatible with all jQuery versions back to 1.4.3.</p>
@@ -39,7 +39,7 @@ layout: default
   </div>
 </div>
 
-#Usage<small>Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/>
+##Usage<small> Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/>
 
 Load jQuery, then  Ninja UI.
 
@@ -84,7 +84,7 @@ Insert them into the DOM when it's ready.
 #####Wait... don't I have to learn some complicated html patterns that will repaint and flash as the page loads?
 Nope.
 
-#Autocomplete<small>Finish What They Begin</small>
+##Autocomplete<small> Finish What They Begin</small>
 
     $.ninja.autocomplete({
       remote: function () {
@@ -92,21 +92,19 @@ Nope.
       }
     });
 
-#Button<small></small>
+##Button<small> </small>
 
-#Dialog<small></small>
+##Dialog<small> </small>
 
-#Drawer<small></small>
+##Drawer<small> </small>
 
-#Icons<small></small>
+##Icons<small> </small>
 
-#Icons<small></small>
+##Slider<small> </small>
 
-#Slider<small></small>
+##Tabs<small> </small>
 
-#Tabs<small></small>
-
-#Themes<small>Premade or Roll Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/>
+##Themes<small> Premade or Roll Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/>
 
 Dojo
 
