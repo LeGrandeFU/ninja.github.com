@@ -4,19 +4,16 @@ layout: default
 ---
 
 
-##About<img alt="bonsai" class="sectionImage" src="/img/about.png">
+##About<small>jQuery Ninjutsu 忍術</small><img alt="bonsai" class="sectionImage" src="/img/about.png">
 
 <div class="row">
   <div class="one-third column">
     <h3>Intuitive</h3>
     <p>Clear syntax, extending what you already know and love about jQuery.</p>
     <h3>Fast</h3>
-    <ul>
-      <li>one file</li>
-      <li>vector icons</li>
-      <li>encoded stylesheet</li>
-      <li>25k</li>
-    </ul>
+    <p>Single network connection to a 25k JavaScript file with vector icons and encoded styles.</p>
+    <h3>Usable</h3>
+    <p>Keyboard, touch and speech accessible.</p>
   </div>
   <div class="one-third column">
     <h3>Source Code</h3>
@@ -39,7 +36,7 @@ layout: default
   </div>
 </div>
 
-##Usage<small> Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/>
+##Usage<small>Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/>
 
 Load jQuery, then  Ninja UI.
 
@@ -81,10 +78,10 @@ Insert them into the DOM when it's ready.
 
 <div id="usageButton"> </div>
 
-#####Wait... don't I have to learn some complicated html patterns that will repaint and flash as the page loads?
+####Wait... don't I have to learn some complicated html patterns that will redraw and flash as the page loads?
 Nope.
 
-##Autocomplete<small> Finish What They Begin</small>
+##Autocomplete<small>Finish What They Begin</small>
 
     $.ninja.autocomplete({
       remote: function () {
@@ -104,7 +101,7 @@ Nope.
 
 ##Tabs<small> </small>
 
-##Themes<small> Premade or Roll Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/>
+##Themes<small>Premade or Roll Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/>
 
 Dojo
 

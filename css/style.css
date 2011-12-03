@@ -56,7 +56,7 @@ sub { bottom: -0.25em; }
 /* =============================================================================
    Lists
    ========================================================================== */
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 /* =============================================================================
@@ -162,8 +162,9 @@ pre code {
 #content h2 {
   border-bottom: 1px solid #ccc;
   font-size: 3em;
-  padding: 60px 0 10px;
+  padding: 60px 0 10px 0;
   position: relative;
+  vertical-align: bottom;
 }
 #content h2 img {
   position: absolute;
@@ -172,6 +173,8 @@ pre code {
 }
 #content h2 small {
   color: #ccc;
+  margin-left: 1em;
+  vertical-align: middle;
 }
 #footer {
   color: #666;
@@ -200,9 +203,12 @@ pre code {
 }
 #logo h1 {
   font-size: 4em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
-#logo h1 small {
+#logo h1 small,
+#logo p {
   font-weight: 300;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px;
 }
 #menubar {
   background-color: #333;
@@ -250,7 +256,7 @@ pre code {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(0,0,0,0.2)', EndColorStr='rgba(255,255,255,0.1)');
 }
 #usageButton {
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 #watchers {
   font-size: 11px;
