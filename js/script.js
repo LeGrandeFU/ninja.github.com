@@ -9,66 +9,67 @@
   'use strict';
 
   var
-    $ninjaDialog,
+    downloadFileName = 'jquery.ninjaui.js',
+    downloadFileNameMinified = 'jquery.ninjaui.min.js',
 
-    $ninjaButton = $.ninja.button({
+    $usageDialog,
+
+    $usageButton = $.ninja.button({
       html: 'I am <strong>Ninja...</strong>'
     }).select(function () {
-      $ninjaDialog.attach();
+      $usageDialog.attach();
     });
 
-  $ninjaDialog = $.ninja.dialog({
+  $usageDialog = $.ninja.dialog({
     html: '<div style="margin: 60px">... and now you <strong>die</strong>!</div>'
   }).detach(function () {
-    $ninjaButton.deselect();
+    $usageButton.deselect();
   });
 
   $(document).ready(function () {
-
-    $('#usageButton').append($ninjaButton.fadeIn('slow'));
-
-  });
-
-  $(document).ready(function () {
-
-    $('#menubar').scrollSpy();
 
     var
-      downloadFileName = 'jquery.ninjaui.js',
-      downloadFileNameMinified = 'jquery.ninjaui.min.js',
+      $navigation = $('#navigation'),
+      $download = $('#download');
 
-      $appMenuDownload = $.ninja.menu({
-        choices: [
-          {
-            html: $('<div/>', {
-              html: downloadFileNameMinified
-            }),
-            select: function () {
-              window.location = 'cdn/' + $.ninja.version() + '/' + downloadFileNameMinified;
-            }
-          },
-          {
-            html: $('<div/>', {
-              html: downloadFileName
-            }),
-            select: function () {
-              window.location = 'cdn/' + $.ninja.version() + '/' + downloadFileName;
-            }
-          }
-        ],
-        html: $.ninja.version() + ' Download'
-      }).attr({
-        id: 'appMenuDownload'
-      });
+    $navigation.scrollSpy();
 
-    $('#menubarMenu').append($appMenuDownload.fadeIn('fast'));
+    $('#usageButton').append($usageButton.fadeIn('slow'));
+
+    $download.toggle(
+      function () {
+        $download.ninja().list({
+          choices: [
+            {
+              html: $('<div/>', {
+                html: downloadFileNameMinified
+              }),
+              select: function () {
+                window.location = 'cdn/' + $.ninja.version() + '/' + downloadFileNameMinified;
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: downloadFileName
+              }),
+              select: function () {
+                window.location = 'cdn/' + $.ninja.version() + '/' + downloadFileName;
+              }
+            }
+          ]
+        }).addClass('active');
+      },
+      function () {
+        $download.delist().removeClass('active');
+      }
+    );
 
     $.ajax({
       url: 'https://api.github.com/repos/ninja/ui',
       dataType: 'jsonp',
       success: function (object) {
         console.log(object.data);
-        $('#watchers-count').prepend(object.data.watchers + ' ');
+        $('#githubWatchersCount').prepend(object.data.watchers + ' ');
       }
     });
 

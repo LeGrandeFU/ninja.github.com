@@ -4,7 +4,7 @@ layout: default
 ---
 
 
-##About<small>jQuery Ninjutsu 忍術</small><img alt="bonsai" class="sectionImage" src="/img/about.png">
+##About<small>忍者 UI</small><img alt="bonsai" class="sectionImage" src="/img/about.png">
 
 <div class="row">
   <div class="one-third column">
@@ -19,7 +19,7 @@ layout: default
     <h3>Source Code</h3>
     <p>
       <a href="https://github.com/ninja/ui/">Github repository</a>
-      <span id="watchers">· <span id="watchers-count"></span> watchers</span>
+      <span id="githubWatchers">· <span id="githubWatchersCount"></span> watchers</span>
     </p>
     <h3>Announcements</h3>
     <p>
@@ -80,6 +80,8 @@ Insert them into the DOM when it's ready.
 
 ####Wait... don't I have to learn some complicated html patterns that will redraw and flash as the page loads?
 Nope.
+
+##Examples<small> </small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/>
 
 ##Autocomplete<small>Finish What They Begin</small>
 

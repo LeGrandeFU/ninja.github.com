@@ -210,7 +210,7 @@ pre code {
   font-weight: 300;
   text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px;
 }
-#menubar {
+#navigation {
   background-color: #333;
   background-image: -webkit-gradient(linear, left top, left bottom, colorstop(0, rgba(255,255,255,0.2)), colorstop(0.5, rgba(255,255,255,0)), colorstop(0.5, rgba(0,0,0,0)), colorstop(1, rgba(0,0,0,0.1)));
   background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 100%);
@@ -234,18 +234,21 @@ pre code {
   top: 0;
   z-index: 3;
 }
-#menubar li {
+#navigation li {
   display: inline-block;
 }
-#menubar a {
+#navigation a,
+#navigation span {
   color: #fff;
+  cursor: pointer;
   display: block;
   height: 30px;
   line-height: 30px;
   padding: 0 15px;
   text-decoration: none;
 }
-#menubar li.active a {
+#navigation li.active a,
+#navigation li.active span {
   background-color: #c00;
   background-image: -webkit-gradient(linear, left top, left bottom, colorstop(0, rgba(0,0,0,0.3)), colorstop(0.5, rgba(0,0,0,0)), colorstop(0.5, rgba(255,255,255,0)), colorstop(1, rgba(255,255,255,0.1)));
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
@@ -255,13 +258,14 @@ pre code {
   background-image: linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(0,0,0,0.2)', EndColorStr='rgba(255,255,255,0.1)');
 }
-#menubarMenu .ninja-object-button {
-  height: 30px;
+#download {
+  float: right;
+  position: relative;
 }
 #usageButton {
   margin: 2em 0;
 }
-#watchers {
+#githubWatchers {
   font-size: 11px;
 }
 
@@ -407,33 +411,11 @@ pre code {
   .container .one-third.column,
   .container .two-thirds.column { width: 420px; }
 }
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
-  #header {
-    padding-top: 90px;
-  }
-}
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  #header {
-    padding-top: 120px;
-  }
-}
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {}
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 320px) {
   #content h2 small {
     display: block;
     margin: 1em 0 0 0;
-  }
-  #header {
-    padding-top: 30px;
-  }
-  #menubar {
-    position: relative;
+    max-width: 200px;
   }
 }
 /* ==|== non-semantic helper classes ========================================
