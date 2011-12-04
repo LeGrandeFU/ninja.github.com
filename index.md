@@ -81,7 +81,7 @@ Insert them into the DOM when it's ready.
 ####Wait... don't I have to learn some complicated html patterns that will redraw and flash as the page loads?
 Nope.
 
-##Examples<small> </small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/>
+<div id="examples"> </div>
 
 ##Autocomplete<small>Finish What They Begin</small>
 

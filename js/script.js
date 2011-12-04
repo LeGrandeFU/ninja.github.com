@@ -1,7 +1,3 @@
-/*global
-  pageName: false, google: false, console
-*/
-
 /*jshint bitwise: true, browser: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 2, jquery: true, maxerr: 3, newcap: true, noarg: true, noempty: true, nomen: true, nonew: true, onevar: true, plusplus: false, regexp: true, strict: true, undef: true, white: true*/
 
 (function ($) {
@@ -9,8 +5,9 @@
   'use strict';
 
   var
-    downloadFileName = 'jquery.ninjaui.js',
-    downloadFileNameMinified = 'jquery.ninjaui.min.js',
+    $menuIcon = $.ninja.icon({
+      name: 'drawer-select'
+    }),
 
     $usageDialog,
 
@@ -30,15 +27,21 @@
 
     var
       $navigation = $('#navigation'),
-      $download = $('#download');
+      $downloadMenu = $('#downloadMenu'),
+      $examplesMenu = $('#examplesMenu');
 
-    $navigation.scrollSpy();
+    $downloadMenu.find('span').append($menuIcon.clone());
+
+    $examplesMenu.find('a').append($menuIcon.clone());
 
     $('#usageButton').append($usageButton.fadeIn('slow'));
 
-    $download.toggle(
+    $downloadMenu.toggle(
       function () {
-        $download.ninja().list({
+        var
+          downloadFileName = 'jquery.ninjaui.js',
+          downloadFileNameMinified = 'jquery.ninjaui.min.js';
+        $downloadMenu.ninja().list({
           choices: [
             {
               html: $('<div/>', {
@@ -57,10 +60,86 @@
               }
             }
           ]
-        }).addClass('active');
+        }).addClass('activeMenu');
       },
       function () {
-        $download.delist().removeClass('active');
+        $downloadMenu.delist().removeClass('activeMenu');
+      }
+    );
+
+    $examplesMenu.toggle(
+      function () {
+        $examplesMenu.ninja().list({
+          choices: [
+            {
+              html: $('<div/>', {
+                html: 'Autocomplete'
+              }),
+              select: function () {
+                window.location = '#autocomplete';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Button'
+              }),
+              select: function () {
+                window.location = '#button';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Dialog'
+              }),
+              select: function () {
+                window.location = '#dialog';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Drawer'
+              }),
+              select: function () {
+                window.location = '#drawer';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Icons'
+              }),
+              select: function () {
+                window.location = '#icons';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Menu'
+              }),
+              select: function () {
+                window.location = '#menu';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Slider'
+              }),
+              select: function () {
+                window.location = '#slider';
+              }
+            },
+            {
+              html: $('<div/>', {
+                html: 'Tabs'
+              }),
+              select: function () {
+                window.location = '#tabs';
+              }
+            }
+          ]
+        }).addClass('activeMenu');
+      },
+      function () {
+        $examplesMenu.delist().removeClass('activeMenu');
       }
     );
 
@@ -68,10 +147,11 @@
       url: 'https://api.github.com/repos/ninja/ui',
       dataType: 'jsonp',
       success: function (object) {
-        console.log(object.data);
         $('#githubWatchersCount').prepend(object.data.watchers + ' ');
       }
     });
+
+    $navigation.scrollSpy();
 
   });
 

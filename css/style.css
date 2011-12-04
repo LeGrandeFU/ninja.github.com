@@ -248,7 +248,8 @@ pre code {
   text-decoration: none;
 }
 #navigation li.active a,
-#navigation li.active span {
+#navigation li.activeMenu a,
+#navigation li.activeMenu span {
   background-color: #c00;
   background-image: -webkit-gradient(linear, left top, left bottom, colorstop(0, rgba(0,0,0,0.3)), colorstop(0.5, rgba(0,0,0,0)), colorstop(0.5, rgba(255,255,255,0)), colorstop(1, rgba(255,255,255,0.1)));
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
@@ -258,9 +259,12 @@ pre code {
   background-image: linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(0,0,0,0.2)', EndColorStr='rgba(255,255,255,0.1)');
 }
-#download {
-  float: right;
+#downloadMenu,
+#examplesMenu {
   position: relative;
+}
+#downloadMenu {
+  float: right;
 }
 #usageButton {
   margin: 2em 0;
