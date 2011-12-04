@@ -85,25 +85,151 @@ Nope.
 
 ##Autocomplete<small>Finish What They Begin</small>
 
-    $.ninja.autocomplete({
-      remote: function () {
-        $.ajax
-      }
-    });
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li>placeholder</li>
+    <li>remote</li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.autocomplete({
+  remote: function () {
+    $.ajax();
+  }
+});
+</pre>
+</div>
+</div>
 
 ##Button<small> </small>
 
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
+
 ##Dialog<small> </small>
+
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
 
 ##Drawer<small> </small>
 
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
+
 ##Icons<small> </small>
+
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
 
 ##Slider<small> </small>
 
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
+
 ##Tabs<small> </small>
 
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
+
 ##Themes<small>Premade or Roll Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/>
+
+<div class="row">
+<div class="one-third column">
+  <h3>Options:</h3>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="two-thirds column">
+<pre>
+$.ninja.({});
+</pre>
+</div>
+</div>
 
 Dojo
 
