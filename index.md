@@ -68,13 +68,15 @@ Insert them into the DOM when it's ready.
       }(jQuery));
     </script>
 
-<div id="examples"> </div>
+<div id="examples">
 
-##Autocomplete<small>Finish What They Begin</small>
+<h2>Examples<small>Documentation</small><img alt="kakejiku" class="sectionImage" src="/img/examples.png"/></h2>
+
+<h3 id="autocomplete">Autocomplete</h3>
 
 <div class="row">
   <div class="one-third column">
-    <h3>Options:</h3>
+    <h4>Options:</h4>
     <ul>
       <li>placeholder</li>
       <li>remote</li>
@@ -92,11 +94,11 @@ $.ninja.autocomplete({
 </div>
 </div>
 
-##Button<small> </small>
+<h3 id="button">Button<small> </small></h3>
 
 <div class="row">
 <div class="one-third column">
-  <h3>Options:</h3>
+  <h4>Options:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -110,11 +112,11 @@ $.ninja.({});
 </div>
 </div>
 
-##Dialog<small> </small>
+<h3 id="dialog">Dialog<small> </small></h3>
 
 <div class="row">
 <div class="one-third column">
-  <h3>Options:</h3>
+  <h4>Options:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -128,11 +130,11 @@ $.ninja.({});
 </div>
 </div>
 
-##Drawer<small> </small>
+<h3 id="drawer">Drawer<small> </small></h3>
 
 <div class="row">
 <div class="one-third column">
-  <h3>Options:</h3>
+  <h4>Options:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -146,11 +148,11 @@ $.ninja.({});
 </div>
 </div>
 
-##Icons<small> </small>
+<h3 id="icons">Icons<small> </small></h3>
 
 <div class="row">
 <div class="one-third column">
-  <h3>Options:</h3>
+  <h4>Options:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -164,11 +166,11 @@ $.ninja.({});
 </div>
 </div>
 
-##Slider<small> </small>
+<h3 id="slider">Slider<small> </small></h3>
 
 <div class="row">
 <div class="one-third column">
-  <h3>Options:</h3>
+  <h4>Options:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -182,11 +184,11 @@ $.ninja.({});
 </div>
 </div>
 
-##Tabs<small> </small>
+<h3 id="tabs">Tabs<small> </small></h3>
 
 <div class="row">
 <div class="one-third column">
-  <h3>Options:</h3>
+  <h4>Options:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -197,6 +199,7 @@ $.ninja.({});
 <pre>
 $.ninja.({});
 </pre>
+</div>
 </div>
 </div>
 

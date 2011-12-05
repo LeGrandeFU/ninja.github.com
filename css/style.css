@@ -176,6 +176,13 @@ pre code {
   margin-left: 1em;
   vertical-align: middle;
 }
+#examples h3 {
+  border-bottom: 1px solid #ccc;
+  font-size: 2em;
+  padding: 60px 0 10px 0;
+  position: relative;
+  vertical-align: bottom;
+}
 #footer {
   color: #666;
   padding: 2em;
