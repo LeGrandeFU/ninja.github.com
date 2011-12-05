@@ -15,12 +15,86 @@
       html: 'I am <strong>Ninja...</strong>'
     }).select(function () {
       $usageDialog.attach();
+    }),
+
+    $autocompleteExample = $.ninja.autocomplete({
+      placeholder: 'United States Cities'
+    }).source(function (event) {
+      $.ajax({
+        url: 'http://ws.geonames.org/searchJSON',
+        dataType: 'jsonp',
+        data: {
+          country: 'US',
+          featureClass: 'P',
+          fuzzy: 0,
+          maxRows: 10,
+          q: event.query
+        },
+        success: function (data) {
+          $autocompleteExample.list({
+            choices: $.map(data.geonames, function (item) {
+              return {
+                html: item.name + ', ' + item.adminName1,
+                value: item.name + ', ' + item.adminCode1
+              };
+            }),
+            query: event.query
+          });
+        },
+        error: function (request, status, message) {
+          $.error(message);
+        }
+      });
+    }),
+
+    $buttonExampleCheckboxSelect, $buttonExampleCheckboxDisable,
+
+    $buttonExample = $.ninja.button({
+      html: 'Button'
+    }).disable(function () {
+      $buttonExampleCheckboxSelect.attr({ disabled: 'disabled' });
+    }).enable(function () {
+      $buttonExampleCheckboxSelect.attr({ disabled: false });
+    }).select(function () {
+      $buttonExampleCheckboxSelect.attr({ checked: 'checked' });
+    }).deselect(function () {
+      $buttonExampleCheckboxSelect.attr({ checked: false });
+    }),
+
+    $buttonExampleSelected = $.ninja.button({
+      html: '<i>Selected</i> Button',
+      select: true
+    }),
+
+    $buttonExampleDisabled = $.ninja.button({
+      html: '<i>Disabled</i> Button',
+      disable: true
     });
 
   $usageDialog = $.ninja.dialog({
     html: '<div style="margin: 60px">... and now you <strong>die</strong>!</div>'
   }).detach(function () {
     $usageButton.deselect();
+  });
+
+  $buttonExampleCheckboxSelect = $('<input/>', {
+    type: 'checkbox'
+  }).change(function () {
+    if ($buttonExampleCheckboxSelect.attr('checked')) {
+      $buttonExample.select();
+    } else {
+      $buttonExample.deselect();
+    }
+  });
+
+  $buttonExampleCheckboxDisable = $('<input/>', {
+    type: 'checkbox'
+  }).change(function () {
+    if ($buttonExampleCheckboxDisable.attr('checked')) {
+      $buttonExample.disable();
+    } else {
+      $buttonExample.enable();
+    }
   });
 
   $(document).ready(function () {
@@ -33,8 +107,6 @@
     $downloadMenu.find('span').append($menuIcon.clone());
 
     $examplesMenu.find('a').append($menuIcon.clone());
-
-    $('#usageButton').append($usageButton.fadeIn('slow'));
 
     $downloadMenu.toggle(
       function () {
@@ -150,6 +222,10 @@
         $('#githubWatchersCount').prepend(object.data.watchers + ' ');
       }
     });
+
+    $('#usageButton').append($usageButton.fadeIn('slow'));
+    $('#autocompleteExamples').prepend($autocompleteExample.fadeIn('slow'));
+    $('#buttonExamples').prepend('<p>', $buttonExample, ' ', $buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable', '</p></p>', $buttonExampleSelected, ' ', $buttonExampleDisabled, '</p>');
 
     $navigation.scrollSpy();
 
