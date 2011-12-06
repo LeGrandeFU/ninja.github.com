@@ -69,6 +69,36 @@
     $buttonExampleDisabled = $.ninja.button({
       html: '<i>Disabled</i> Button',
       disable: true
+    }),
+
+    $dialogExampleCheckbox,
+
+    $dialogExample = $.ninja.dialog({
+      html: '<div style="padding: 50px">This is <b>HTML</b> inside the dialog.</div>'
+    }).attach(function () {
+      $dialogExampleCheckbox.attr({
+        checked: 'checked'
+      });
+    }).detach(function () {
+      $dialogExampleCheckbox.attr({
+        checked: false
+      });
+    // }),
+
+    // $drawerExample = $.ninja.drawer({
+
+    // }),
+
+    // $iconExample = $.ninja.icon({
+
+    // }),
+
+    // $sliderExample = $.ninja.slider({
+
+    // }),
+
+    // $tabsExample = $.ninja.tabs({
+
     });
 
   $usageDialog = $.ninja.dialog({
@@ -94,6 +124,16 @@
       $buttonExample.disable();
     } else {
       $buttonExample.enable();
+    }
+  });
+
+  $dialogExampleCheckbox = $('<input/>', {
+    type: 'checkbox'
+  }).change(function () {
+    if ($dialogExampleCheckbox.attr('checked')) {
+      $dialogExample.attach();
+    } else {
+      $dialogExample.detach();
     }
   });
 
@@ -223,9 +263,10 @@
       }
     });
 
-    $('#usageButton').append($usageButton.fadeIn('slow'));
-    $('#autocompleteExamples').prepend($autocompleteExample.fadeIn('slow'));
+    $('#usageButton').append($usageButton);
+    $('#autocompleteExamples').prepend($autocompleteExample);
     $('#buttonExamples').prepend('<p>', $buttonExample, ' ', $buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable', '</p></p>', $buttonExampleSelected, ' ', $buttonExampleDisabled, '</p>');
+    $('#dialogExamples').prepend($dialogExampleCheckbox, ' Attach Dialog');
 
     $navigation.scrollSpy();
 

@@ -44,12 +44,12 @@ Mark a position where you want to have a Ninja button.
       <div id="usageButton"></div>
       ...
 
-Load the Ninja UI plugin after jQuery.
+Load the Ninja UI plugin, after jQuery of course.
 
       <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
       <script src="//ninjaui.com/cdn/1.0.0rc1/jquery.ninjaui.min.js"></script>
 
-Store the Ninja button as a variable before the DOM finishes loading.
+Create the Ninja button and dialog as a variables before the document finishes loading.
 
       <script>
         (function ($) {
@@ -66,7 +66,7 @@ Store the Ninja button as a variable before the DOM finishes loading.
             $ninjaButton.deselect();
           });
 
-When the DOM is ready, insert the Ninja button.
+When the document is ready, append the Ninja button.
 
           $(document).ready(function () {
             $('#usageButton').append($ninjaButton.fadeIn());
@@ -75,8 +75,7 @@ When the DOM is ready, insert the Ninja button.
       </script>
     </body>
 
-Now your Ninja button is ready for action.
-<div id="usageButton"> </div>
+The Ninja button is ready for action! -> <span id="usageButton"> </span>
 
 ###Wait...don't I have to learn some complicated html patterns that will redraw and flash as the page loads?
 Nope. :)
@@ -216,10 +215,39 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
     <li></li>
     <li></li>
   </ul>
+  <h4>Callbacks:</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>
 <div class="two-thirds column">
 <pre>
-$.ninja.({});
+var
+  $dialogExampleCheckbox,
+
+  $dialogExample = $.ninja.dialog({
+    html: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b> inside the dialog.&lt;/div>'
+  }).attach(function () {
+    $dialogExampleCheckbox.attr({
+      checked: 'checked'
+    });
+  }).detach(function () {
+    $dialogExampleCheckbox.attr({
+      checked: false
+    });
+  });
+
+$dialogExampleCheckbox = $('&lt;input/>', {
+  type: 'checkbox'
+}).change(function () {
+  if ($dialogExampleCheckbox.attr('checked')) {
+    $dialogExample.attach();
+  } else {
+    $dialogExample.detach();
+  }
+});
 </pre>
 </div>
 </div>
@@ -229,6 +257,12 @@ $.ninja.({});
 <div class="row">
 <div class="one-third column" id="drawerExamples">
   <h4>Options:</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <h4>Callbacks:</h4>
   <ul>
     <li></li>
     <li></li>
@@ -252,6 +286,12 @@ $.ninja.({});
     <li></li>
     <li></li>
   </ul>
+  <h4>Callbacks:</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>
 <div class="two-thirds column">
 <pre>
@@ -270,6 +310,12 @@ $.ninja.({});
     <li></li>
     <li></li>
   </ul>
+  <h4>Callbacks:</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>
 <div class="two-thirds column">
 <pre>
@@ -283,6 +329,12 @@ $.ninja.({});
 <div class="row">
 <div class="one-third column" id="tabsExamples">
   <h4>Options:</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <h4>Callbacks:</h4>
   <ul>
     <li></li>
     <li></li>
