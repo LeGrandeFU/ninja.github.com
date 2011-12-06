@@ -37,38 +37,36 @@
         </tr>
       </table>
     </div>
-    <div class="container" id="content">
+    <div class="grid" id="content">
 
-      <h2>About <small>忍者 UI</small><img alt="bonsai" class="sectionImage" src="/img/about.png"></h2>
+      <h2>About <small>忍者 UI</small><img alt="bonsai" class="sectionImage" src="/img/about.png"/></h2>
 
-      <div class="row">
-        <div class="one-third column">
-          <h3>Intuitive</h3>
-          <p>Clear syntax, extending what you already know and love about jQuery.</p>
-          <h3>Usable</h3>
-          <p>Keyboard, touch and speech accessible.</p>
-          <h3>Fast</h3>
-          <p><strong>Network-connection-free</strong> assets are embedded inside the <strong>26k</strong> JavaScript file. Icons are Scalable Vector Graphics and Cascading Style Sheet is base64 encoded.</p>
-        </div>
-        <div class="one-third column">
-          <h3>Compatible</h3>
-          <p>Ninja UI works with jQuery back to v1.4.3 and HTML5 browsers: Chrome, Safari, Firefox, Internet Explorer*, and Opera.</p>
-          <p><img src="/img/browsers.png" alt="Chrome, Safari, Firefox, Internet Explorer, and Opera"/></p>
-          <p><small>* Internet Explorer 6-8 will offer to install Google Chrome Frame. If declined, Ninja UI will function, though without icons or rounded corners.</small></p>
-        </div>
-        <div class="one-third column">
-          <h3>Open Source Code</h3>
-          <p>
-            <a href="https://github.com/ninja/ui/">Github repository</a>
-            <span id="githubWatchers">· <span id="githubWatchersCount"></span> watchers</span>
-          </p>
-          <h3>Announcements</h3>
-          <p>
-            <a href="http://twitter.com/ninjaui" class="twitter-follow-button">Follow @ninjaui</a>
-          </p>
-          <h3>Authors</h3>
-          <p><a href="https://github.com/uipoet">Jamie R. Hoover</a> and <a href="https://github.com/faisal">Faisal N. Jawdat</a></p>
-        </div>
+      <div class="grid-one-third">
+        <h3>Intuitive</h3>
+        <p>Clear syntax, extending what you already know and love about jQuery.</p>
+        <h3>Usable</h3>
+        <p>Keyboard, touch and speech accessible.</p>
+        <h3>Fast</h3>
+        <p><strong>Network-connection-free</strong> assets are embedded inside the <strong>26k</strong> JavaScript file. Icons are Scalable Vector Graphics and Cascading Style Sheet is base64 encoded.</p>
+      </div>
+      <div class="grid-one-third">
+        <h3>Compatible</h3>
+        <p>Ninja UI works with jQuery back to v1.4.3 and HTML5 browsers: Chrome, Safari, Firefox, Internet Explorer*, and Opera.</p>
+        <p><img src="/img/browsers.png" alt="Chrome, Safari, Firefox, Internet Explorer, and Opera"/></p>
+        <p><small>* Internet Explorer 6-8 will offer to install Google Chrome Frame. If declined, Ninja UI will function, though without icons or rounded corners.</small></p>
+      </div>
+      <div class="grid-one-third">
+        <h3>Open Source Code</h3>
+        <p>
+          <a href="https://github.com/ninja/ui/">Github repository</a>
+          <span id="githubWatchers">· <span id="githubWatchersCount"></span> watchers</span>
+        </p>
+        <h3>Announcements</h3>
+        <p>
+          <a href="http://twitter.com/ninjaui" class="twitter-follow-button">Follow @ninjaui</a>
+        </p>
+        <h3>Authors</h3>
+        <p><a href="https://github.com/uipoet">Jamie R. Hoover</a> and <a href="https://github.com/faisal">Faisal N. Jawdat</a></p>
       </div>
 
       <h2>Usage <small>Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/></h2>
@@ -131,24 +129,23 @@
 
         <h3 id="autocomplete">Autocomplete</h3>
 
-        <div class="row">
-          <div class="one-third column" id="autocompleteExamples">
-            <h4>Options:</h4>
+        <div class="grid-one-third" id="autocompleteExamples">
+          <h4>Options:</h4>
+          <ul>
+            <li>css</li>
+            <li>placeholder</li>
+          </ul>
+          <h4>Callbacks:</h4>
+          <ul>
+            <li>list()</li>
             <ul>
-              <li>css</li>
-              <li>placeholder</li>
+              <li>choices</li>
+              <li>query</li>
             </ul>
-            <h4>Callbacks:</h4>
-            <ul>
-              <li>list()</li>
-              <ul>
-                <li>choices</li>
-                <li>query</li>
-              </ul>
-              <li>source(event.query)</li>
-            </ul>
-          </div>
-          <div class="two-thirds column">
+            <li>source(event.query)</li>
+          </ul>
+        </div>
+        <div class="grid-two-thirds">
 
 <pre>
 var $autocompleteExample = $.ninja.autocomplete({
@@ -182,27 +179,25 @@ var $autocompleteExample = $.ninja.autocomplete({
 });
 </pre>
 
-          </div>
         </div>
 
         <h3 id="button">Button<small> </small></h3>
 
-        <div class="row">
-          <div class="one-third column" id="buttonExamples">
-            <h4>Options:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <h4>Callbacks:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <div class="two-thirds column">
+        <div class="grid-one-third" id="buttonExamples">
+          <h4>Options:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h4>Callbacks:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="grid-two-thirds">
 
 <pre>
 var
@@ -251,13 +246,11 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
 });
 </pre>
 
-          </div>
         </div>
 
         <h3 id="dialog">Dialog<small> </small></h3>
 
-        <div class="row">
-        <div class="one-third column" id="dialogExamples">
+        <div class="grid-one-third" id="dialogExamples">
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -271,7 +264,7 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
             <li></li>
           </ul>
         </div>
-        <div class="two-thirds column">
+        <div class="grid-two-thirds">
 
 <pre>
 var
@@ -300,13 +293,11 @@ $dialogExampleCheckbox = $('&lt;input/>', {
 });
 </pre>
 
-          </div>
         </div>
 
         <h3 id="drawer">Drawer<small> </small></h3>
 
-        <div class="row">
-        <div class="one-third column" id="drawerExamples">
+        <div class="grid-one-third" id="drawerExamples">
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -320,92 +311,86 @@ $dialogExampleCheckbox = $('&lt;input/>', {
             <li></li>
           </ul>
         </div>
-        <div class="two-thirds column">
+        <div class="grid-two-thirds">
 
       <pre>
       $.ninja.({});
       </pre>
 
-          </div>
         </div>
 
         <h3 id="icons">Icons<small> </small></h3>
 
-        <div class="row">
-          <div class="one-third column" id="iconExamples">
-            <h4>Options:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <h4>Callbacks:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <div class="two-thirds column">
+        <div class="grid-one-third" id="iconExamples">
+          <h4>Options:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h4>Callbacks:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="grid-two-thirds">
 
 <pre>
 $.ninja.({});
 </pre>
 
-          </div>
         </div>
 
         <h3 id="slider">Slider<small> </small></h3>
 
-        <div class="row">
-          <div class="one-third column" id="sliderExamples">
-            <h4>Options:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <h4>Callbacks:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <div class="two-thirds column">
+        <div class="grid-one-third" id="sliderExamples">
+          <h4>Options:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h4>Callbacks:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="grid-two-thirds">
 
 <pre>
 $.ninja.({});
 </pre>
 
-          </div>
         </div>
 
         <h3 id="tabs">Tabs<small> </small></h3>
 
-        <div class="row">
-          <div class="one-third column" id="tabsExamples">
-            <h4>Options:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <h4>Callbacks:</h4>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <div class="two-thirds column">
+        <div class="grid-one-third" id="tabsExamples">
+          <h4>Options:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h4>Callbacks:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="grid-two-thirds">
 
 <pre>
 $.ninja.({});
 </pre>
 
-          </div>
         </div>
+
       </div>
 
       <h2>Themes <small>Premade or Build Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/></h2>
