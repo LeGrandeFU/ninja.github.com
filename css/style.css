@@ -32,7 +32,7 @@ small {
   float: right;
   position: absolute;
   right: -128px;
-  top: 0;
+  top: 30px;
 }
 #content h2 small {
   color: #ccc;
@@ -71,7 +71,7 @@ small {
 #logo {
   color: #fff;
   margin: 0 auto;
-  width: 320px;
+  width: 300px;
 }
 #logo h1,
 #logo h2,
