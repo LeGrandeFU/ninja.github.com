@@ -83,9 +83,17 @@
       $dialogExampleCheckbox.attr({
         checked: false
       });
-    // }),
+    }),
 
-    // $drawerExample = $.ninja.drawer({
+    $drawerExample = $.ninja.drawer({
+      html: '<div style="padding: 50px">This is <b>HTML</b>.</div>',
+      title: 'Drawer'
+    }),
+
+    $drawerExampleSelect = $.ninja.drawer({
+      html: '<div style="padding: 50px">This is <b>HTML</b>.</div>',
+      select: true,
+      title: '<i>Selected</i> Drawer'
 
     // }),
 
@@ -270,6 +278,8 @@
     $('#buttonExamplesRemote').append($buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable');
 
     $('#dialogExamples').prepend($dialogExampleCheckbox, ' Attach Dialog');
+
+    $('#drawerExamples').append($drawerExample, $drawerExampleSelect);
 
     $navigation.scrollSpy();
 
