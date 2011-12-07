@@ -95,18 +95,25 @@
       select: true,
       title: '<i>Selected</i> Drawer'
 
-    // }),
+    }),
 
-    // $iconExample = $.ninja.icon({
+    iconNames = ['spin', 'stop', 'yield', 'go', 'x', '-', '+', 'arrow-down', 'arrow-right', 'camera', 'home', 'email', 'search', 'star', 'X'],
 
-    // }),
+    $iconExamples = $('<span/>'),
 
-    // $sliderExample = $.ninja.slider({
+    $menuExample = $.ninja.menu({
+      choices: [{html: 'foo'}],
+      html: 'foo'
+    }),
 
-    // }),
+    $sliderExample = $.ninja.slider({
+      choices: [{html: 'foo'}],
+      html: 'foo'
+    }),
 
-    // $tabsExample = $.ninja.tabs({
-
+    $tabsExample = $.ninja.tabs({
+      choices: [{html: 'foo'}],
+      html: 'foo'
     });
 
   $usageDialog = $.ninja.dialog({
@@ -143,6 +150,42 @@
     } else {
       $dialogExample.detach();
     }
+  });
+
+  $.each(iconNames, function (i, iconName) {
+    var $exampleIcon, $icon;
+    if (iconName === 'stop') {
+      $icon = $.ninja.icon({
+        css: {
+          fill: '#c00',
+          stroke: '#c00'
+        },
+        name: iconName
+      });
+    } else if (iconName === 'yield') {
+      $icon = $.ninja.icon({
+        css: {
+          fill: 'goldenrod',
+          stroke: 'goldenrod'
+        },
+        name: iconName
+      });
+    } else if (iconName === 'go') {
+      $icon = $.ninja.icon({
+        css: {
+          fill: 'green',
+          stroke: 'green'
+        },
+        name: iconName
+      });
+    } else {
+      $icon = $.ninja.icon({
+        name: iconName
+      });
+    }
+    $exampleIcon = $('<span/>', {
+      'class': 'icon-example'
+    }).append($icon, ' ', iconName).appendTo($iconExamples);
   });
 
   $(document).ready(function () {
@@ -280,6 +323,8 @@
     $('#dialogExamples').prepend($dialogExampleCheckbox, ' Attach Dialog');
 
     $('#drawerExamples').append($drawerExample, $drawerExampleSelect);
+
+    $('#iconExamples').append($iconExamples);
 
     $navigation.scrollSpy();
 

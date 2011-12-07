@@ -37,9 +37,17 @@
         </tr>
       </table>
     </div>
-    <div class="grid" id="content">
+    <div class="grid">
 
-      <h2>About <small>忍者 UI</small><img alt="bonsai" class="sectionImage" src="/img/about.png"/></h2>
+      <div class="section">
+        <div class="grid-three-quarters">
+          <h2>About</h2>
+          <h3>忍者 UI</h3>
+        </div>
+        <div class="grid-one-quarter">
+          <img alt="bonsai" src="/img/about.png"/>
+        </div>
+      </div>
 
       <div class="grid-one-third">
         <h3>Intuitive</h3>
@@ -69,7 +77,17 @@
         <p><a href="https://github.com/uipoet">Jamie R. Hoover</a> and <a href="https://github.com/faisal">Faisal N. Jawdat</a></p>
       </div>
 
-      <h2 id="usage">Usage <small>Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/></h2>
+      <div class="section" id="usage">
+        <div class="grid-three-quarters">
+          <h2>Usage</h2>
+          <h3>Getting Started</h3>
+        </div>
+        <div class="grid-one-quarter">
+          <img alt="katana" src="/img/usage.png"/>
+        </div>
+      </div>
+
+      <h2 id=""> <small></small></h2>
 
       <div class="grid-one-third">
         <p>Mark a position where you want to have a Ninja button.</p>
@@ -133,26 +151,34 @@
         <p id="usageButton"></p>
       </div>
 
-      <h4>Wait...don't I have to learn some ugly html patterns that will restyle as the page loads?</h4>
+      <h5>Wait...don't I have to learn some ugly html patterns that will restyle as the page loads?</h5>
 
       <p>Nope. :)</p>
 
-      <h2>Examples <small>Documentation</small><img alt="kakejiku" class="sectionImage" src="/img/examples.png"/></h2>
+      <div class="section" id="examples">
+        <div class="grid-three-quarters">
+          <h2>Examples</h2>
+          <h3>Documentation</h3>
+        </div>
+        <div class="grid-one-quarter">
+          <img alt="kakejiku" src="/img/examples.png"/>
+        </div>
+      </div>
 
       <p>Here are demos for each object and method of Ninja UI.</p>
 
-      <div id="examples">
+      <div class="subsection">
 
-        <h3 id="autocomplete">Autocomplete</h3>
+        <h4 id="autocomplete">Autocomplete</h4>
 
         <div class="grid-one-third">
           <p id="autocompleteExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li>css</li>
             <li>placeholder</li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li>list()</li>
             <ul>
@@ -198,17 +224,17 @@ var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong
 
         </div>
 
-        <h3 id="button">Button<small> </small></h3>
+        <h4 id="button">Button<small> </small></h4>
 
         <div class="grid-one-third">
           <p id="buttonExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li></li>
             <li></li>
@@ -244,7 +270,7 @@ var
 </pre>
 
         <div class="grid-one-third" id="buttonExamplesRemote">
-          <h4>Button Remote Control</h4>
+          <h5>Button Remote Control</h5>
         </div>
 
 <pre class="grid-two-thirds">
@@ -269,17 +295,17 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
 });
 </pre>
 
-        <h3 id="dialog">Dialog<small> </small></h3>
+        <h4 id="dialog">Dialog<small> </small></h4>
 
         <div class="grid-one-third">
           <p id="dialogExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li></li>
             <li></li>
@@ -315,19 +341,19 @@ $dialogExampleCheckbox = $('&lt;input/>', {
 });
 </pre>
 
-        </div>
+      </div>
 
-        <h3 id="drawer">Drawer<small> </small></h3>
+        <h4 id="drawer">Drawer<small> </small></h4>
 
         <div class="grid-one-third">
           <p id="drawerExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li></li>
             <li></li>
@@ -336,7 +362,7 @@ $dialogExampleCheckbox = $('&lt;input/>', {
         </div>
         <div class="grid-two-thirds">
 
-      <pre>
+<pre>
 $drawerExample = $.<strong>ninja</strong>.<strong>drawer</strong>({
   <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
   <strong>title</strong>: 'Drawer'
@@ -347,46 +373,54 @@ $drawerExampleSelect = $.<strong>ninja</strong>.<strong>drawer</strong>({
   <strong>select</strong>: true,
   <strong>title</strong>: '&lt;i>Selected&lt;/i> Drawer'
 )};
-      </pre>
+</pre>
 
         </div>
 
-        <h3 id="icons">Icons<small> </small></h3>
+        <h4 id="icons">Icons<small> </small></h4>
 
         <div class="grid-one-third">
           <p id="iconExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <h4>Callbacks:</h4>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>css</li>
+            <li>name</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
 
 <pre>
-$.ninja.({});
+var
+  $iconExample = $.<strong>ninja</strong>.<strong>icon</strong>({
+    <strong>name</strong>: 'star'
+  }),
+
+  $iconExampleSpin = $.<strong>ninja</strong>.<strong>icon</strong>({
+    <strong>name</strong>: 'spin'
+  }),
+
+  $iconExampleStop = $.<strong>ninja</strong>.<strong>icon</strong>({
+    <strong>css</strong>: {
+      <strong>fill</strong>: '#c00',
+      <strong>stroke</strong>: '#c00'
+    },
+    <strong>name</strong>: stop
+  });
 </pre>
 
         </div>
 
-        <h3 id="menu">Menu<small> </small></h3>
+        <h4 id="menu">Menu<small> </small></h4>
 
         <div class="grid-one-third">
           <p id="menuExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li></li>
             <li></li>
@@ -401,17 +435,17 @@ $.ninja.({});
 
         </div>
 
-        <h3 id="slider">Slider<small> </small></h3>
+        <h4 id="slider">Slider<small> </small></h4>
 
         <div class="grid-one-third" id="sliderExamples">
           <p id="sliderExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li></li>
             <li></li>
@@ -426,17 +460,17 @@ $.ninja.({});
 
         </div>
 
-        <h3 id="tabs">Tabs<small> </small></h3>
+        <h4 id="tabs">Tabs<small> </small></h4>
 
         <div class="grid-one-third" id="tabsExamples">
           <p id="tabsExamples"></p>
-          <h4>Options:</h4>
+          <h5>Options:</h5>
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
-          <h4>Callbacks:</h4>
+          <h5>Callbacks:</h5>
           <ul>
             <li></li>
             <li></li>
@@ -450,16 +484,23 @@ $.ninja.({});
 </pre>
 
         </div>
-
       </div>
 
-      <h2 id="themes">Themes <small>Premade or Build Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/></h2>
+      <div class="section" id="themes">
+        <div class="grid-three-quarters">
+          <h2>Themes</h2>
+          <h3>Premade or Build Your Own</h3>
+        </div>
+        <div class="grid-one-quarter">
+          <img alt="kimono" src="/img/themes.png"/>
+        </div>
+      </div>
 
-      Dojo
+      <h3>Dojo</h3>
 
       <div class="ninja-themes-dojo"> </div>
 
-      Neon
+      <h3>Neon</h3>
 
 
     </div>

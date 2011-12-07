@@ -2,9 +2,11 @@ body {
   background-color: #fff;
   color: #333;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  min-width: 320px;
 }
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
 p,
 pre {
   margin-bottom: 1em;
@@ -28,28 +30,12 @@ pre strong {
 small {
   font-weight: normal;
 }
-#content h2 {
-  border-bottom: 1px solid #ccc;
-  padding-top: 64px;
+#downloadMenu,
+#examplesMenu {
   position: relative;
-  margin-right: 128px;
 }
-#content h2 img {
-  position: absolute;
-  right: -128px;
-  top: -32;
-}
-#content h2 small {
-  color: #ccc;
-  vertical-align: middle;
-}
-#content h3 {
-  margin: 1em 0 0 0;
-}
-#examples h3 {
-  border-bottom: 1px solid #ccc;
-  padding: 60px 0 10px 0;
-  margin: 1em 0 1em 0;
+#downloadMenu {
+  float: right;
 }
 #footer {
   background: #eee;
@@ -59,8 +45,11 @@ small {
   margin-top: 60px;
   padding: 60px;
 }
+#githubWatchers {
+  font-size: 11px;
+}
 #header {
-  background: #222;
+  background: #222 no-repeat;
   background-image: -webkit-gradient(radial, center top, 0, center top, 320, from(#555), to(#222));
   background-image: -webkit-radial-gradient(center top, 0, center top, 320, #555, #222);
   background-image: -moz-radial-gradient(center top, 0, center top, 320, #555, #222);
@@ -68,8 +57,7 @@ small {
   background-image: -o-radial-gradient(center top, 0, center top, 320, #555, #222);
   background-image: radial-gradient(center top, 0, center top, 320, #555, #222);
   margin-top: 30px;
-  padding: 30px 10px;
-  width: 100%;
+  padding: 30px 0;
 }
 #logo {
   color: #fff;
@@ -122,8 +110,8 @@ small {
   margin: 0;
   padding: 0;
   position: fixed;
-  right: 0;
   top: 0;
+  width: 100%;
   z-index: 3;
 }
 #navigation li {
@@ -151,25 +139,21 @@ small {
   background-image: linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(0,0,0,0.2)', EndColorStr='rgba(255,255,255,0.1)');
 }
-#downloadMenu,
-#examplesMenu {
-  position: relative;
-}
-#downloadMenu {
-  float: right;
-}
-#githubWatchers {
-  font-size: 11px;
+.icon-example {
+  display: inline-block;
+  line-height: 2em;
+  white-space: nowrap;
+  width: 50%;
 }
 .grid {
   max-width: 1024px;
-  min-width: 320px;
   margin: 0 auto;
   padding-left: 3%;
 }
 .grid-one-half,
 .grid-one-quarter,
 .grid-one-third,
+.grid-three-quarters,
 .grid-two-thirds {
   display: inline-block;
   margin: 0 3% 1em 0;
@@ -184,18 +168,58 @@ small {
 .grid-one-third {
   width: 29%;
 }
+.grid-three-quarters {
+  width: 72%;
+}
 .grid-two-thirds {
-  width: 62%;
+  width: 61.5%;
+}
+.section {
+  margin-top: 10px;
+}
+.section .grid-one-half,
+.section .grid-one-quarter,
+.section .grid-one-third,
+.section .grid-three-quarters,
+.section .grid-two-thirds {
+  vertical-align: bottom;
+}
+.section h2,
+.subsection h5 {
+  border-bottom: 1px solid #ccc;
+}
+.section h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
+.section h3 {
+  color: #999;
+  font-size: 24px;
+  font-weight: 300;
+}
+.subsection h4 {
+  margin-bottom: 1em;
+}
+.subsection li {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 80%;
 }
 /* Mobile */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
+  #content h2 img {
+    float: right;
+  }
   #navigation a,
   #navigation span {
     padding: 0 5px;
   }
   .grid-one-half,
+  .grid-one-quarter,
   .grid-one-third,
+  .grid-three-quarters,
   .grid-two-thirds {
-    width: 94%;
+    display: block;
+    width: auto;
   }
 }
