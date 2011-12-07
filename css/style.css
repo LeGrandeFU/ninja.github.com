@@ -34,6 +34,10 @@ small {
 #examplesMenu {
   position: relative;
 }
+#downloadMenu button ,
+#examplesMenu button {
+  line-height: 20px;
+}
 #downloadMenu {
   float: right;
 }
@@ -208,13 +212,23 @@ small {
 }
 /* Mobile */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  #content h2 img {
-    float: right;
+  #downloadMenu button ,
+  #examplesMenu button {
+    line-height: 13px;
   }
   #navigation a,
   #navigation span {
     padding: 0 5px;
   }
+  .grid-one-half,
+  .grid-one-quarter,
+  .grid-one-third,
+  .grid-three-quarters,
+  .grid-two-thirds {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 320px) {
   .grid-one-half,
   .grid-one-quarter,
   .grid-one-third,
