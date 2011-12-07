@@ -199,6 +199,7 @@ small {
 }
 .subsection h4 {
   margin-bottom: 1em;
+  padding-top: 60px;
 }
 .subsection li {
   font-family: monospace, serif;
