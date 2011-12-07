@@ -74,7 +74,7 @@
     $dialogExampleCheckbox,
 
     $dialogExample = $.ninja.dialog({
-      html: '<div style="padding: 50px">This is <b>HTML</b> inside the dialog.</div>'
+      html: '<div style="padding: 50px">This is <b>Sparta</b>!</div>'
     }).attach(function () {
       $dialogExampleCheckbox.attr({
         checked: 'checked'
