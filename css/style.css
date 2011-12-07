@@ -4,8 +4,11 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   min-width: 320px;
 }
-p {
-  margin: 0.5em 0 0 0;
+h1, h2, h3, h4, h5, h6,
+p,
+pre {
+  margin-bottom: 1em;
+  margin-top: 0;
 }
 pre {
   background: #eee;
@@ -19,20 +22,22 @@ pre {
   font-size: 80%;
   padding: 1em;
 }
+pre strong {
+  color: #c00;
+}
 small {
   font-weight: normal;
 }
 #content h2 {
   border-bottom: 1px solid #ccc;
-  padding: 60px 0 10px 0;
+  padding-top: 64px;
   position: relative;
-  margin: 0 128px 30px 0;
+  margin-right: 128px;
 }
 #content h2 img {
-  float: right;
   position: absolute;
   right: -128px;
-  top: 30px;
+  top: -32;
 }
 #content h2 small {
   color: #ccc;
@@ -45,9 +50,6 @@ small {
   border-bottom: 1px solid #ccc;
   padding: 60px 0 10px 0;
   margin: 1em 0 1em 0;
-}
-#examples pre {
-  margin: 0;
 }
 #footer {
   background: #eee;
@@ -83,21 +85,19 @@ small {
 #logo h1 {
   font-size: 70px;
   font-weight: 900;
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+  text-shadow: #000 0 2px 4px;
 }
 #logo h2,
 #logo h3 {
   font-weight: 300;
-  text-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px;
+  line-height: 1;
+  text-shadow: #000 0 1px 1px;
 }
 #logo h2 {
   font-size: 24px;
-  line-height: 24px;
-  white-space: nowrap;
 }
 #logo h3 {
   font-size: 14px;
-  line-height: 14px;
 }
 #logo img {
   margin: 0 10px 0 0;
@@ -172,7 +172,7 @@ small {
 .grid-one-third,
 .grid-two-thirds {
   display: inline-block;
-  margin-right: 3%;
+  margin: 0 3% 1em 0;
   vertical-align: top;
 }
 .grid-one-half {
@@ -182,10 +182,10 @@ small {
   width: 21%;
 }
 .grid-one-third {
-  width: 30%;
+  width: 29%;
 }
 .grid-two-thirds {
-  width: 63%;
+  width: 62%;
 }
 /* Mobile */
 @media only screen and (min-width: 320px) and (max-width: 768px) {

@@ -69,46 +69,54 @@
         <p><a href="https://github.com/uipoet">Jamie R. Hoover</a> and <a href="https://github.com/faisal">Faisal N. Jawdat</a></p>
       </div>
 
-      <h2>Usage <small>Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/></h2>
+      <h2 id="usage">Usage <small>Getting Started</small><img alt="bonsai" class="sectionImage" src="/img/usage.png"/></h2>
 
-      <p>Mark a position where you want to have a Ninja button.</p>
+      <div class="grid-one-third">
+        <p>Mark a position where you want to have a Ninja button.</p>
+      </div>
 
-<pre>
+<pre class="grid-two-thirds">
 &lt;body>
   ...
   &lt;div id="usageButton">&lt;/div>
   ...
 </pre>
 
-      <p>Load the Ninja UI plugin, after jQuery of course.
+      <div class="grid-one-third">
+        <p>Load the Ninja UI plugin, after jQuery of course.
+      </div>
 
-<pre>
+<pre class="grid-two-thirds">
   &lt;script src="//code.jquery.com/jquery-1.7.1.min.js">&lt;/script>
   &lt;script src="//ninjaui.com/cdn/1.0.0rc1/jquery.ninjaui.min.js">&lt;/script>
 </pre>
 
-      <p>Create the Ninja button and dialog variables before the document finishes loading.</p>
+      <div class="grid-one-third">
+        <p>Create the Ninja button and dialog variables before the document finishes loading.</p>
+      </div>
 
-<pre>
+<pre class="grid-two-thirds">
   &lt;script>
     (function ($) {
       var
         $ninjaDialog,
         $ninjaButton = $.ninja.button({
-          html: 'I am &lt;strong>Ninja...&lt;/strong>'
+          html: '&lt;strong>Ninja&lt;/strong> star...'
         }).select(function () {
           $ninjaDialog.attach();
         });
       $ninjaDialog = $.ninja.dialog({
-        html: '&lt;div style="margin: 60px">... and now you &lt;strong>die&lt;/strong>!&lt;/div>'
+        html: '&lt;img src="/img/logo.png"/>'
       }).detach(function () {
         $ninjaButton.deselect();
       });
 </pre>
 
-      <p>When the document is ready, append the Ninja button.</p>
+      <div class="grid-one-third">
+        <p>When the document is ready, append the Ninja button.</p>
+      </div>
 
-<pre>
+<pre class="grid-two-thirds">
       $(document).ready(function () {
         $('#usageButton').append($ninjaButton.fadeIn());
       });
@@ -117,7 +125,13 @@
 &lt;/body>
 </pre>
 
-      <p>The Ninja button is ready for action! -> <span id="usageButton"></span></p>
+      <div class="grid-one-third">
+        <p>The Ninja button is ready for action!</p>
+      </div>
+
+      <div class="grid-two-thirds">
+        <p id="usageButton"></p>
+      </div>
 
       <h4>Wait...don't I have to learn some ugly html patterns that will restyle as the page loads?</h4>
 
@@ -125,11 +139,14 @@
 
       <h2>Examples <small>Documentation</small><img alt="kakejiku" class="sectionImage" src="/img/examples.png"/></h2>
 
+      <p>Here are demos for each object and method of Ninja UI.</p>
+
       <div id="examples">
 
         <h3 id="autocomplete">Autocomplete</h3>
 
-        <div class="grid-one-third" id="autocompleteExamples">
+        <div class="grid-one-third">
+          <p id="autocompleteExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li>css</li>
@@ -148,9 +165,9 @@
         <div class="grid-two-thirds">
 
 <pre>
-var $autocompleteExample = $.ninja.autocomplete({
-  placeholder: 'United States Cities'
-}).source(function (event) {
+var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong>({
+  <strong>placeholder</strong>: 'United States Cities'
+}).<strong>source</strong>(function (event) {
   $.ajax({
     url: 'http://ws.geonames.org/searchJSON',
     dataType: 'jsonp',
@@ -162,20 +179,20 @@ var $autocompleteExample = $.ninja.autocomplete({
       q: event.query
     },
     success: function (data) {
-      $autocompleteExample.list({
-        choices: $.map(data.geonames, function (item) {
+      $autocompleteExample.<strong>list</strong>({
+        <strong>choices</strong>: $.map(data.geonames, function (item) {
           return {
-            html: item.name + ', ' + item.adminName1,
-            value: item.name + ', ' + item.adminCode1
+            <strong>html</strong>: item.name + ', ' + item.adminName1,
+            <strong>value</strong>: item.name + ', ' + item.adminCode1
           };
         }),
-        query: event.query
+        <strong>query</strong>: event.query
       });
     },
     error: function (request, status, message) {
       $.error(message);
     }
-  });
+  });```
 });
 </pre>
 
@@ -183,7 +200,8 @@ var $autocompleteExample = $.ninja.autocomplete({
 
         <h3 id="button">Button<small> </small></h3>
 
-        <div class="grid-one-third" id="buttonExamples">
+        <div class="grid-one-third">
+          <p id="buttonExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -197,41 +215,46 @@ var $autocompleteExample = $.ninja.autocomplete({
             <li></li>
           </ul>
         </div>
-        <div class="grid-two-thirds">
 
-<pre>
+<pre class="grid-two-thirds">
 var
   $buttonExampleCheckboxSelect, $buttonExampleCheckboxDisable,
 
-  $buttonExample = $.ninja.button({
-    html: 'Button'
-  }).disable(function () {
+  $buttonExample = $.<strong>ninja</strong>.<strong>button</strong>({
+    <strong>html</strong>: 'Button'
+  }).<strong>disable</strong>(function () {
     $buttonExampleCheckboxSelect.attr({ disabled: 'disabled' });
-  }).enable(function () {
+  }).<strong>enable</strong>(function () {
     $buttonExampleCheckboxSelect.attr({ disabled: false });
-  }).select(function () {
+  }).<strong>select</strong>(function () {
     $buttonExampleCheckboxSelect.attr({ checked: 'checked' });
-  }).deselect(function () {
+  }).<strong>deselect</strong>(function () {
     $buttonExampleCheckboxSelect.attr({ checked: false });
   }),
 
-  $buttonExampleSelected = $.ninja.button({
-    html: '&lt;i>Selected&lt;/i> Button',
-    select: true
+  $buttonExampleSelected = $.<strong>ninja</strong>.<strong>button</strong>({
+    <strong>html</strong>: '&lt;i>Selected&lt;/i> Button',
+    <strong>select</strong>: true
   }),
 
-  $buttonExampleDisabled = $.ninja.button({
-    html: '&lt;i>Disabled&lt;/i> Button',
-    disable: true
+  $buttonExampleDisabled = $.<strong>ninja</strong>.<strong>button</strong>({
+    <strong>html</strong>: '&lt;i>Disabled&lt;/i> Button',
+    <strong>disable</strong>: true
   });
+</pre>
 
+        <div class="grid-one-third" id="buttonExamplesRemote">
+          <h4>Button Remote Control</h4>
+        </div>
+
+<pre class="grid-two-thirds">
 $buttonExampleCheckboxSelect = $('&lt;input/>', {
   type: 'checkbox'
 }).change(function () {
   if ($buttonExampleCheckboxSelect.attr('checked')) {
-    $buttonExample.select();
+    $buttonExample.<strong>select</strong>();
   } else {
-    $buttonExample.deselect();
+    $buttonExample.<strong>deselect</strong>();
   }
 });
 
@@ -239,18 +262,17 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
   type: 'checkbox'
 }).change(function () {
   if ($buttonExampleCheckboxDisable.attr('checked')) {
-    $buttonExample.disable();
+    $buttonExample.<strong>disable</strong>();
   } else {
-    $buttonExample.enable();
+    $buttonExample.<strong>enable</strong>();
   }
 });
 </pre>
 
-        </div>
-
         <h3 id="dialog">Dialog<small> </small></h3>
 
-        <div class="grid-one-third" id="dialogExamples">
+        <div class="grid-one-third">
+          <p id="dialogExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -270,13 +292,13 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
 var
   $dialogExampleCheckbox,
 
-  $dialogExample = $.ninja.dialog({
-    html: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b> inside the dialog.&lt;/div>'
-  }).attach(function () {
+  $dialogExample = $.<strong>ninja</strong>.<strong>dialog</strong>({
+    <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;strong>HTML&lt;/strong> inside the dialog.&lt;/div>'
+  }).<strong>attach</strong>(function () {
     $dialogExampleCheckbox.attr({
       checked: 'checked'
     });
-  }).detach(function () {
+  }).<strong>detach</strong>(function () {
     $dialogExampleCheckbox.attr({
       checked: false
     });
@@ -286,9 +308,9 @@ $dialogExampleCheckbox = $('&lt;input/>', {
   type: 'checkbox'
 }).change(function () {
   if ($dialogExampleCheckbox.attr('checked')) {
-    $dialogExample.attach();
+    $dialogExample.<strong>attach</strong>();
   } else {
-    $dialogExample.detach();
+    $dialogExample.<strong>detach</strong>();
   }
 });
 </pre>
@@ -297,7 +319,8 @@ $dialogExampleCheckbox = $('&lt;input/>', {
 
         <h3 id="drawer">Drawer<small> </small></h3>
 
-        <div class="grid-one-third" id="drawerExamples">
+        <div class="grid-one-third">
+          <p id="drawerExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -321,7 +344,33 @@ $dialogExampleCheckbox = $('&lt;input/>', {
 
         <h3 id="icons">Icons<small> </small></h3>
 
-        <div class="grid-one-third" id="iconExamples">
+        <div class="grid-one-third">
+          <p id="iconExamples"></p>
+          <h4>Options:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h4>Callbacks:</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="grid-two-thirds">
+
+<pre>
+$.ninja.({});
+</pre>
+
+        </div>
+
+        <h3 id="menu">Menu<small> </small></h3>
+
+        <div class="grid-one-third">
+          <p id="menuExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -346,6 +395,7 @@ $.ninja.({});
         <h3 id="slider">Slider<small> </small></h3>
 
         <div class="grid-one-third" id="sliderExamples">
+          <p id="sliderExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -370,6 +420,7 @@ $.ninja.({});
         <h3 id="tabs">Tabs<small> </small></h3>
 
         <div class="grid-one-third" id="tabsExamples">
+          <p id="tabsExamples"></p>
           <h4>Options:</h4>
           <ul>
             <li></li>
@@ -393,7 +444,7 @@ $.ninja.({});
 
       </div>
 
-      <h2>Themes <small>Premade or Build Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/></h2>
+      <h2 id="themes">Themes <small>Premade or Build Your Own</small><img alt="kimono" class="sectionImage" src="/img/themes.png"/></h2>
 
       Dojo
 

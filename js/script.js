@@ -12,7 +12,7 @@
     $usageDialog,
 
     $usageButton = $.ninja.button({
-      html: 'I am <strong>Ninja...</strong>'
+      html: '<strong>Ninja</strong> star...'
     }).select(function () {
       $usageDialog.attach();
     }),
@@ -102,7 +102,7 @@
     });
 
   $usageDialog = $.ninja.dialog({
-    html: '<div style="margin: 60px">... and now you <strong>die</strong>!</div>'
+    html: '<img src="/img/logo.png"/>'
   }).detach(function () {
     $usageButton.deselect();
   });
@@ -265,7 +265,10 @@
 
     $('#usageButton').append($usageButton);
     $('#autocompleteExamples').prepend($autocompleteExample);
-    $('#buttonExamples').prepend('<p>', $buttonExample, ' ', $buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable', '</p></p>', $buttonExampleSelected, ' ', $buttonExampleDisabled, '</p>');
+
+    $('#buttonExamples').prepend($buttonExample, '<br/><br/>', $buttonExampleSelected, '<br/><br/>', $buttonExampleDisabled);
+    $('#buttonExamplesRemote').append($buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable');
+
     $('#dialogExamples').prepend($dialogExampleCheckbox, ' Attach Dialog');
 
     $navigation.scrollSpy();
