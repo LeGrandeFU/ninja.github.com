@@ -6,7 +6,7 @@
 
   var
     $menuIcon = $.ninja.icon({
-      name: 'drawer-select'
+      name: 'arrow-down'
     }),
 
     $usageDialog,
