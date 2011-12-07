@@ -120,16 +120,16 @@
   &lt;script>
     (function ($) {
       var
-        $ninjaDialog,
-        $ninjaButton = $.ninja.button({
-          html: '&lt;strong>Ninja&lt;/strong> star...'
-        }).select(function () {
-          $ninjaDialog.attach();
+        $dialog,
+        $button = $.<strong>ninja</strong>.<strong>button</strong>({
+          <strong>html</strong>: '&lt;b>Ninja&lt;/b> star...'
+        }).<strong>select</strong>(function () {
+          $dialog.<strong>attach</strong>();
         });
-      $ninjaDialog = $.ninja.dialog({
-        html: '&lt;img src="/img/logo.png"/>'
-      }).detach(function () {
-        $ninjaButton.deselect();
+      $dialog = $.<strong>ninja</strong>.<strong>dialog</strong>({
+        <strong>html</strong>: '&lt;img src="/img/logo.png"/>'
+      }).<strong>detach</strong>(function () {
+        $button.<strong>deselect</strong>();
       });</pre>
     </div>
 
@@ -140,7 +140,7 @@
       <div class="grid-two-thirds">
         <pre>
       $(document).ready(function () {
-        $('#usageButton').append($ninjaButton.fadeIn());
+        $('#usageButton').append($button);
       });
     }(jQuery));
   &lt;/script>
