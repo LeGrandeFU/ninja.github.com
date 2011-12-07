@@ -179,7 +179,8 @@
           <p id="autocompleteExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css</li>
+            <li>css: {}</li>
+            <li>html: ''</li>
             <li>placeholder</li>
           </ul>
           <h5>Callbacks:</h5>
@@ -231,15 +232,18 @@ var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong
           <p id="buttonExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>css: {}</li>
+            <li>disable: true | false</li>
+            <li>html: ''</li>
+            <li>select: true | false</li>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>deselect()</li>
+            <li>disable()</li>
+            <li>enable()</li>
+            <li>hint()</li>
+            <li>select()</li>
           </ul>
         </div>
 
@@ -260,14 +264,20 @@ var
     $buttonExampleCheckboxSelect.attr({ checked: false });
   }),
 
-  $buttonExampleSelected = $.<strong>ninja</strong>.<strong>button</strong>({
-    <strong>html</strong>: '&lt;i>Selected&lt;/i> Button',
+  $buttonExampleSelect = $.<strong>ninja</strong>.<strong>button</strong>({
+    <strong>html</strong>: 'Selected',
     <strong>select</strong>: true
   }),
 
-  $buttonExampleDisabled = $.<strong>ninja</strong>.<strong>button</strong>({
-    <strong>html</strong>: '&lt;i>Disabled&lt;/i> Button',
+  $buttonExampleDisable = $.<strong>ninja</strong>.<strong>button</strong>({
+    <strong>html</strong>: 'Disabled',
     <strong>disable</strong>: true
+  });
+
+  $buttonExampleHint = $.<strong>ninja</strong>.<strong>button</strong>({
+    <strong>html</strong>: 'Keep it secret.'
+  }).<strong>hint</strong>({
+    <strong>html</strong>: 'Keep it safe.'
   });</pre>
         </div>
 
@@ -304,8 +314,8 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
           <p id="dialogExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
+            <li>css: {}</li>
+            <li>html: ''</li>
             <li></li>
           </ul>
           <h5>Callbacks:</h5>
@@ -349,8 +359,8 @@ $dialogExampleCheckbox = $('&lt;input/>', {
           <p id="drawerExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
+            <li>css: {}</li>
+            <li>html: ''</li>
             <li></li>
           </ul>
           <h5>Callbacks:</h5>
@@ -410,8 +420,8 @@ var
           <p id="menuExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
+            <li>css: {}</li>
+            <li>html: ''</li>
             <li></li>
           </ul>
           <h5>Callbacks:</h5>
@@ -432,8 +442,8 @@ $.ninja.({});</pre>
           <p id="sliderExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
+            <li>css: {}</li>
+            <li>html: ''</li>
             <li></li>
           </ul>
           <h5>Callbacks:</h5>
@@ -454,8 +464,8 @@ $.ninja.({});</pre>
           <p id="tabsExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li></li>
-            <li></li>
+            <li>css: {}</li>
+            <li>html: ''</li>
             <li></li>
           </ul>
           <h5>Callbacks:</h5>

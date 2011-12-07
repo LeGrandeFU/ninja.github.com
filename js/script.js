@@ -61,14 +61,20 @@
       $buttonExampleCheckboxSelect.attr({ checked: false });
     }),
 
-    $buttonExampleSelected = $.ninja.button({
-      html: '<i>Selected</i> Button',
+    $buttonExampleSelect = $.ninja.button({
+      html: 'Selected',
       select: true
     }),
 
-    $buttonExampleDisabled = $.ninja.button({
-      html: '<i>Disabled</i> Button',
+    $buttonExampleDisable = $.ninja.button({
+      html: 'Disabled',
       disable: true
+    }),
+
+    $buttonExampleHint = $.ninja.button({
+      html: 'Keep it secret.'
+    }).hint({
+      html: 'Keep it safe.'
     }),
 
     $dialogExampleCheckbox,
@@ -317,7 +323,7 @@
     $('#usageButton').append($usageButton);
     $('#autocompleteExamples').prepend($autocompleteExample);
 
-    $('#buttonExamples').prepend($buttonExample, '<br/><br/>', $buttonExampleSelected, '<br/><br/>', $buttonExampleDisabled);
+    $('#buttonExamples').prepend($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable, '<br/><br/>', $buttonExampleHint);
     $('#buttonExamplesRemote').append($buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable');
 
     $('#dialogExamples').prepend($dialogExampleCheckbox, ' Attach Dialog');
