@@ -154,6 +154,15 @@
       html: 'Menu'
     }),
 
+    $ratingExampleOutput = $('<textarea/>'),
+
+    $ratingExample = $.ninja.rating({
+      average: 3
+    }).select(function (event) {
+      $ratingExampleOutput.html('New rating: ' + event.stars + ' stars');
+    }),
+
+
     $sliderExample = $.ninja.slider({
       choices: [{html: 'foo'}],
       html: 'foo'
@@ -375,6 +384,8 @@
     $('#iconExamples').append($iconExamples);
 
     $('#menuExamples').append($menuExample, '<br/><br/>', $menuExampleOutput);
+
+    $('#ratingExamples').append($ratingExample, '<br/><br/>', $ratingExampleOutput);
 
     $navigation.scrollSpy();
 
