@@ -107,9 +107,51 @@
 
     $iconExamples = $('<span/>'),
 
+    $menuExampleOutput = $('<textarea/>', {
+      html: 'Choose a stooge.'
+    }),
+
     $menuExample = $.ninja.menu({
-      choices: [{html: 'foo'}],
-      html: 'foo'
+      choices: [
+        {
+          html: '<div>Mo</div>',
+          select: function () {
+            $menuExampleOutput.html('Oh, a wise guy eh?');
+          }
+        },
+        {
+          html: '<div>Larry</div>',
+          select: function () {
+            $menuExampleOutput.html('Cut it out, ya puddinhead!');
+          }
+        },
+        {
+          html: '<div>Curly</div>',
+          select: function () {
+            $menuExampleOutput.html('Hey, Mo!');
+          }
+        },
+        { spacer: true },
+        {
+          html: '<div>Shemp</div>',
+          select: function () {
+            $menuExampleOutput.html(':( Try again.');
+          }
+        },
+        {
+          html: '<div>Joe</div>',
+          select: function () {
+            $menuExampleOutput.html(':( Try again.');
+          }
+        },
+        {
+          html: '<div>Curly Joe</div>',
+          select: function () {
+            $menuExampleOutput.html(':( Try again.');
+          }
+        }
+      ],
+      html: 'Menu'
     }),
 
     $sliderExample = $.ninja.slider({
@@ -331,6 +373,8 @@
     $('#drawerExamples').append($drawerExample, $drawerExampleSelect);
 
     $('#iconExamples').append($iconExamples);
+
+    $('#menuExamples').append($menuExample, '<br/><br/>', $menuExampleOutput);
 
     $navigation.scrollSpy();
 

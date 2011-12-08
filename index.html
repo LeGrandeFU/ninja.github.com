@@ -422,20 +422,64 @@ var
           <p id="menuExamples"></p>
           <h5>Options:</h5>
           <ul>
+            <li>choices: []</li>
             <li>css: {}</li>
             <li>html: ''</li>
-            <li></li>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>select()</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
-$.ninja.({});</pre>
+var
+  $menuExampleOutput = $('&lt;textarea/>', {
+    html: 'Choose a stooge.'
+  }),
+
+  $menuExample = $.<strong>ninja</strong>.<strong>menu</strong>({
+    <strong>choices</strong>: [
+      {
+        <strong>html</strong>: 'Mo',
+        <strong>select</strong>: function () {
+          $menuExampleOutput.html('Oh, a wise guy eh?');
+        }
+      },
+      {
+        <strong>html</strong>: 'Larry',
+        <strong>select</strong>: function () {
+          $menuExampleOutput.html('Cut it out, ya puddinhead!');
+        }
+      },
+      {
+        <strong>html</strong>: 'Curly',
+        <strong>select</strong>: function () {
+          $menuExampleOutput.html('Hey, Mo!');
+        }
+      },
+      { <strong>spacer</strong>: true },
+      {
+        <strong>html</strong>: 'Shemp',
+        <strong>select</strong>: function () {
+          $menuExampleOutput.html(':( Try again.');
+        }
+      },
+      {
+        <strong>html</strong>: 'Joe',
+        <strong>select</strong>: function () {
+          $menuExampleOutput.html(':( Try again.');
+        }
+      },
+      {
+        <strong>html</strong>: 'Curly Joe',
+        <strong>select</strong>: function () {
+          $menuExampleOutput.html(':( Try again.');
+        }
+      }
+    ],
+    <strong>html</strong>: 'Menu'
+  });</pre>
         </div>
 
         <h4 id="slider">Slider<small> </small></h4>
