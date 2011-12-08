@@ -421,6 +421,10 @@ var
           <h5>Options:</h5>
           <ul>
             <li>choices: []</li>
+            <ul>
+              <li>html: ''</li>
+              <li>select()</li>
+            </ul>
             <li>css: {}</li>
             <li>html: ''</li>
           </ul>
@@ -515,18 +519,39 @@ var
           <ul>
             <li>css: {}</li>
             <li>html: ''</li>
-            <li></li>
+            <li>slot</li>
+            <li>title</li>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>select()</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
-$.ninja.({});</pre>
+  var
+    $sliderExample = $.<strong>ninja</strong>.<strong>slider</strong>({
+      <strong>choices</strong>: [
+        {
+          <strong>html</strong>: '&lt;span title="Silence">0 dB&lt;/span>'
+        },
+        { <strong>html</strong>: '&lt;span title="Light leaf rustling, calm breathing">10 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Very calm room">20-30 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Normal conversation at 1 m">40-60 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="TV set at home level at 1 m">60 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Passenger car at 10 m">60-80 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Hearing damage over long-term exposure">78 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Traffic on a busy roadway at 10 m">80-90 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Jack hammer at 1 m">100 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Hearing damage immediately possible">120 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Threshold of pain">130 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="Jet engine at 30 m">150 dB&lt;/span>' },
+        { <strong>html</strong>: '&lt;span title="M1 Garand rifle being fired at 1 m">168 dB&lt;/span>' }
+      ],
+      <strong>slot</strong>: 3,
+      <strong>title</strong>: 'Volume'
+    });
+</pre>
         </div>
 
         <h4 id="tabs">Tabs</h4>
@@ -535,20 +560,48 @@ $.ninja.({});</pre>
           <p id="tabsExamples"></p>
           <h5>Options:</h5>
           <ul>
+            <li>choice: 2-x</li>
+            <li>choices: []</li>
+            <ul>
+              <li>html: ''</li>
+              <li>select()</li>
+            </ul>
             <li>css: {}</li>
             <li>html: ''</li>
-            <li></li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>vertical: true | false</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
-$.ninja.({});</pre>
+var
+  $tabsExampleOutput = $('&lt;textarea/>'),
+
+  poorly = function () {
+    $tabsExampleOutput.html('You have chosen... poorly.');
+  },
+
+  $tabsExample = $.<strong>ninja</strong>.<strong>tabs</strong>({
+    <strong>choices</strong>: [
+      {
+        <strong>html</strong>: 'Gold',
+        <strong>select</strong>: function () {
+          poorly();
+        }
+      },
+      {
+        <strong>html</strong>: 'Silver',
+        <strong>select</strong>: function () {
+          poorly();
+        }
+      },
+      {
+        <strong>html</strong>: 'Wood',
+        <strong>select</strong>: function () {
+          $tabsExampleOutput.html('You have chosen... wisely.');
+        }
+      }
+    ]
+  }),</pre>
         </div>
       </div>
 

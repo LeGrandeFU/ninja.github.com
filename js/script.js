@@ -166,7 +166,9 @@
     $sliderExample = $.ninja.slider({
       choices: [
         {
-          html: '<span title="Silence">0 dB</span>'
+          html: $('<span title="">0 dB</span>').ninja().hint({
+            html: 'Silence'
+          })
         },
         { html: '<span title="Light leaf rustling, calm breathing">10 dB</span>' },
         { html: '<span title="Very calm room">20-30 dB</span>' },
@@ -213,6 +215,7 @@
         }
       ]
     }),
+
     $themeExamples = $('<div/>');
 
   $usageDialog = $.ninja.dialog({
