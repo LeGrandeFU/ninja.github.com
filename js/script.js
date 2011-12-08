@@ -164,14 +164,56 @@
 
 
     $sliderExample = $.ninja.slider({
-      choices: [{html: 'foo'}],
-      html: 'foo'
+      choices: [
+        {
+          html: '<span title="Silence">0 dB</span>'
+        },
+        { html: '<span title="Light leaf rustling, calm breathing">10 dB</span>' },
+        { html: '<span title="Very calm room">20-30 dB</span>' },
+        { html: '<span title="Normal conversation at 1 m">40-60 dB</span>' },
+        { html: '<span title="TV set at home level at 1 m">60 dB</span>' },
+        { html: '<span title="Passenger car at 10 m">60-80 dB</span>' },
+        { html: '<span title="Hearing damage over long-term exposure">78 dB</span>' },
+        { html: '<span title="Traffic on a busy roadway at 10 m">80-90 dB</span>' },
+        { html: '<span title="Jack hammer at 1 m">100 dB</span>' },
+        { html: '<span title="Hearing damage immediately possible">120 dB</span>' },
+        { html: '<span title="Threshold of pain">130 dB</span>' },
+        { html: '<span title="Jet engine at 30 m">150 dB</span>' },
+        { html: '<span title="M1 Garand rifle being fired at 1 m">168 dB</span>' }
+      ],
+      slot: 3,
+      title: 'Volume'
     }),
 
+    $tabsExampleOutput = $('<textarea/>'),
+
+    poorly = function () {
+      $tabsExampleOutput.html('You have chosen... poorly.');
+    },
+
     $tabsExample = $.ninja.tabs({
-      choices: [{html: 'foo'}],
-      html: 'foo'
-    });
+      choices: [
+        {
+          html: 'Gold',
+          select: function () {
+            poorly();
+          }
+        },
+        {
+          html: 'Silver',
+          select: function () {
+            poorly();
+          }
+        },
+        {
+          html: 'Wood',
+          select: function () {
+            $tabsExampleOutput.html('You have chosen... wisely.');
+          }
+        }
+      ]
+    }),
+    $themeExamples = $('<div/>');
 
   $usageDialog = $.ninja.dialog({
     html: '<img src="/img/logo.png"/>'
@@ -244,6 +286,19 @@
       'class': 'icon-example'
     }).append($icon, ' ', iconName).appendTo($iconExamples);
   });
+
+  $themeExamples.append(
+    $autocompleteExample.clone(),
+    $buttonExample.clone(),
+    $buttonExampleSelect.clone(),
+    $drawerExample.clone(),
+    $drawerExampleSelect.clone(),
+    $iconExamples.clone(),
+    $menuExample.clone(),
+    $ratingExample.clone(),
+    $sliderExample.clone(),
+    $tabsExample.clone()
+  );
 
   $(document).ready(function () {
 
@@ -341,6 +396,14 @@
             },
             {
               html: $('<div/>', {
+                html: 'Rating'
+              }),
+              select: function () {
+                window.location = '#rating';
+              }
+            },
+            {
+              html: $('<div/>', {
                 html: 'Slider'
               }),
               select: function () {
@@ -374,10 +437,10 @@
     $('#usageButton').append($usageButton);
     $('#autocompleteExamples').prepend($autocompleteExample);
 
-    $('#buttonExamples').prepend($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable, '<br/><br/>', $buttonExampleHint);
+    $('#buttonExamples').append($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable, '<br/><br/>', $buttonExampleHint);
     $('#buttonExamplesRemote').append($buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable');
 
-    $('#dialogExamples').prepend($dialogExampleCheckbox, ' Attach Dialog');
+    $('#dialogExamples').append($dialogExampleCheckbox, ' Attach Dialog');
 
     $('#drawerExamples').append($drawerExample, $drawerExampleSelect);
 
@@ -386,6 +449,12 @@
     $('#menuExamples').append($menuExample, '<br/><br/>', $menuExampleOutput);
 
     $('#ratingExamples').append($ratingExample, '<br/><br/>', $ratingExampleOutput);
+
+    $('#sliderExamples').append($sliderExample);
+
+    $('#tabsExamples').append($tabsExample, '<br/><br/>', $tabsExampleOutput);
+
+    $('.theme-examples').append($themeExamples);
 
     $navigation.scrollSpy();
 
