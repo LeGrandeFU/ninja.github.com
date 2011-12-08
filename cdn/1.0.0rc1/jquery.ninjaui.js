@@ -43,7 +43,7 @@
 
   $('<link/>', {
     rel: 'stylesheet',
-    href: 'data:text/css;base64,Lm5pbmphLW9iamVjdC1hdXRvY29tcGxldGV7cG9zaXRpb246cmVsYXRpdmV9Lm5pbmphLW9iamVjdC1hdXRvY29tcGxldGUgLm5pbmphLW9iamVjdC1pY29uW2FyaWEtbGFiZWw9c3Bpbl17cG9zaXRpb246YWJzb2x1dGU7cmlnaHQ6LTIwcHg7dG9wOjFweH0ubmluamEtb2JqZWN0LWF1dG9jb21wbGV0ZSAubmluamEtb2JqZWN0LWljb25bYXJpYS1sYWJlbD1zcGluXSBne2ZpbGw6Izk5OSFpbXBvcnRhbnR9Lm5pbmphLW9iamVjdC1ibG9ja2Vye2JhY2tncm91bmQtY29sb3I6cmdiYSgyNTUsMjU1LDI1NSwuNSk7bGVmdDowO3Bvc2l0aW9uOmFic29sdXRlO3RvcDowO3dpZHRoOjEwMCV9Lm5pbmphLW9iamVjdC1idXR0b24sLm5pbmphLW9iamVjdC1pdGVtLm5pbmphLXN0YXRlLWhvdmVyLC5uaW5qYS1vYmplY3Qtc2xpZGVyLWJ1dHRvbiwubmluamEtb2JqZWN0LXNsaWRlci1sZXZlbCwubmluamEtb2JqZWN0LXRhYntiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLGxlZnQgdG9wLGxlZnQgYm90dG9tLGNvbG9yc3RvcCgwLHJnYmEoMjU1LDI1NSwyNTUsLjIpKSxjb2xvcnN0b3AoMC41LHJnYmEoMjU1LDI1NSwyNTUsMCkpLGNvbG9yc3RvcCgwLjUscmdiYSgwLDAsMCwwKSksY29sb3JzdG9wKDEscmdiYSgwLDAsMCwuMSkpKTtiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW1vei1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbXMtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW8tbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6bGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2ZpbHRlcjpwcm9naWQ6RFhJbWFnZVRyYW5zZm9ybS5NaWNyb3NvZnQuZ3JhZGllbnQoc3RhcnRDb2xvclN0cj0ncmdiYSgyNTUsIDI1NSwgMjU1LCAuMiknLEVuZENvbG9yU3RyPSdyZ2JhKDAsMCwwLC4xKScpO3Bvc2l0aW9uOnJlbGF0aXZlfS5uaW5qYS1vYmplY3QtYnV0dG9uLC5uaW5qYS1vYmplY3QtaXRlbSwubmluamEtb2JqZWN0LXRhYntsaW5lLWhlaWdodDoxZW07cGFkZGluZzouMmVtIDFlbTt0ZXh0LXNoYWRvdzowIDFweCAwICNmZmZ9Lm5pbmphLW9iamVjdC1idXR0b246aG92ZXIsLm5pbmphLW9iamVjdC1pdGVtLm5pbmphLXN0YXRlLWhvdmVyLC5uaW5qYS1vYmplY3Qtc2xpZGVyLWJ1dHRvbiwubmluamEtb2JqZWN0LXNsaWRlci1ncm9vdmUsLm5pbmphLW9iamVjdC1zdGFyOmhvdmVyLC5uaW5qYS1vYmplY3QtdGFiOmhvdmVye2N1cnNvcjpwb2ludGVyfS5uaW5qYS1vYmplY3QtYnV0dG9uLC5uaW5qYS1vYmplY3QtbGlzdCwubmluamEtb2JqZWN0LWRpYWxvZywubmluamEtb2JqZWN0LWhpbnQsLm5pbmphLW9iamVjdC1zbGlkZXItYnV0dG9uLC5uaW5qYS1vYmplY3Qtc2xpZGVyLWdyb292ZSwubmluamEtb2JqZWN0LXNsaWRlci1sZXZlbCwubmluamEtb2JqZWN0LXRhYiwubmluamEtb2JqZWN0LXRyYXl7LXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3g7LW1vei1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZztiYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3h9Lm5pbmphLW9iamVjdC1idXR0b24sLm5pbmphLW9iamVjdC1saXN0LC5uaW5qYS1vYmplY3QtZGlhbG9nLC5uaW5qYS1vYmplY3QtaGludCwubmluamEtb2JqZWN0LXNsaWRlci1idXR0b24sLm5pbmphLW9iamVjdC1zbGlkZXItZ3Jvb3ZlLC5uaW5qYS1vYmplY3QtdGFiLC5uaW5qYS1vYmplY3QtdHJheXtiYWNrZ3JvdW5kLWNvbG9yOiNlZWU7Ym9yZGVyOjFweCBzb2xpZCAjNjY2fS5uaW5qYS1vYmplY3QtYnV0dG9uLC5uaW5qYS1vYmplY3QtbGlzdCwubmluamEtb2JqZWN0LWRpYWxvZywubmluamEtb2JqZWN0LWhpbnR7LXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3g7LW1vei1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZztiYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3g7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi40ZW07LW1vei1ib3JkZXItcmFkaXVzOi40ZW07Ym9yZGVyLXJhZGl1czouNGVtfS5uaW5qYS1vYmplY3QtYnV0dG9uLC5uaW5qYS1vYmplY3QtaXRlbSwubmluamEtb2JqZWN0LXNsaWRlci1idXR0b24sLm5pbmphLW9iamVjdC1zdGFyLC5uaW5qYS1vYmplY3QtdGFie21hcmdpbjowO291dGxpbmUtd2lkdGg6MXB4fS5uaW5qYS1vYmplY3QtYnV0dG9uLC5uaW5qYS1vYmplY3QtdGFie3RleHQtYWxpZ246Y2VudGVyfS5uaW5qYS1vYmplY3QtYnV0dG9uIC5uaW5qYS1vYmplY3QtaWNvbiwubmluamEtb2JqZWN0LWl0ZW0gLm5pbmphLW9iamVjdC1pY29uLC5uaW5qYS1vYmplY3QtdGFiIC5uaW5qYS1vYmplY3QtaWNvbnt2ZXJ0aWNhbC1hbGlnbjpib3R0b219Lm5pbmphLW9iamVjdC1kaWFsb2csLm5pbmphLW9iamVjdC1oaW50e3BhZGRpbmc6LjZlbX0ubmluamEtb2JqZWN0LWRpYWxvZyAubmluamEtb2JqZWN0LWljb25bYXJpYS1sYWJlbD1YXXtjdXJzb3I6cG9pbnRlcjtwb3NpdGlvbjphYnNvbHV0ZTtyaWdodDotMTFweDt0b3A6LTExcHh9Lm5pbmphLW9iamVjdC1kcmF3ZXIgLm5pbmphLW9iamVjdC1idXR0b257ZGlzcGxheTpibG9jaztwYWRkaW5nLWxlZnQ6MDt0ZXh0LWFsaWduOmxlZnQ7d2lkdGg6MTAwJX0ubmluamEtb2JqZWN0LWRyYXdlciAubmluamEtb2JqZWN0LWJ1dHRvbi5uaW5qYS1zdGF0ZS1zZWxlY3R7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi4zNWVtIC4zNWVtIDAgMDstbW96LWJvcmRlci1yYWRpdXM6LjM1ZW0gLjM1ZW0gMCAwO2JvcmRlci1yYWRpdXM6LjM1ZW0gLjM1ZW0gMCAwfS5uaW5qYS1vYmplY3QtaGludHt3aGl0ZS1zcGFjZTpub3dyYXB9Lm5pbmphLW9iamVjdC1pY29ue2Rpc3BsYXk6aW5saW5lLWJsb2NrO2hlaWdodDoxZW07dmVydGljYWwtYWxpZ246bWlkZGxlO3dpZHRoOjFlbX0ubmluamEtb2JqZWN0LWljb24gZ3tmaWxsOiMzMzM7c3Ryb2tlOiMwMDB9Lm5pbmphLW9iamVjdC1pY29uW2FyaWEtbGFiZWw9WF17aGVpZ2h0OjIycHg7d2lkdGg6MjJweH0ubmluamEtb2JqZWN0LWljb25bYXJpYS1sYWJlbD1YXSBjaXJjbGV7c3Ryb2tlOiM5OTk7c3Ryb2tlLXdpZHRoOjF9Lm5pbmphLW9iamVjdC1pY29uW2FyaWEtbGFiZWw9WF0gcG9seWdvbntmaWxsOiNmZmZ9Lm5pbmphLW9iamVjdC1pbnB1dHtwYWRkaW5nLXJpZ2h0OjIwcHh9Lm5pbmphLW9iamVjdC1pdGVtLm5pbmphLXN0YXRlLWhvdmVyLC5uaW5qYS1vYmplY3Qtc2xpZGVyLWdyb292ZSwubmluamEtc3RhdGUtc2VsZWN0e2JhY2tncm91bmQtY29sb3I6Izk5OX0ubmluamEtb2JqZWN0LWl0ZW0ubmluamEtc3RhdGUtaG92ZXIsLm5pbmphLXN0YXRlLXNlbGVjdHtjb2xvcjojZmZmO3RleHQtc2hhZG93OjAgMXB4IDAgIzY2Nn0ubmluamEtb2JqZWN0LWl0ZW0ubmluamEtc3RhdGUtaG92ZXIgZywubmluamEtc3RhdGUtc2VsZWN0IGd7ZmlsbDojZmZmO3N0cm9rZTojZmZmfS5uaW5qYS1vYmplY3QtaXRlbXtiYWNrZ3JvdW5kOjA7Ym9yZGVyOjA7ZGlzcGxheTpibG9jazt0ZXh0LWFsaWduOmxlZnQ7d2lkdGg6MTAwJX0ubmluamEtb2JqZWN0LWxpc3QsLm5pbmphLW9iamVjdC1kaWFsb2csLm5pbmphLW9iamVjdC1oaW50e2JhY2tncm91bmQtY29sb3I6cmdiYSgyNTUsMjU1LDI1NSwuODUpO2JvcmRlcjoxcHggc29saWQgI2NjYzstd2Via2l0LWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7LW1vei1ib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpOy1tcy1ib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpOy1vLWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7Ym94LXNoYWRvdzowIC4yZW0gLjRlbSByZ2JhKDAsMCwwLC41KTtwYWRkaW5nOi42ZW07cG9zaXRpb246YWJzb2x1dGU7ei1pbmRleDorMX0ubmluamEtb2JqZWN0LWxpc3R7cGFkZGluZzouNmVtIDA7dGV4dC1hbGlnbjpsZWZ0fS5uaW5qYS1vYmplY3QtcnVsZXtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjZWVlO2JvcmRlci10b3A6MXB4IHNvbGlkICNjY2M7bWFyZ2luOi40ZW0gMH0ubmluamEtb2JqZWN0LXNsaWRlcntkaXNwbGF5OmlubGluZS1ibG9ja30ubmluamEtb2JqZWN0LXNsaWRlci1idXR0b24sLm5pbmphLW9iamVjdC1zbGlkZXItZ3Jvb3ZlLC5uaW5qYS1vYmplY3Qtc2xpZGVyLWxldmVsey13ZWJraXQtYm9yZGVyLXJhZGl1czo5cHg7LW1vei1ib3JkZXItcmFkaXVzOjlweDtib3JkZXItcmFkaXVzOjlweH0ubmluamEtb2JqZWN0LXNsaWRlci1idXR0b257aGVpZ2h0OjE4cHg7bGVmdDowO3BhZGRpbmc6MDtwb3NpdGlvbjphYnNvbHV0ZTt0b3A6MDt3aWR0aDoxOHB4fS5uaW5qYS1vYmplY3Qtc2xpZGVyLWJ1dHRvbi5uaW5qYS1zdGF0ZS1zZWxlY3R7YmFja2dyb3VuZC1jb2xvcjojY2NjfS5uaW5qYS1vYmplY3Qtc2xpZGVyLWdyb292ZSwubmluamEtb2JqZWN0LXNsaWRlci1sZXZlbHtoZWlnaHQ6NHB4fS5uaW5qYS1vYmplY3Qtc2xpZGVyLWdyb292ZSwubmluamEtc3RhdGUtc2VsZWN0e2JhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1ncmFkaWVudChsaW5lYXIsbGVmdCB0b3AsbGVmdCBib3R0b20sY29sb3JzdG9wKDAscmdiYSgwLDAsMCwuMykpLGNvbG9yc3RvcCgwLjUscmdiYSgwLDAsMCwwKSksY29sb3JzdG9wKDAuNSxyZ2JhKDI1NSwyNTUsMjU1LDApKSxjb2xvcnN0b3AoMSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSkpO2JhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbW96LWxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgwLDAsMCwuMykgMCxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSAxMDAlKTtiYWNrZ3JvdW5kLWltYWdlOi1tcy1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotby1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTpsaW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7ZmlsdGVyOnByb2dpZDpEWEltYWdlVHJhbnNmb3JtLk1pY3Jvc29mdC5ncmFkaWVudChzdGFydENvbG9yU3RyPSdyZ2JhKDAsIDAsIDAsIC4yKScsRW5kQ29sb3JTdHI9J3JnYmEoMjU1LDI1NSwyNTUsLjEpJyl9Lm5pbmphLW9iamVjdC1zbGlkZXItZ3Jvb3Zle2N1cnNvcjpwb2ludGVyO2xlZnQ6OXB4O3Bvc2l0aW9uOmFic29sdXRlO3JpZ2h0OjlweDt0b3A6NXB4fS5uaW5qYS1vYmplY3Qtc2xpZGVyLWxldmVse2JhY2tncm91bmQtY29sb3I6IzZjZn0ubmluamEtb2JqZWN0LXNsaWRlci10aXRsZXtmb250LXdlaWdodDo3MDB9Lm5pbmphLW9iamVjdC1zbGlkZXItdHJhY2t7aGVpZ2h0OjE4cHg7cG9zaXRpb246cmVsYXRpdmV9Lm5pbmphLW9iamVjdC1zdGFye2JhY2tncm91bmQ6MDtib3JkZXI6MDttYXJnaW4tcmlnaHQ6MXB4O3BhZGRpbmc6MH0ubmluamEtb2JqZWN0LXN0YXIgLm5pbmphLW9iamVjdC1pY29ue2hlaWdodDoxOHB4O3dpZHRoOjE4cHh9Lm5pbmphLW9iamVjdC1zdGFyIGd7ZmlsbDojZWVlO3N0cm9rZTojY2NjO3N0cm9rZS13aWR0aDoxfS5uaW5qYS1vYmplY3Qtc3Rhci5uaW5qYS1zdGF0ZS1hdmVyYWdlIGd7ZmlsbDojNmNmO3N0cm9rZTojMzljfS5uaW5qYS1vYmplY3Qtc3Rhci5uaW5qYS1zdGF0ZS1pbmRpdmlkdWFsIGd7ZmlsbDojYzk2O3N0cm9rZTojOTYzfS5uaW5qYS1vYmplY3Qtc3RlbXtkaXNwbGF5OmlubGluZS1ibG9jaztoZWlnaHQ6OHB4O3Bvc2l0aW9uOmFic29sdXRlO3RvcDotOHB4O3dpZHRoOjhweH0ubmluamEtb2JqZWN0LXN0ZW0gZ3tmaWxsOnJnYmEoMjU1LDI1NSwyNTUsLjg1KTtzdHJva2U6I2NjY30ubmluamEtb2JqZWN0LXRhYnMtaG9yaXpvbnRhbCwubmluamEtb2JqZWN0LXRhYnMtdmVydGljYWx7d2hpdGUtc3BhY2U6bm93cmFwfS5uaW5qYS1vYmplY3QtdGFicy1ob3Jpem9udGFse2Rpc3BsYXk6aW5saW5lLWJsb2NrfS5uaW5qYS1vYmplY3QtdGFicy12ZXJ0aWNhbCAubmluamEtb2JqZWN0LXRhYntkaXNwbGF5OmJsb2NrfS5uaW5qYS1vYmplY3QtdGFie2JvcmRlci1sZWZ0LWNvbG9yOiNjY2N9Lm5pbmphLW9iamVjdC10YWI6Zmlyc3QtY2hpbGR7Ym9yZGVyLWxlZnQtY29sb3I6Izk5OTstd2Via2l0LWJvcmRlci1yYWRpdXM6LjM1ZW0gMCAwIC4zNWVtOy1tb3otYm9yZGVyLXJhZGl1czouMzVlbSAwIDAgLjM1ZW07Ym9yZGVyLXJhZGl1czouMzVlbSAwIDAgLjM1ZW19Lm5pbmphLW9iamVjdC10YWI6bGFzdC1jaGlsZHtib3JkZXItcmlnaHQtY29sb3I6Izk5OTstd2Via2l0LWJvcmRlci1yYWRpdXM6MCAuMzVlbSAuMzVlbSAwOy1tb3otYm9yZGVyLXJhZGl1czowIC4zNWVtIC4zNWVtIDA7Ym9yZGVyLXJhZGl1czowIC4zNWVtIC4zNWVtIDB9Lm5pbmphLW9iamVjdC10YWIubmluamEtc3RhdGUtc2VsZWN0e2JvcmRlci1sZWZ0LWNvbG9yOiM2NjY7Ym9yZGVyLXJpZ2h0LWNvbG9yOiM2NjZ9Lm5pbmphLW9iamVjdC10YWI6Zmlyc3QtY2hpbGQubmluamEtc3RhdGUtc2VsZWN0e2JvcmRlci1sZWZ0LWNvbG9yOiM5OTl9Lm5pbmphLW9iamVjdC10YWI6bGFzdC1jaGlsZC5uaW5qYS1zdGF0ZS1zZWxlY3R7Ym9yZGVyLXJpZ2h0LWNvbG9yOiM5OTl9Lm5pbmphLW9iamVjdC10cmF5e2JvcmRlcjoxcHggc29saWQgI2NjYztib3JkZXItYm90dG9tLWNvbG9yOiNlZWU7LXdlYmtpdC1ib3JkZXItcmFkaXVzOjAgMCAuMzVlbSAuMzVlbTstbW96LWJvcmRlci1yYWRpdXM6MCAwIC4zNWVtIC4zNWVtO2JvcmRlci1yYWRpdXM6MCAwIC4zNWVtIC4zNWVtO2JvcmRlci10b3AtY29sb3I6IzY2NjtwYWRkaW5nOi4yZW0gMWVtfS5uaW5qYS1zdGF0ZS1wbGFjZWhvbGRlcntjb2xvcjojOTk5fS5uaW5qYS1zdGF0ZS1kaXNhYmxle2N1cnNvcjpkZWZhdWx0IWltcG9ydGFudH0='
+    href: 'data:text/css;base64,Lm51aS1hdGN7cG9zaXRpb246cmVsYXRpdmV9Lm51aS1hdGMgLm51aS1pY25bYXJpYS1sYWJlbD1zcGluXXtwb3NpdGlvbjphYnNvbHV0ZTtyaWdodDotMjBweDt0b3A6MXB4fS5udWktYXRjIC5udWktaWNuW2FyaWEtbGFiZWw9c3Bpbl0gZ3tmaWxsOiM5OTkhaW1wb3J0YW50fS5udWktYmxre2JhY2tncm91bmQtY29sb3I6cmdiYSgyNTUsMjU1LDI1NSwuNSk7bGVmdDowO3Bvc2l0aW9uOmFic29sdXRlO3RvcDowO3dpZHRoOjEwMCV9Lm51aS1idG4sLm51aS1pdG0ubnVpLWh2ciwubnVpLXNsZC1idG4sLm51aS1zbGQtbHZsLC5udWktdGFie2JhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1ncmFkaWVudChsaW5lYXIsbGVmdCB0b3AsbGVmdCBib3R0b20sY29sb3JzdG9wKDAscmdiYSgyNTUsMjU1LDI1NSwuMikpLGNvbG9yc3RvcCgwLjUscmdiYSgyNTUsMjU1LDI1NSwwKSksY29sb3JzdG9wKDAuNSxyZ2JhKDAsMCwwLDApKSxjb2xvcnN0b3AoMSxyZ2JhKDAsMCwwLC4xKSkpO2JhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbW96LWxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgyNTUsMjU1LDI1NSwuMikgMCxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDAsMCwwLC4xKSAxMDAlKTtiYWNrZ3JvdW5kLWltYWdlOi1tcy1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotby1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTpsaW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7ZmlsdGVyOnByb2dpZDpEWEltYWdlVHJhbnNmb3JtLk1pY3Jvc29mdC5ncmFkaWVudChzdGFydENvbG9yU3RyPSdyZ2JhKDI1NSwgMjU1LCAyNTUsIC4yKScsRW5kQ29sb3JTdHI9J3JnYmEoMCwwLDAsLjEpJyk7cG9zaXRpb246cmVsYXRpdmV9Lm51aS1idG4sLm51aS1pdG0sLm51aS10YWJ7bGluZS1oZWlnaHQ6MWVtO3BhZGRpbmc6LjJlbSAxZW07dGV4dC1zaGFkb3c6MCAxcHggMCAjZmZmfS5udWktYnRuOmhvdmVyLC5udWktaXRtLm51aS1odnIsLm51aS1zbGQtYnRuLC5udWktc2xkLWdydiwubnVpLXN0cjpob3ZlciwubnVpLXRhYjpob3ZlcntjdXJzb3I6cG9pbnRlcn0ubnVpLWJ0biwubnVpLWxzdCwubnVpLWRsZywubnVpLWhudCwubnVpLXNsZC1idG4sLm51aS1zbGQtZ3J2LC5udWktc2xkLWx2bCwubnVpLXRhYiwubnVpLXRyeXstd2Via2l0LWJhY2tncm91bmQtY2xpcDpwYWRkaW5nLWJveDstbW96LWJhY2tncm91bmQtY2xpcDpwYWRkaW5nO2JhY2tncm91bmQtY2xpcDpwYWRkaW5nLWJveH0ubnVpLWJ0biwubnVpLWxzdCwubnVpLWRsZywubnVpLWhudCwubnVpLXNsZC1idG4sLm51aS1zbGQtZ3J2LC5udWktdGFiLC5udWktdHJ5e2JhY2tncm91bmQtY29sb3I6I2VlZTtib3JkZXI6MXB4IHNvbGlkICM2NjZ9Lm51aS1idG4sLm51aS1sc3QsLm51aS1kbGcsLm51aS1obnR7LXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3g7LW1vei1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZztiYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3g7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi40ZW07LW1vei1ib3JkZXItcmFkaXVzOi40ZW07Ym9yZGVyLXJhZGl1czouNGVtfS5udWktYnRuLC5udWktaXRtLC5udWktc2xkLWJ0biwubnVpLXN0ciwubnVpLXRhYnttYXJnaW46MDtvdXRsaW5lLXdpZHRoOjFweH0ubnVpLWJ0biwubnVpLXRhYnt0ZXh0LWFsaWduOmNlbnRlcn0ubnVpLWJ0biAubnVpLWljbiwubnVpLWl0bSAubnVpLWljbiwubnVpLXRhYiAubnVpLWljbnt2ZXJ0aWNhbC1hbGlnbjpib3R0b219Lm51aS1kbGcsLm51aS1obnR7cGFkZGluZzouNmVtfS5udWktZGxnIC5udWktaWNuW2FyaWEtbGFiZWw9WF17Y3Vyc29yOnBvaW50ZXI7cG9zaXRpb246YWJzb2x1dGU7cmlnaHQ6LTExcHg7dG9wOi0xMXB4fS5udWktZHJ3IC5udWktYnRue2Rpc3BsYXk6YmxvY2s7cGFkZGluZy1sZWZ0OjA7dGV4dC1hbGlnbjpsZWZ0O3dpZHRoOjEwMCV9Lm51aS1kcncgLm51aS1idG4ubnVpLXNsY3std2Via2l0LWJvcmRlci1yYWRpdXM6LjM1ZW0gLjM1ZW0gMCAwOy1tb3otYm9yZGVyLXJhZGl1czouMzVlbSAuMzVlbSAwIDA7Ym9yZGVyLXJhZGl1czouMzVlbSAuMzVlbSAwIDB9Lm51aS1obnR7d2hpdGUtc3BhY2U6bm93cmFwfS5udWktaWNue2Rpc3BsYXk6aW5saW5lLWJsb2NrO2hlaWdodDoxZW07dmVydGljYWwtYWxpZ246bWlkZGxlO3dpZHRoOjFlbX0ubnVpLWljbiBne2ZpbGw6IzMzMztzdHJva2U6IzAwMH0ubnVpLWljblthcmlhLWxhYmVsPVhde2hlaWdodDoyMnB4O3dpZHRoOjIycHh9Lm51aS1pY25bYXJpYS1sYWJlbD1YXSBjaXJjbGV7c3Ryb2tlOiM5OTk7c3Ryb2tlLXdpZHRoOjF9Lm51aS1pY25bYXJpYS1sYWJlbD1YXSBwb2x5Z29ue2ZpbGw6I2ZmZn0ubnVpLWlucHtwYWRkaW5nLXJpZ2h0OjIwcHh9Lm51aS1pdG0ubnVpLWh2ciwubnVpLXNsZC1ncnYsLm51aS1zbGN7YmFja2dyb3VuZC1jb2xvcjojOTk5fS5udWktaXRtLm51aS1odnIsLm51aS1zbGN7Y29sb3I6I2ZmZjt0ZXh0LXNoYWRvdzowIDFweCAwICM2NjZ9Lm51aS1pdG0ubnVpLWh2ciBnLC5udWktc2xjIGd7ZmlsbDojZmZmO3N0cm9rZTojZmZmfS5udWktaXRte2JhY2tncm91bmQ6MDtib3JkZXI6MDtkaXNwbGF5OmJsb2NrO3RleHQtYWxpZ246bGVmdDt3aWR0aDoxMDAlfS5udWktbHN0LC5udWktZGxnLC5udWktaG50e2JhY2tncm91bmQtY29sb3I6cmdiYSgyNTUsMjU1LDI1NSwuODUpO2JvcmRlcjoxcHggc29saWQgI2NjYzstd2Via2l0LWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7LW1vei1ib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpOy1tcy1ib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpOy1vLWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7Ym94LXNoYWRvdzowIC4yZW0gLjRlbSByZ2JhKDAsMCwwLC41KTtwYWRkaW5nOi42ZW07cG9zaXRpb246YWJzb2x1dGU7ei1pbmRleDorMX0ubnVpLWxzdHtwYWRkaW5nOi42ZW0gMDt0ZXh0LWFsaWduOmxlZnR9Lm51aS1ydWx7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgI2VlZTtib3JkZXItdG9wOjFweCBzb2xpZCAjY2NjO21hcmdpbjouNGVtIDB9Lm51aS1zbGR7ZGlzcGxheTppbmxpbmUtYmxvY2t9Lm51aS1zbGQtYnRuLC5udWktc2xkLWdydiwubnVpLXNsZC1sdmx7LXdlYmtpdC1ib3JkZXItcmFkaXVzOjlweDstbW96LWJvcmRlci1yYWRpdXM6OXB4O2JvcmRlci1yYWRpdXM6OXB4fS5udWktc2xkLWJ0bntoZWlnaHQ6MThweDtsZWZ0OjA7cGFkZGluZzowO3Bvc2l0aW9uOmFic29sdXRlO3RvcDowO3dpZHRoOjE4cHh9Lm51aS1zbGQtYnRuLm51aS1zbGN7YmFja2dyb3VuZC1jb2xvcjojY2NjfS5udWktc2xkLWdydiwubnVpLXNsZC1sdmx7aGVpZ2h0OjRweH0ubnVpLXNsZC1ncnYsLm51aS1zbGN7YmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWdyYWRpZW50KGxpbmVhcixsZWZ0IHRvcCxsZWZ0IGJvdHRvbSxjb2xvcnN0b3AoMCxyZ2JhKDAsMCwwLC4zKSksY29sb3JzdG9wKDAuNSxyZ2JhKDAsMCwwLDApKSxjb2xvcnN0b3AoMC41LHJnYmEoMjU1LDI1NSwyNTUsMCkpLGNvbG9yc3RvcCgxLHJnYmEoMjU1LDI1NSwyNTUsLjEpKSk7YmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgwLDAsMCwuMykgMCxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSAxMDAlKTtiYWNrZ3JvdW5kLWltYWdlOi1tb3otbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDAsMCwwLC4zKSAwLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW1zLWxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgwLDAsMCwuMykgMCxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSAxMDAlKTtiYWNrZ3JvdW5kLWltYWdlOi1vLWxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgwLDAsMCwuMykgMCxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSAxMDAlKTtiYWNrZ3JvdW5kLWltYWdlOmxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgwLDAsMCwuMykgMCxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSAxMDAlKTtmaWx0ZXI6cHJvZ2lkOkRYSW1hZ2VUcmFuc2Zvcm0uTWljcm9zb2Z0LmdyYWRpZW50KHN0YXJ0Q29sb3JTdHI9J3JnYmEoMCwgMCwgMCwgLjIpJyxFbmRDb2xvclN0cj0ncmdiYSgyNTUsMjU1LDI1NSwuMSknKX0ubnVpLXNsZC1ncnZ7Y3Vyc29yOnBvaW50ZXI7bGVmdDo5cHg7cG9zaXRpb246YWJzb2x1dGU7cmlnaHQ6OXB4O3RvcDo1cHh9Lm51aS1zbGQtbHZse2JhY2tncm91bmQtY29sb3I6IzZjZn0ubnVpLXNsZC10dGx7Zm9udC13ZWlnaHQ6NzAwfS5udWktc2xkLXRya3toZWlnaHQ6MThweDtwb3NpdGlvbjpyZWxhdGl2ZX0ubnVpLXN0cntiYWNrZ3JvdW5kOjA7Ym9yZGVyOjA7bWFyZ2luLXJpZ2h0OjFweDtwYWRkaW5nOjB9Lm51aS1zdHIgLm51aS1pY257aGVpZ2h0OjE4cHg7d2lkdGg6MThweH0ubnVpLXN0ciBne2ZpbGw6I2VlZTtzdHJva2U6I2NjYztzdHJva2Utd2lkdGg6MX0ubnVpLXN0ci5udWktYXZnIGd7ZmlsbDojNmNmO3N0cm9rZTojMzljfS5udWktc3RyLm51aS1pbmQgZ3tmaWxsOiNjOTY7c3Ryb2tlOiM5NjN9Lm51aS1zdG17ZGlzcGxheTppbmxpbmUtYmxvY2s7aGVpZ2h0OjhweDtwb3NpdGlvbjphYnNvbHV0ZTt0b3A6LThweDt3aWR0aDo4cHh9Lm51aS1zdG0gZ3tmaWxsOnJnYmEoMjU1LDI1NSwyNTUsLjg1KTtzdHJva2U6I2NjY30ubnVpLXRhYi1ocnosLm51aS10YWItdnJ0e3doaXRlLXNwYWNlOm5vd3JhcH0ubnVpLXRhYi1ocnp7ZGlzcGxheTppbmxpbmUtYmxvY2t9Lm51aS10YWItdnJ0IC5udWktdGFie2Rpc3BsYXk6YmxvY2t9Lm51aS10YWJ7Ym9yZGVyLWxlZnQtY29sb3I6I2NjY30ubnVpLXRhYjpmaXJzdC1jaGlsZHtib3JkZXItbGVmdC1jb2xvcjojOTk5Oy13ZWJraXQtYm9yZGVyLXJhZGl1czouMzVlbSAwIDAgLjM1ZW07LW1vei1ib3JkZXItcmFkaXVzOi4zNWVtIDAgMCAuMzVlbTtib3JkZXItcmFkaXVzOi4zNWVtIDAgMCAuMzVlbX0ubnVpLXRhYjpsYXN0LWNoaWxke2JvcmRlci1yaWdodC1jb2xvcjojOTk5Oy13ZWJraXQtYm9yZGVyLXJhZGl1czowIC4zNWVtIC4zNWVtIDA7LW1vei1ib3JkZXItcmFkaXVzOjAgLjM1ZW0gLjM1ZW0gMDtib3JkZXItcmFkaXVzOjAgLjM1ZW0gLjM1ZW0gMH0ubnVpLXRhYi5udWktc2xje2JvcmRlci1sZWZ0LWNvbG9yOiM2NjY7Ym9yZGVyLXJpZ2h0LWNvbG9yOiM2NjZ9Lm51aS10YWI6Zmlyc3QtY2hpbGQubnVpLXNsY3tib3JkZXItbGVmdC1jb2xvcjojOTk5fS5udWktdGFiOmxhc3QtY2hpbGQubnVpLXNsY3tib3JkZXItcmlnaHQtY29sb3I6Izk5OX0ubnVpLXRyeXtib3JkZXI6MXB4IHNvbGlkICNjY2M7Ym9yZGVyLWJvdHRvbS1jb2xvcjojZWVlOy13ZWJraXQtYm9yZGVyLXJhZGl1czowIDAgLjM1ZW0gLjM1ZW07LW1vei1ib3JkZXItcmFkaXVzOjAgMCAuMzVlbSAuMzVlbTtib3JkZXItcmFkaXVzOjAgMCAuMzVlbSAuMzVlbTtib3JkZXItdG9wLWNvbG9yOiM2NjY7cGFkZGluZzouMmVtIDFlbX0ubnVpLXBsY3tjb2xvcjojOTk5fS5udWktZHNie2N1cnNvcjpkZWZhdWx0IWltcG9ydGFudH0='
   }).appendTo('head');
 
   time = $.now();
@@ -81,7 +81,7 @@
         var $object = $(this).ninja();
         if ($.isFunction(callback)) {
           $object.bind('deselect.ninja', callback);
-        } else if ($object.is('.ninja-state-select') && !$object.is('.ninja-state-disable')) {
+        } else if ($object.is('.nui-slc') && !$object.is('.nui-dsb')) {
           $object.trigger('deselect.ninja');
         }
       });
@@ -105,7 +105,7 @@
         if ($.isFunction(callback)) {
           $object.bind('disable.ninja', callback);
         } else {
-          $object.fadeTo('fast', 0.5).addClass('ninja-state-disable').trigger('disable.ninja');
+          $object.fadeTo('fast', 0.5).addClass('nui-dsb').trigger('disable.ninja');
         }
       });
     },
@@ -116,7 +116,7 @@
         if ($.isFunction(callback)) {
           $object.bind('enable.ninja', callback);
         } else {
-          $object.fadeTo('fast', 1).removeClass('ninja-state-disable').trigger('enable.ninja');
+          $object.fadeTo('fast', 1).removeClass('nui-dsb').trigger('enable.ninja');
         }
       });
     },
@@ -127,11 +127,11 @@
         var
           $object = $(this),
           $hint = $('<span/>', {
-            'class': 'ninja-object-hint',
+            'class': 'nui-hnt',
             css: options.css,
             html: options.html
           }),
-          $stem = $('<svg class="ninja-object-stem" height="1" width="1" version="1.1" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><g><polygon points="4,1 8,8 1,8" stroke-width="0"/><line x1="4" x2="0" y2="8"/><line x1="4" x2="8" y2="8"/></g></svg>').appendTo($hint);
+          $stem = $('<svg class="nui-stm" height="1" width="1" version="1.1" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><g><polygon points="4,1 8,8 1,8" stroke-width="0"/><line x1="4" x2="0" y2="8"/><line x1="4" x2="8" y2="8"/></g></svg>').appendTo($hint);
         if (options.css) {
           $stem.find('g').css(options.css);
         }
@@ -174,10 +174,10 @@
           $hover = null,
           $object = $(this).ninja(),
           $list = $('<div/>', {
-            'class': 'ninja-object-list'
+            'class': 'nui-lst'
           });
-        if ($object.is('.ninja-object-autocomplete')) {
-          $object.find('.ninja-object-icon[aria-label=spin]').hide();
+        if ($object.is('.nui-atc')) {
+          $object.find('.nui-icn[aria-label=spin]').hide();
         }
         if (options.choices.length) {
           $object.bind({
@@ -185,7 +185,7 @@
               $(document).unbind('click.ninja keydown.ninja keyup.ninja');
               $list.detach();
               if ($hover) {
-                $hover.removeClass('ninja-state-hover');
+                $hover.removeClass('nui-hvr');
               }
             }
           });
@@ -206,23 +206,23 @@
                   $object.delist();
                 } else if ($.inArray(event.keyCode, [9, 40]) > -1 && !event.shiftKey) {/* tab or down arrow */
                   if ($hover) {
-                    if ($hover.nextAll('.ninja-object-item').length) {
-                      $hover.nextAll('.ninja-object-item:first').trigger('mouseenter.ninja');
+                    if ($hover.nextAll('.nui-itm').length) {
+                      $hover.nextAll('.nui-itm:first').trigger('mouseenter.ninja');
                     } else {
-                      $list.find('.ninja-object-item:first').trigger('mouseenter.ninja');
+                      $list.find('.nui-itm:first').trigger('mouseenter.ninja');
                     }
                   } else {
-                    $list.find('.ninja-object-item:first').trigger('mouseenter.ninja');
+                    $list.find('.nui-itm:first').trigger('mouseenter.ninja');
                   }
                 } else if (event.keyCode === 38 || (event.shiftKey && event.keyCode === 9)) {/* shift+tab or up arrow */
                   if ($hover) {
-                    if ($hover.prevAll('.ninja-object-item').length) {
-                      $hover.prevAll('.ninja-object-item:first').trigger('mouseenter.ninja');
+                    if ($hover.prevAll('.nui-itm').length) {
+                      $hover.prevAll('.nui-itm:first').trigger('mouseenter.ninja');
                     } else {
-                      $list.find('.ninja-object-item:last').trigger('mouseenter.ninja');
+                      $list.find('.nui-itm:last').trigger('mouseenter.ninja');
                     }
                   } else {
-                    $list.find('.ninja-object-item:last').trigger('mouseenter.ninja');
+                    $list.find('.nui-itm:last').trigger('mouseenter.ninja');
                   }
                 }
                 return false;
@@ -245,15 +245,15 @@
             var $choice;
             if (choice.spacer) {
               $choice = $('<div/>', {
-                'class': 'ninja-object-rule'
+                'class': 'nui-rul'
               });
             } else {
               $choice = $('<button/>', {
-                'class': 'ninja-object-item'
+                'class': 'nui-itm'
               });
               $choice.bind({
                 'mouseleave.ninja': function () {
-                  $hover.removeClass('ninja-state-hover');
+                  $hover.removeClass('nui-hvr');
                 },
                 'click.ninja': function () {
                   $object.trigger('delist.ninja').focus();
@@ -268,7 +268,7 @@
                   if ($hover) {
                     $hover.trigger('mouseleave.ninja');
                   }
-                  $hover = $choice.addClass('ninja-state-hover');
+                  $hover = $choice.addClass('nui-hvr');
                 }
               });
             }
@@ -309,7 +309,7 @@
               'blur.ninja': function () {
                 value = $object.val();
                 if (value === '' || value === placeholder) {
-                  $object.addClass('ninja-state-placeholder');
+                  $object.addClass('nui-plc');
                   if (value === '') {
                     $object.val(placeholder);
                   }
@@ -317,7 +317,7 @@
               },
               'focus.ninja': function () {
                 if ($object.val() === placeholder) {
-                  $object.removeClass('ninja-state-placeholder').val('');
+                  $object.removeClass('nui-plc').val('');
                 }
               }
             }).trigger('blur.ninja');
@@ -331,7 +331,7 @@
         var $object = $(this).ninja();
         if ($.isFunction(event)) {
           $object.bind('select.ninja', event);
-        } else if (!$object.is('.ninja-state-disable')) {
+        } else if (!$object.is('.nui-dsb')) {
           $object.trigger('select.ninja');
         }
       });
@@ -357,7 +357,7 @@
       var
         timer,
         $autocomplete = $('<span/>', {
-          'class': 'ninja-object-autocomplete'
+          'class': 'nui-atc'
         }).bind({
           'select.ninja': function (event) {
             if (event.html) {
@@ -372,14 +372,14 @@
           }
         }),
         $input = $('<input/>', {
-          'class': 'ninja-object-input',
+          'class': 'nui-inp',
           type: 'text'
         }).bind({
           'keyup.ninja': function (event) {
             clearTimeout(timer);
             if ($.inArray(event.keyCode, [9, 13, 27, 37, 38, 39, 40]) === -1 && $input.val() !== '') {/* not tab, return, escape, left , up, right or down */
               timer = setTimeout(function () {
-                var $spin = $autocomplete.find('.ninja-object-icon[aria-label=spin]');
+                var $spin = $autocomplete.find('.nui-icn[aria-label=spin]');
                 if ($spin.is(':hidden')) {
                   $spin.show();
                 } else {
@@ -401,14 +401,14 @@
     button: function (options) {
       options = $.extend({}, defaults, options);
       var $button = $('<button/>', {
-        'class': 'ninja-object-button',
+        'class': 'nui-btn',
         css: options.css,
         html: options.html
       });
       $button.bind({
         'click.ninja': function (event) {
-          if (!$button.is('.ninja-state-disable')) {
-            if ($button.is('.ninja-state-select')) {
+          if (!$button.is('.nui-dsb')) {
+            if ($button.is('.nui-slc')) {
               $button.trigger('deselect.ninja');
             } else {
               $button.trigger('select.ninja');
@@ -417,7 +417,7 @@
           event.stopImmediatePropagation();
         },
         'deselect.ninja': function () {
-          $button.removeClass('ninja-state-select');
+          $button.removeClass('nui-slc');
         },
         'disable.ninja': function () {
           $button.attr({
@@ -430,7 +430,7 @@
           });
         },
         'select.ninja': function () {
-          $button.addClass('ninja-state-select');
+          $button.addClass('nui-slc');
         }
       });
       if (options.select) {
@@ -448,7 +448,7 @@
       }, options);
       var
         $dialog = $('<span/>', {
-          'class': 'ninja-object-dialog',
+          'class': 'nui-dlg',
           css: options.css,
           html: options.html
         }),
@@ -458,7 +458,7 @@
           $dialog.detach();
         }).appendTo($dialog),
         $blocker = $('<div/>', {
-          'class': 'ninja-object-blocker'
+          'class': 'nui-blk'
         }).bind('click.ninja', function (event) {
           if ($.inArray($dialog[0], $(event.target).parents()) === -1) {
             $dialog.detach();
@@ -492,11 +492,11 @@
       options = $.extend({}, defaults, options);
       var
         $drawer = $('<div/>', {
-          'class': 'ninja-object-drawer',
+          'class': 'nui-drw',
           css: options.css
         }),
         $tray = $('<div/>', {
-          'class': 'ninja-object-tray',
+          'class': 'nui-try',
           html: options.html
         }).appendTo($drawer),
         $arrowDown = $.ninja.icon({
@@ -592,7 +592,7 @@
         defs = '<defs><rect id="' + idSymbol + '" x="7" width="2" height="4"/></defs>';
         g = '<use xlink:href="#' + idSymbol + '" style="opacity:.1" transform="rotate(30 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.2" transform="rotate(60 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.3" transform="rotate(90 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.4" transform="rotate(120 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.5" transform="rotate(150 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.6" transform="rotate(180 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.7" transform="rotate(210 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.8" transform="rotate(240 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.9" transform="rotate(270 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.9.5" transform="rotate(300 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.9.75" transform="rotate(330 8 8)"/><use xlink:href="#' + idSymbol + '"/>';
       }
-      $icon = $('<svg aria-label="' + options.name + '" class="ninja-object-icon" height="1" width="1"' + onload + ' role="img" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>' + options.name + '</title>' + defs + '<g id="' + idVector + '" stroke-width="0">' + g + '</g></svg>');
+      $icon = $('<svg aria-label="' + options.name + '" class="nui-icn" height="1" width="1"' + onload + ' role="img" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>' + options.name + '</title>' + defs + '<g id="' + idVector + '" stroke-width="0">' + g + '</g></svg>');
       if (options.css) {
         $icon.find('g').css(options.css);
       }
@@ -603,7 +603,7 @@
       options = $.extend({}, defaults, options);
       var $menu = $.ninja.button($.extend({}, options, {
         html: options.html
-      })).addClass('ninja-object-menu').append($.ninja.icon({
+      })).addClass('nui-mnu').append($.ninja.icon({
         name: 'arrow-down'
       })).select(function () {
         $menu.blur().list(options);
@@ -624,35 +624,35 @@
       var
         i,
         $rating = $('<span/>', {
-          'class': 'ninja-object-rating'
+          'class': 'nui-rating'
         }).bind({
           'mouseleave.ninja': function () {
-            $rating.find('.ninja-object-star').each(function (ii, star) {
+            $rating.find('.nui-str').each(function (ii, star) {
               var $star = $(star);
               if (options.select === 0) {
                 if (ii < options.average) {
-                  $star.addClass('ninja-state-average');
+                  $star.addClass('nui-avg');
                 } else {
-                  $star.removeClass('ninja-state-average');
+                  $star.removeClass('nui-avg');
                 }
               }
               if (ii < options.select) {
-                $star.addClass('ninja-state-individual');
+                $star.addClass('nui-ind');
               } else {
-                $star.removeClass('ninja-state-individual');
+                $star.removeClass('nui-ind');
               }
             });
           }
         });
       for (i = 0; i < options.stars; i++) {
         $('<button/>', {
-          'class': 'ninja-object-star',
+          'class': 'nui-str',
           html: $.ninja.icon({
             'name': 'star'
           })
         }).appendTo($rating);
       }
-      $rating.find('.ninja-object-star').each(function (i, star) {
+      $rating.find('.nui-str').each(function (i, star) {
         i++;
         var $star = $(star);
         $star.bind({
@@ -664,12 +664,12 @@
             });
           },
           'mouseenter.ninja': function () {
-            $rating.find('.ninja-object-star').each(function (ii, star) {
-              var $star = $(star).removeClass('ninja-state-average');
+            $rating.find('.nui-str').each(function (ii, star) {
+              var $star = $(star).removeClass('nui-avg');
               if (ii < i) {
-                $star.addClass('ninja-state-individual');
+                $star.addClass('nui-ind');
               } else {
-                $star.removeClass('ninja-state-individual');
+                $star.removeClass('nui-ind');
               }
             });
           }
@@ -692,20 +692,20 @@
         increment = options.width / slots,
         left = options.slot * increment,
         $choice = $('<span/>', {
-          'class': 'ninja-object-slider-choice',
+          'class': 'nui-sld-choice',
           html: options.choices[options.slot].html
         }),
         $button = $('<button/>', {
-          'class': 'ninja-object-slider-button',
+          'class': 'nui-sld-btn',
           css: { left: left }
         }),
         trackWidth = options.width + 18,
         $level = $('<div/>', {
-          'class': 'ninja-object-slider-level',
+          'class': 'nui-sld-lvl',
           css: { width: left }
         }),
         $slider = $('<span/>', {
-          'class': 'ninja-object-slider'
+          'class': 'nui-sld'
         }).bind({
           'change.ninja select.ninja': function (event) {
             var slot;
@@ -729,11 +729,11 @@
           }
         }).append($choice),
         $track = $('<div/>', {
-          'class': 'ninja-object-slider-track',
+          'class': 'nui-sld-trk',
           css: { width: trackWidth }
         }).appendTo($slider),
         $groove = $('<div/>', {
-          'class': 'ninja-object-slider-groove'
+          'class': 'nui-sld-grv'
         }).bind('click.ninja', function (event) {
           $button.trigger({
             type: 'select.ninja',
@@ -743,7 +743,7 @@
       $track.append($groove.append($level), $button);
       if (options.title) {
         $choice.before($('<span/>', {
-          'class': 'ninja-object-slider-title',
+          'class': 'nui-sld-ttl',
           text: options.title + ': '
         }));
       }
@@ -768,7 +768,7 @@
         },
         'mousedown.ninja touchstart.ninja': function (event) {
           event.preventDefault();
-          $button.addClass('ninja-state-select');
+          $button.addClass('nui-slc');
           return false;
         },
         'mousedown.ninja': function (event) {
@@ -785,7 +785,7 @@
               });
             },
             'mouseup.ninja': function (event) {
-              $button.removeClass('ninja-state-select');
+              $button.removeClass('nui-slc');
               drag = false;
               $button.trigger({
                 type: 'select.ninja',
@@ -812,7 +812,7 @@
         },
         'touchend.ninja': function (event) {
           event.preventDefault();
-          $button.removeClass('ninja-state-select').trigger({
+          $button.removeClass('nui-slc').trigger({
             type: 'select.ninja',
             sliderX: Math.round((touch.pageX - offsetX) / increment)
           });
@@ -827,18 +827,18 @@
       }, options);
       var $tabs = $('<span/>');
       if (options.vertical) {
-        $tabs.addClass('ninja-object-tabs-vertical');
+        $tabs.addClass('nui-tab-vrt');
       } else {
-        $tabs.addClass('ninja-object-tabs-horizontal');
+        $tabs.addClass('nui-tab-hrz');
       }
       $.each(options.choices, function (i, choice) {
         var $tab = $('<button/>', {
-          'class': 'ninja-object-tab',
+          'class': 'nui-tab',
           css: options.css,
           html: choice.html || choice
         }).bind({
           'click.ninja': function () {
-            if (!$tab.is('.ninja-state-disable') && !$tab.is('.ninja-state-select')) {
+            if (!$tab.is('.nui-dsb') && !$tab.is('.nui-slc')) {
               $tab.trigger('select.ninja');
             }
           },
@@ -853,8 +853,8 @@
             });
           },
           'select.ninja': function () {
-            $tabs.children().not($tab).removeClass('ninja-state-select');
-            $tab.addClass('ninja-state-select');
+            $tabs.children().not($tab).removeClass('nui-slc');
+            $tab.addClass('nui-slc');
             if ($.isFunction(choice.select)) {
               choice.select();
             }
