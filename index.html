@@ -489,19 +489,24 @@ var
           <h5>Options:</h5>
           <ul>
             <li>css: {}</li>
-            <li>html: ''</li>
-            <li></li>
+            <li>average: 0-5</li>
+            <li>select: 0-5</li>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>select(event.stars)</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
-$.ninja.({});</pre>
+var
+  $ratingExampleOutput = $('&lt;textarea/>'),
+
+  $ratingExample = $.<strong>ninja</strong>.<strong>rating</strong>({
+    <strong>average</strong>: 3
+  }).<strong>select</strong>(function (event) {
+    $ratingExampleOutput.html('New rating: ' + event.<strong>stars</strong> + ' stars');
+  });</pre>
         </div>
 
         <h4 id="slider">Slider<small> </small></h4>
