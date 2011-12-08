@@ -214,9 +214,7 @@
           }
         }
       ]
-    }),
-
-    $themeExamples = $('<div/>');
+    });
 
   $usageDialog = $.ninja.dialog({
     html: '<img src="/img/logo.png"/>'
@@ -289,19 +287,6 @@
       'class': 'icon-example'
     }).append($icon, ' ', iconName).appendTo($iconExamples);
   });
-
-  $themeExamples.append(
-    $autocompleteExample.clone(),
-    $buttonExample.clone(),
-    $buttonExampleSelect.clone(),
-    $drawerExample.clone(),
-    $drawerExampleSelect.clone(),
-    $iconExamples.clone(),
-    $menuExample.clone(),
-    $ratingExample.clone(),
-    $sliderExample.clone(),
-    $tabsExample.clone()
-  );
 
   $(document).ready(function () {
 
@@ -457,7 +442,82 @@
 
     $('#tabsExamples').append($tabsExample, '<br/><br/>', $tabsExampleOutput);
 
-    $('.theme-examples').append($themeExamples);
+    $('.theme-examples').each(function () {
+      var $autocomplete;
+      $(this).append(
+        $autocomplete = $.ninja.autocomplete({
+          placeholder: 'Autocomplete'
+        }).source(function (event) {
+          $autocomplete.list({
+            choices: [
+              { html: 'Choice 1' },
+              { html: 'Choice 2' },
+              { html: 'Choice 3' }
+            ],
+            query: event.query
+          });
+        }),
+
+        '<br/></br/>',
+
+        $.ninja.button({
+          html: 'Button'
+        }),
+
+        '<br/></br/>',
+
+        $.ninja.drawer({
+          html: 'HTML',
+          title: 'Drawer'
+        }),
+
+        '<br/></br/>',
+
+        $iconExamples.clone(),
+
+        '<br/></br/>',
+
+        $.ninja.menu({
+          choices: [
+            { html: 'Choice 1' },
+            { html: 'Choice 2' },
+            { spacer: true },
+            { html: 'Choice 3' }
+          ],
+          html: 'Menu'
+        }),
+
+        '<br/></br/>',
+
+        $.ninja.rating({
+          average: 3
+        }).select(function (event) {
+          $ratingExampleOutput.html('New rating: ' + event.stars + ' stars');
+        }),
+
+        '<br/></br/>',
+
+        $.ninja.slider({
+          choices: [
+            { html: 'Choice 1' },
+            { html: 'Choice 2' },
+            { html: 'Choice 3' }
+          ],
+          title: 'Slider'
+        }),
+
+        '<br/></br/>',
+
+        $.ninja.tabs({
+          choices: [
+            { html: 'Tab 1' },
+            { html: 'Tab 2' },
+            { html: 'Tab 3' }
+          ]
+        })
+
+      );
+    });
 
     $navigation.scrollSpy();
 
