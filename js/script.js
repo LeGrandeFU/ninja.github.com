@@ -443,7 +443,32 @@
     $('#tabsExamples').append($tabsExample, '<br/><br/>', $tabsExampleOutput);
 
     $('.theme-examples').each(function () {
-      var $autocomplete;
+      var
+        $autocomplete,
+        $dialog = $('<span/>', {
+          'class': 'nui-dlg',
+          css: {
+            display: 'block',
+            padding: '1em',
+            position: 'relative'
+          },
+          text: 'Dialog'
+        }),
+        $icons = $('<div/>');
+
+      $.ninja.icon({
+        name: 'X'
+      }).appendTo($dialog);
+
+      $.each(iconNames, function (i, iconName) {
+        $icons.append(
+          $.ninja.icon({
+            name: iconName
+          }),
+          ' '
+        );
+      });
+
       $(this).append(
         $autocomplete = $.ninja.autocomplete({
           placeholder: 'Autocomplete'
@@ -466,16 +491,20 @@
 
         '<br/></br/>',
 
+        $dialog,
+
+        '<br/>',
+
         $.ninja.drawer({
           html: 'HTML',
           title: 'Drawer'
         }),
 
-        '<br/></br/>',
+        '<br/>',
 
-        $iconExamples.clone(),
+        $icons,
 
-        '<br/></br/>',
+        '<br/>',
 
         $.ninja.menu({
           choices: [
@@ -503,6 +532,7 @@
             { html: 'Choice 2' },
             { html: 'Choice 3' }
           ],
+          slot: 1,
           title: 'Slider'
         }),
 
