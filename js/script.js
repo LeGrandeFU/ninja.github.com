@@ -103,7 +103,7 @@
 
     }),
 
-    iconNames = ['spin', 'stop', 'yield', 'go', 'x', '-', '+', 'arrow-down', 'arrow-right', 'camera', 'home', 'email', 'search', 'star', 'X'],
+    iconNames = ['spin', 'stop', 'yield', 'go', 'x', '-', '+', 'camera', 'home', 'email', 'search', 'star'],
 
     $iconExamples = $('<span/>'),
 
