@@ -413,6 +413,12 @@ small {
   vertical-align: top;
   width: 240px;
 }
+.theme-examples .nui-dlg {
+  display: block;
+  padding: 1em;
+  position: relative;
+  z-index: auto;
+}
 .theme-examples.nui-thm-chocolate {
 }
 .theme-examples.nui-thm-dojo {

@@ -447,11 +447,6 @@
         $autocomplete,
         $dialog = $('<span/>', {
           'class': 'nui-dlg',
-          css: {
-            display: 'block',
-            padding: '1em',
-            position: 'relative'
-          },
           text: 'Dialog'
         }),
         $icons = $('<div/>');
