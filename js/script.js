@@ -71,12 +71,6 @@
       disable: true
     }),
 
-    $buttonExampleHint = $.ninja.button({
-      html: 'Keep it secret.'
-    }).hint({
-      html: 'Keep it safe.'
-    }),
-
     $dialogExampleCheckbox,
 
     $dialogExample = $.ninja.dialog({
@@ -165,11 +159,7 @@
 
     $sliderExample = $.ninja.slider({
       choices: [
-        {
-          html: $('<span title="">0 dB</span>').ninja().hint({
-            html: 'Silence'
-          })
-        },
+        { html: '<span title="Silence">0 dB</span>' },
         { html: '<span title="Light leaf rustling, calm breathing">10 dB</span>' },
         { html: '<span title="Very calm room">20-30 dB</span>' },
         { html: '<span title="Normal conversation at 1 m">40-60 dB</span>' },
@@ -425,7 +415,7 @@
     $('#usageButton').append($usageButton);
     $('#autocompleteExamples').prepend($autocompleteExample);
 
-    $('#buttonExamples').append($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable, '<br/><br/>', $buttonExampleHint);
+    $('#buttonExamples').append($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable);
     $('#buttonExamplesRemote').append($buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable');
 
     $('#dialogExamples').append($dialogExampleCheckbox, ' Attach Dialog');
