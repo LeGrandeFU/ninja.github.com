@@ -255,8 +255,7 @@ small {
   background-image: -ms-radial-gradient(center top, 0, center top, 320, #555, #222);
   background-image: -o-radial-gradient(center top, 0, center top, 320, #555, #222);
   background-image: radial-gradient(center top, 0, center top, 320, #555, #222);
-  margin-top: 30px;
-  padding: 30px 0;
+  padding: 60px 0 30px 0;
 }
 #logo {
   color: #fff;
@@ -372,14 +371,14 @@ small {
   width: 64%;
 }
 .section {
-  margin-top: 10px;
+  padding-top: 30px;
 }
 .section .grid-one-half,
 .section .grid-one-quarter,
 .section .grid-one-third,
 .section .grid-three-quarters,
 .section .grid-two-thirds {
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .section h2,
 .subsection h5 {
@@ -420,6 +419,7 @@ small {
 .theme-examples.nui-thm-dojo {
   background-color: #333;
   border-color: #666;
+  color: #fff;
 }
 /* Mobile */
 @media only screen and (min-width: 320px) and (max-width: 768px) {

@@ -6,7 +6,7 @@
 
   var
     $menuIcon = $.ninja.icon({
-      name: 'arrow-down'
+      value: 'arrow-down'
     }),
 
     $usageDialog,
@@ -19,7 +19,7 @@
 
     $autocompleteExample = $.ninja.autocomplete({
       placeholder: 'United States Cities'
-    }).source(function (event) {
+    }).values(function (event) {
       $.ajax({
         url: 'http://ws.geonames.org/searchJSON',
         dataType: 'jsonp',
@@ -32,7 +32,7 @@
         },
         success: function (data) {
           $autocompleteExample.list({
-            choices: $.map(data.geonames, function (item) {
+            values: $.map(data.geonames, function (item) {
               return {
                 html: item.name + ', ' + item.adminName1,
                 value: item.name + ', ' + item.adminCode1
@@ -87,13 +87,13 @@
 
     $drawerExample = $.ninja.drawer({
       html: '<div style="padding: 50px">This is <b>HTML</b>.</div>',
-      title: 'Drawer'
+      value: 'Drawer'
     }),
 
     $drawerExampleSelect = $.ninja.drawer({
       html: '<div style="padding: 50px">This is <b>HTML</b>.</div>',
       select: true,
-      title: '<i>Selected</i> Drawer'
+      value: 'Select'
 
     }),
 
@@ -106,7 +106,7 @@
     }),
 
     $menuExample = $.ninja.menu({
-      choices: [
+      values: [
         {
           html: '<div>Mo</div>',
           select: function () {
@@ -125,7 +125,7 @@
             $menuExampleOutput.html('Hey, Mo!');
           }
         },
-        { spacer: true },
+        { rule: true },
         {
           html: '<div>Shemp</div>',
           select: function () {
@@ -153,12 +153,14 @@
     $ratingExample = $.ninja.rating({
       average: 3
     }).select(function (event) {
-      $ratingExampleOutput.html('New rating: ' + event.stars + ' stars');
+      $ratingExampleOutput.html('New rating: ' + event.value + ' stars');
     }),
 
 
     $sliderExample = $.ninja.slider({
-      choices: [
+      html: 'Volume',
+      value: 3,
+      values: [
         { html: '<span title="Silence">0 dB</span>' },
         { html: '<span title="Light leaf rustling, calm breathing">10 dB</span>' },
         { html: '<span title="Very calm room">20-30 dB</span>' },
@@ -172,9 +174,7 @@
         { html: '<span title="Threshold of pain">130 dB</span>' },
         { html: '<span title="Jet engine at 30 m">150 dB</span>' },
         { html: '<span title="M1 Garand rifle being fired at 1 m">168 dB</span>' }
-      ],
-      slot: 3,
-      title: 'Volume'
+      ]
     }),
 
     $tabsExampleOutput = $('<textarea/>'),
@@ -184,7 +184,7 @@
     },
 
     $tabsExample = $.ninja.tabs({
-      choices: [
+      values: [
         {
           html: 'Gold',
           select: function () {
@@ -204,6 +204,31 @@
           }
         }
       ]
+    }),
+
+    $tabsExampleVertical = $.ninja.tabs({
+      value: 2,
+      values: [
+        {
+          html: 'Gold',
+          select: function () {
+            poorly();
+          }
+        },
+        {
+          html: 'Silver',
+          select: function () {
+            poorly();
+          }
+        },
+        {
+          html: 'Wood',
+          select: function () {
+            $tabsExampleOutput.html('You have chosen... wisely.');
+          }
+        }
+      ],
+      vertical: true
     });
 
   $usageDialog = $.ninja.dialog({
@@ -213,6 +238,7 @@
   });
 
   $buttonExampleCheckboxSelect = $('<input/>', {
+    id: 'buttonExampleCheckboxSelect',
     type: 'checkbox'
   }).change(function () {
     if ($buttonExampleCheckboxSelect.attr('checked')) {
@@ -223,6 +249,7 @@
   });
 
   $buttonExampleCheckboxDisable = $('<input/>', {
+    id: 'buttonExampleCheckboxDisable',
     type: 'checkbox'
   }).change(function () {
     if ($buttonExampleCheckboxDisable.attr('checked')) {
@@ -233,6 +260,7 @@
   });
 
   $dialogExampleCheckbox = $('<input/>', {
+    id: 'dialogExampleCheckbox',
     type: 'checkbox'
   }).change(function () {
     if ($dialogExampleCheckbox.attr('checked')) {
@@ -250,7 +278,7 @@
           fill: '#c00',
           stroke: '#c00'
         },
-        name: iconName
+        value: iconName
       });
     } else if (iconName === 'yield') {
       $icon = $.ninja.icon({
@@ -258,7 +286,7 @@
           fill: 'goldenrod',
           stroke: 'goldenrod'
         },
-        name: iconName
+        value: iconName
       });
     } else if (iconName === 'go') {
       $icon = $.ninja.icon({
@@ -266,11 +294,11 @@
           fill: 'green',
           stroke: 'green'
         },
-        name: iconName
+        value: iconName
       });
     } else {
       $icon = $.ninja.icon({
-        name: iconName
+        value: iconName
       });
     }
     $exampleIcon = $('<span/>', {
@@ -295,7 +323,7 @@
           downloadFileName = 'jquery.ninjaui.js',
           downloadFileNameMinified = 'jquery.ninjaui.min.js';
         $downloadMenu.ninja().list({
-          choices: [
+          values: [
             {
               html: $('<div/>', {
                 html: downloadFileNameMinified
@@ -323,7 +351,7 @@
     $examplesMenu.toggle(
       function () {
         $examplesMenu.ninja().list({
-          choices: [
+          values: [
             {
               html: $('<div/>', {
                 html: 'Autocomplete'
@@ -404,21 +432,13 @@
       }
     );
 
-    $.ajax({
-      url: 'https://api.github.com/repos/ninja/ui',
-      dataType: 'jsonp',
-      success: function (object) {
-        $('#githubWatchersCount').prepend(object.data.watchers + ' ');
-      }
-    });
-
     $('#usageButton').append($usageButton);
     $('#autocompleteExamples').prepend($autocompleteExample);
 
     $('#buttonExamples').append($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable);
-    $('#buttonExamplesRemote').append($buttonExampleCheckboxSelect, ' Select ', $buttonExampleCheckboxDisable, ' Disable');
+    $('#buttonExamplesMethods').prepend($buttonExampleCheckboxSelect, ' <label for="buttonExampleCheckboxSelect">Select</label> ', $buttonExampleCheckboxDisable, ' <label for="buttonExampleCheckboxDisable">Disable</label>', '<br/><br/>');
 
-    $('#dialogExamples').append($dialogExampleCheckbox, ' Attach Dialog');
+    $('#dialogExamples').append($dialogExampleCheckbox, ' <label for="dialogExampleCheckbox">Attach Dialog</label>');
 
     $('#drawerExamples').append($drawerExample, $drawerExampleSelect);
 
@@ -430,7 +450,7 @@
 
     $('#sliderExamples').append($sliderExample);
 
-    $('#tabsExamples').append($tabsExample, '<br/><br/>', $tabsExampleOutput);
+    $('#tabsExamples').append($tabsExample, '<br/><br/>', $tabsExampleVertical, '<br/><br/>', $tabsExampleOutput);
 
     $('.theme-examples').each(function () {
       var
@@ -442,13 +462,13 @@
         $icons = $('<div/>');
 
       $.ninja.icon({
-        name: 'X'
+        value: 'X'
       }).appendTo($dialog);
 
       $.each(iconNames, function (i, iconName) {
         $icons.append(
           $.ninja.icon({
-            name: iconName
+            value: iconName
           }),
           ' '
         );
@@ -457,12 +477,12 @@
       $(this).append(
         $autocomplete = $.ninja.autocomplete({
           placeholder: 'Autocomplete'
-        }).source(function (event) {
+        }).values(function (event) {
           $autocomplete.list({
-            choices: [
-              { html: 'Choice 1' },
-              { html: 'Choice 2' },
-              { html: 'Choice 3' }
+            values: [
+              { html: 'Value 1' },
+              { html: 'Value 2' },
+              { html: 'Value 3' }
             ],
             query: event.query
           });
@@ -482,7 +502,7 @@
 
         $.ninja.drawer({
           html: 'HTML',
-          title: 'Drawer'
+          value: 'Drawer'
         }),
 
         '<br/>',
@@ -492,11 +512,11 @@
         '<br/>',
 
         $.ninja.menu({
-          choices: [
-            { html: 'Choice 1' },
-            { html: 'Choice 2' },
-            { spacer: true },
-            { html: 'Choice 3' }
+          values: [
+            { html: 'Value 1' },
+            { html: 'Value 2' },
+            { rule: true },
+            { html: 'Value 3' }
           ],
           html: 'Menu'
         }),
@@ -512,19 +532,19 @@
         '<br/></br/>',
 
         $.ninja.slider({
-          choices: [
-            { html: 'Choice 1' },
-            { html: 'Choice 2' },
-            { html: 'Choice 3' }
-          ],
-          slot: 1,
-          title: 'Slider'
+          html: 'Slider',
+          value: 1,
+          values: [
+            { html: 'Value 1' },
+            { html: 'Value 2' },
+            { html: 'Value 3' }
+          ]
         }),
 
         '<br/></br/>',
 
         $.ninja.tabs({
-          choices: [
+          values: [
             { html: 'Tab 1' },
             { html: 'Tab 2' },
             { html: 'Tab 3' }
@@ -532,6 +552,18 @@
         })
 
       );
+    });
+
+    $.ajax({
+      url: 'https://api.github.com/repos/ninja/ui',
+      dataType: 'jsonp',
+      error: function () {
+        $('#githubWatchersCount').prepend(' 191');
+      },
+      success: function (object) {
+        $('#githubWatchersCount').prepend(object.data.watchers + ' ');
+      },
+      timeout: 3000
     });
 
     $navigation.scrollSpy();

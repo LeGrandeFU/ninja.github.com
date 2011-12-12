@@ -42,7 +42,7 @@
 
   $('<link/>', {
     rel: 'stylesheet',
-    href: 'data:text/css;base64,LyohCiAgTmluamEgVXNlciBJbnRlcmZhY2UgalF1ZXJ5IFBsdWdpbiB2ZGV2ZWxvcG1lbnQKICBodHRwOi8vbmluamF1aS5jb20vCiAgQ29weXJpZ2h0IDIwMDgtMjAxMSBKYW1pZSBIb292ZXIKICBMaWNlbnNlZCBwZXIgdGhlIHRlcm1zIG9mIHRoZSBBcGFjaGUgTGljZW5zZSB2Mi4wCiAgaHR0cDovL25pbmphdWkuY29tLyNsaWNlbnNlCiovLm51aS1hdGMsLm51aS1tbnUsLm51aS1zbGQtdHJre3Bvc2l0aW9uOnJlbGF0aXZlfS5udWktYXRjIC5udWktaWNuW2FyaWEtbGFiZWw9c3Bpbl0sLm51aS1ibGssLm51aS1kbGcsLm51aS1kbGcgLm51aS1pY25bYXJpYS1sYWJlbD1YXSwubnVpLWxzdCwubnVpLXNsZC1idG4sLm51aS1zbGQtZ3J2e3Bvc2l0aW9uOmFic29sdXRlfS5udWktYXRjIC5udWktaWNuW2FyaWEtbGFiZWw9c3Bpbl17b3BhY2l0eTouNTtyaWdodDoxcHg7dG9wOjFweH0ubnVpLWF0YyBpbnB1dHtwYWRkaW5nLXJpZ2h0OjE3cHh9Lm51aS1ibGssLm51aS1kbGcsLm51aS1sc3R7YmFja2dyb3VuZC1jb2xvcjpyZ2JhKDI1NSwyNTUsMjU1LC44NSl9Lm51aS1ibGssLm51aS1kcncgLm51aS1idG4sLm51aS1pdG17d2lkdGg6MTAwJX0ubnVpLWJsaywubnVpLXNsZC1idG57bGVmdDowO3RvcDowfS5udWktYnRuLC5udWktaXRtLm51aS1odnIsLm51aS1zbGQtYnRuLC5udWktc2xkLWx2bCwubnVpLXRhYntiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLGxlZnQgdG9wLGxlZnQgYm90dG9tLGNvbG9yc3RvcCgwLHJnYmEoMjU1LDI1NSwyNTUsLjIpKSxjb2xvcnN0b3AoMC41LHJnYmEoMjU1LDI1NSwyNTUsMCkpLGNvbG9yc3RvcCgwLjUscmdiYSgwLDAsMCwwKSksY29sb3JzdG9wKDEscmdiYSgwLDAsMCwuMSkpKTtiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW1vei1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbXMtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW8tbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpfS5udWktYnRuLC5udWktaXRtLC5udWktdGFiLC5udWktdHJ5e3BhZGRpbmc6LjJlbSAxZW19Lm51aS1idG4sLm51aS1pdG0sLm51aS10YWJ7bGluZS1oZWlnaHQ6MWVtO3RleHQtc2hhZG93OjAgMXB4IDAgI2ZmZn0ubnVpLWJ0bjpob3ZlciwubnVpLWRsZyAubnVpLWljblthcmlhLWxhYmVsPVhdLC5udWktaXRtLm51aS1odnIsLm51aS1zbGQtYnRuLC5udWktc2xkLWdydiwubnVpLXN0cjpob3ZlciwubnVpLXRhYjpob3ZlcntjdXJzb3I6cG9pbnRlcn0ubnVpLWJ0biwubnVpLWxzdCwubnVpLWRsZywubnVpLXNsZC1idG4sLm51aS1zbGQtZ3J2LC5udWktc2xkLWx2bCwubnVpLXRhYiwubnVpLXRyeXstd2Via2l0LWJhY2tncm91bmQtY2xpcDpwYWRkaW5nLWJveDstbW96LWJhY2tncm91bmQtY2xpcDpwYWRkaW5nO2JhY2tncm91bmQtY2xpcDpwYWRkaW5nLWJveH0ubnVpLWJ0biwubnVpLWxzdCwubnVpLWRsZywubnVpLXNsZC1idG4sLm51aS1zbGQtZ3J2LC5udWktdGFiLC5udWktdHJ5e2JhY2tncm91bmQtY29sb3I6I2VlZTtib3JkZXI6MXB4IHNvbGlkICM2NjZ9Lm51aS1idG4sLm51aS1sc3QsLm51aS1kbGd7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi40ZW07LW1vei1ib3JkZXItcmFkaXVzOi40ZW07Ym9yZGVyLXJhZGl1czouNGVtfS5udWktYnRuLC5udWktaXRtLC5udWktc2xkLWJ0biwubnVpLXN0ciwubnVpLXRhYnttYXJnaW46MDtvdXRsaW5lLXdpZHRoOjFweH0ubnVpLWJ0biwubnVpLXRhYnt0ZXh0LWFsaWduOmNlbnRlcn0ubnVpLWJ0biAubnVpLWljbiwubnVpLWl0bSAubnVpLWljbiwubnVpLXRhYiAubnVpLWljbnt2ZXJ0aWNhbC1hbGlnbjpib3R0b219Lm51aS1kbGcsLm51aS1sc3R7Ym9yZGVyOjFweCBzb2xpZCAjY2NjOy13ZWJraXQtYm94LXNoYWRvdzowIC4yZW0gLjRlbSByZ2JhKDAsMCwwLC41KTstbW96LWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7LW1zLWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7LW8tYm94LXNoYWRvdzowIC4yZW0gLjRlbSByZ2JhKDAsMCwwLC41KTtib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpO3otaW5kZXg6KzF9Lm51aS1kbGd7cGFkZGluZzouNmVtfS5udWktZGxnIC5udWktaWNuW2FyaWEtbGFiZWw9WF17cmlnaHQ6LTExcHg7dG9wOi0xMXB4fS5udWktZHJ3IC5udWktYnRuLC5udWktaXRtLC5udWktdGFiLXZydCAubnVpLXRhYntkaXNwbGF5OmJsb2NrfS5udWktZHJ3IC5udWktYnRuLC5udWktaXRtLC5udWktbHN0e3RleHQtYWxpZ246bGVmdH0ubnVpLWRydyAubnVpLWJ0bntwYWRkaW5nLWxlZnQ6MH0ubnVpLWRydyAubnVpLWJ0bi5udWktc2xjey13ZWJraXQtYm9yZGVyLXJhZGl1czouNGVtIC40ZW0gMCAwOy1tb3otYm9yZGVyLXJhZGl1czouNGVtIC40ZW0gMCAwO2JvcmRlci1yYWRpdXM6LjRlbSAuNGVtIDAgMH0ubnVpLWxzdCwubnVpLXRhYi1ocnosLm51aS10YWItdnJ0e3doaXRlLXNwYWNlOm5vd3JhcH0ubnVpLWljbiwubnVpLXNsZCwubnVpLXRhYi1ocnp7ZGlzcGxheTppbmxpbmUtYmxvY2t9Lm51aS1pY257aGVpZ2h0OjFlbTt2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7d2lkdGg6MWVtfS5udWktaWNuIGd7ZmlsbDojMzMzO3N0cm9rZTojMzMzfS5udWktaWNuW2FyaWEtbGFiZWw9WF17aGVpZ2h0OjIycHg7d2lkdGg6MjJweH0ubnVpLWljblthcmlhLWxhYmVsPVhdIGNpcmNsZSwubnVpLXN0ciBne3N0cm9rZTojY2NjO3N0cm9rZS13aWR0aDoxfS5udWktaWNuW2FyaWEtbGFiZWw9WF0gcG9seWdvbiwubnVpLWl0bS5udWktaHZyIGcsLm51aS1zbGMgZ3tmaWxsOiNmZmZ9Lm51aS1pdG0sLm51aS1zdHJ7YmFja2dyb3VuZDowO2JvcmRlcjowfS5udWktbHN0e3BhZGRpbmc6LjZlbSAwfS5udWktcnVse2JvcmRlci10b3A6MXB4IHNvbGlkICNjY2M7bWFyZ2luOi4yZW0gMCAuNGVtIDB9Lm51aS1zbGQtYnRuLC5udWktc2xkLWdydiwubnVpLXNsZC1sdmx7LXdlYmtpdC1ib3JkZXItcmFkaXVzOjlweDstbW96LWJvcmRlci1yYWRpdXM6OXB4O2JvcmRlci1yYWRpdXM6OXB4fS5udWktc2xkLWJ0biwubnVpLXN0cntwYWRkaW5nOjB9Lm51aS1zbGQtYnRuLC5udWktc2xkLXRyaywubnVpLXN0ciAubnVpLWljbntoZWlnaHQ6MThweH0ubnVpLXNsZC1idG4sLm51aS1zdHIgLm51aS1pY257d2lkdGg6MThweH0ubnVpLXNsZC1ncnYsLm51aS1zbGQtbHZse2hlaWdodDo0cHh9Lm51aS1zbGQtZ3J2LC5udWktc2xje2JhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1ncmFkaWVudChsaW5lYXIsbGVmdCB0b3AsbGVmdCBib3R0b20sY29sb3JzdG9wKDAscmdiYSgwLDAsMCwuMykpLGNvbG9yc3RvcCgwLjUscmdiYSgwLDAsMCwwKSksY29sb3JzdG9wKDAuNSxyZ2JhKDI1NSwyNTUsMjU1LDApKSxjb2xvcnN0b3AoMSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSkpO2JhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbW96LWxpbmVhci1ncmFkaWVudCh0b3AscmdiYSgwLDAsMCwuMykgMCxyZ2JhKDAsMCwwLDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LDApIDUwJSxyZ2JhKDI1NSwyNTUsMjU1LC4xKSAxMDAlKTtiYWNrZ3JvdW5kLWltYWdlOi1tcy1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotby1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSl9Lm51aS1zbGQtZ3J2e2JhY2tncm91bmQtY29sb3I6Izk5OTtsZWZ0OjlweDtyaWdodDo5cHg7dG9wOjVweH0ubnVpLXNsZC10dGx7Zm9udC13ZWlnaHQ6NzAwfS5udWktc3Rye21hcmdpbi1yaWdodDoxcHh9Lm51aS1zdHIgZ3tmaWxsOiNlZWV9Lm51aS1zdHIubnVpLWF2ZyBne2ZpbGw6IzY2Nn0ubnVpLXN0ci5udWktaW5kIGd7ZmlsbDojMDZjO3N0cm9rZTojMDM5fS5udWktdGFie2JvcmRlci1sZWZ0LXN0eWxlOm5vbmV9Lm51aS10YWI6Zmlyc3QtY2hpbGR7Ym9yZGVyLWxlZnQtc3R5bGU6c29saWQ7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi40ZW0gMCAwIC40ZW07LW1vei1ib3JkZXItcmFkaXVzOi40ZW0gMCAwIC40ZW07Ym9yZGVyLXJhZGl1czouNGVtIDAgMCAuNGVtfS5udWktdGFiOmxhc3QtY2hpbGR7LXdlYmtpdC1ib3JkZXItcmFkaXVzOjAgLjRlbSAuNGVtIDA7LW1vei1ib3JkZXItcmFkaXVzOjAgLjRlbSAuNGVtIDA7Ym9yZGVyLXJhZGl1czowIC40ZW0gLjRlbSAwfS5udWktdHJ5e2JvcmRlcjoxcHggc29saWQgIzk5OTtib3JkZXItYm90dG9tLWNvbG9yOiNjY2M7LXdlYmtpdC1ib3JkZXItcmFkaXVzOjAgMCAuNGVtIC40ZW07LW1vei1ib3JkZXItcmFkaXVzOjAgMCAuNGVtIC40ZW07Ym9yZGVyLXJhZGl1czowIDAgLjRlbSAuNGVtO2JvcmRlci10b3Atc3R5bGU6bm9uZX0ubnVpLWl0bS5udWktaHZyLC5udWktc2xjLC5udWktc2xkLWx2bHtiYWNrZ3JvdW5kLWNvbG9yOiMwNmN9Lm51aS1pdG0ubnVpLWh2ciwubnVpLXNsY3tib3JkZXItY29sb3I6IzA2Yztjb2xvcjojZmZmO3RleHQtc2hhZG93OjAgLTFweCAxcHggIzA2Y30ubnVpLWl0bS5udWktaHZyIGcsLm51aS1zbGMgZ3tzdHJva2U6I2ZmZn0ubnVpLXBsY3tjb2xvcjojOTk5fS5udWktc2xkLWJ0bi5udWktc2xje2JhY2tncm91bmQtY29sb3I6I2NjY30ubnVpLWRzYntjdXJzb3I6ZGVmYXVsdCFpbXBvcnRhbnR9'
+    href: 'data:text/css;base64,LyohCiAgTmluamEgVXNlciBJbnRlcmZhY2UgalF1ZXJ5IFBsdWdpbiB2ZGV2ZWxvcG1lbnQKICBodHRwOi8vbmluamF1aS5jb20vCiAgQ29weXJpZ2h0IDIwMDgtMjAxMSBKYW1pZSBIb292ZXIKICBMaWNlbnNlZCBwZXIgdGhlIHRlcm1zIG9mIHRoZSBBcGFjaGUgTGljZW5zZSB2Mi4wCiAgaHR0cDovL25pbmphdWkuY29tLyNsaWNlbnNlCiovLm51aS1hdGMsLm51aS1tbnUsLm51aS1zbGQtdHJre3Bvc2l0aW9uOnJlbGF0aXZlfS5udWktYXRjIC5udWktaWNuW2FyaWEtbGFiZWw9c3Bpbl0sLm51aS1ibGssLm51aS1kbGcsLm51aS1kbGcgLm51aS1pY25bYXJpYS1sYWJlbD1YXSwubnVpLWxzdCwubnVpLXNsZC1idG4sLm51aS1zbGQtZ3J2e3Bvc2l0aW9uOmFic29sdXRlfS5udWktYXRjLC5udWktaWNuLC5udWktbW51LC5udWktc2xkLC5udWktdGFiLWhyentkaXNwbGF5OmlubGluZS1ibG9ja30ubnVpLWF0YyAubnVpLWljblthcmlhLWxhYmVsPXNwaW5de29wYWNpdHk6LjU7cmlnaHQ6MXB4O3RvcDoxcHh9Lm51aS1hdGMgaW5wdXR7cGFkZGluZy1yaWdodDoxN3B4fS5udWktYmxrLC5udWktZHJ3IC5udWktYnRuLC5udWktaXRte3dpZHRoOjEwMCV9Lm51aS1ibGssLm51aS1zbGQtYnRue2xlZnQ6MDt0b3A6MH0ubnVpLWJsa3tiYWNrZ3JvdW5kLWNvbG9yOnJnYmEoMjU1LDI1NSwyNTUsLjUpfS5udWktYnRuLC5udWktaXRtLm51aS1odnIsLm51aS1zbGQtYnRuLC5udWktc2xkLWx2bCwubnVpLXRhYntiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLGxlZnQgdG9wLGxlZnQgYm90dG9tLGNvbG9yc3RvcCgwLHJnYmEoMjU1LDI1NSwyNTUsLjIpKSxjb2xvcnN0b3AoMC41LHJnYmEoMjU1LDI1NSwyNTUsMCkpLGNvbG9yc3RvcCgwLjUscmdiYSgwLDAsMCwwKSksY29sb3JzdG9wKDEscmdiYSgwLDAsMCwuMSkpKTtiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW1vei1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMjU1LDI1NSwyNTUsLjIpIDAscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgwLDAsMCwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbXMtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW8tbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDI1NSwyNTUsMjU1LC4yKSAwLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMCwwLDAsLjEpIDEwMCUpfS5udWktYnRuLC5udWktaXRtLC5udWktdGFiLC5udWktdHJ5e3BhZGRpbmc6LjJlbSAxZW19Lm51aS1idG4sLm51aS1pdG0sLm51aS10YWJ7bGluZS1oZWlnaHQ6MWVtO3RleHQtc2hhZG93OjAgMXB4IDAgI2ZmZn0ubnVpLWJ0biwubnVpLWRsZyAubnVpLWljblthcmlhLWxhYmVsPVhdLC5udWktaXRtLC5udWktc2xkLWJ0biwubnVpLXNsZC1ncnYsLm51aS1zdHIsLm51aS10YWJ7Y3Vyc29yOnBvaW50ZXJ9Lm51aS1idG4sLm51aS1kbGcsLm51aS1sc3QsLm51aS1zbGQtYnRuLC5udWktc2xkLWdydiwubnVpLXNsZC1sdmwsLm51aS10YWIsLm51aS10cnl7LXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3g7LW1vei1iYWNrZ3JvdW5kLWNsaXA6cGFkZGluZztiYWNrZ3JvdW5kLWNsaXA6cGFkZGluZy1ib3h9Lm51aS1idG4sLm51aS1zbGQtYnRuLC5udWktc2xkLWdydiwubnVpLXRhYiwubnVpLXRyeXtiYWNrZ3JvdW5kLWNvbG9yOiNlZWU7Ym9yZGVyOjFweCBzb2xpZCAjOTk5fS5udWktYnRuLC5udWktZGxnLC5udWktbHN0ey13ZWJraXQtYm9yZGVyLXJhZGl1czouNGVtOy1tb3otYm9yZGVyLXJhZGl1czouNGVtO2JvcmRlci1yYWRpdXM6LjRlbX0ubnVpLWJ0biwubnVpLWl0bSwubnVpLXNsZC1idG4sLm51aS1zdHIsLm51aS10YWJ7bWFyZ2luOjA7b3V0bGluZS13aWR0aDoxcHh9Lm51aS1idG4sLm51aS10YWItaHJ6IC5udWktdGFie3RleHQtYWxpZ246Y2VudGVyfS5udWktYnRuIC5udWktaWNuLC5udWktaXRtIC5udWktaWNuLC5udWktdGFiIC5udWktaWNue3ZlcnRpY2FsLWFsaWduOmJvdHRvbX0ubnVpLWRsZywubnVpLWxzdHtiYWNrZ3JvdW5kLWNvbG9yOnJnYmEoMjU1LDI1NSwyNTUsLjkpO2JvcmRlcjoxcHggc29saWQgI2NjYzstd2Via2l0LWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7LW1vei1ib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpOy1tcy1ib3gtc2hhZG93OjAgLjJlbSAuNGVtIHJnYmEoMCwwLDAsLjUpOy1vLWJveC1zaGFkb3c6MCAuMmVtIC40ZW0gcmdiYSgwLDAsMCwuNSk7Ym94LXNoYWRvdzowIC4yZW0gLjRlbSByZ2JhKDAsMCwwLC41KTt6LWluZGV4OisxfS5udWktZGxne3BhZGRpbmc6LjZlbX0ubnVpLWRsZyAubnVpLWljblthcmlhLWxhYmVsPVhde3JpZ2h0Oi0xMXB4O3RvcDotMTFweH0ubnVpLWRydyAubnVpLWJ0biwubnVpLWl0bSwubnVpLXRhYi12cnQgLm51aS10YWJ7ZGlzcGxheTpibG9ja30ubnVpLWRydyAubnVpLWJ0biwubnVpLWl0bSwubnVpLWxzdHt0ZXh0LWFsaWduOmxlZnR9Lm51aS1kcncgLm51aS1idG57cGFkZGluZy1sZWZ0OjB9Lm51aS1kcncgLm51aS1idG4ubnVpLXNsYywubnVpLXRhYi12cnQgLm51aS10YWI6Zmlyc3QtY2hpbGR7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi40ZW0gLjRlbSAwIDA7LW1vei1ib3JkZXItcmFkaXVzOi40ZW0gLjRlbSAwIDA7Ym9yZGVyLXJhZGl1czouNGVtIC40ZW0gMCAwfS5udWktaWNue2hlaWdodDoxZW07dmVydGljYWwtYWxpZ246bWlkZGxlO3dpZHRoOjFlbX0ubnVpLWljbiBne2ZpbGw6IzMzMztzdHJva2U6IzMzM30ubnVpLWljblthcmlhLWxhYmVsPVhdIHBvbHlnb24sLm51aS1pdG0ubnVpLWh2ciBnLC5udWktc2xjIGd7ZmlsbDojZmZmfS5udWktaWNuW2FyaWEtbGFiZWw9WF0gY2lyY2xlLC5udWktc3RyIGd7c3Ryb2tlOiNjY2M7c3Ryb2tlLXdpZHRoOjF9Lm51aS1pY25bYXJpYS1sYWJlbD1YXXtoZWlnaHQ6MjJweDt3aWR0aDoyMnB4fS5udWktaXRtLC5udWktc3Rye2JhY2tncm91bmQ6MDtib3JkZXI6MH0ubnVpLWxzdCwubnVpLXJ0biwubnVpLXRhYi1ocnosLm51aS10YWItdnJ0e3doaXRlLXNwYWNlOm5vd3JhcH0ubnVpLWxzdHtwYWRkaW5nOi42ZW0gMH0ubnVpLXJ1bHtib3JkZXItdG9wOjFweCBzb2xpZCAjY2NjO21hcmdpbjouMmVtIDAgLjRlbSAwfS5udWktc2xkLWJ0biwubnVpLXNsZC1ncnYsLm51aS1zbGQtbHZsey13ZWJraXQtYm9yZGVyLXJhZGl1czo5cHg7LW1vei1ib3JkZXItcmFkaXVzOjlweDtib3JkZXItcmFkaXVzOjlweH0ubnVpLXNsZC1idG4sLm51aS1zdHJ7cGFkZGluZzowfS5udWktc2xkLWJ0biwubnVpLXNsZC10cmssLm51aS1zdHIgLm51aS1pY257aGVpZ2h0OjE4cHh9Lm51aS1zbGQtYnRuLC5udWktc3RyIC5udWktaWNue3dpZHRoOjE4cHh9Lm51aS1zbGQtZ3J2LC5udWktc2xkLWx2bHtoZWlnaHQ6NHB4fS5udWktc2xkLWdydiwubnVpLXNsY3tiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLGxlZnQgdG9wLGxlZnQgYm90dG9tLGNvbG9yc3RvcCgwLHJnYmEoMCwwLDAsLjMpKSxjb2xvcnN0b3AoMC41LHJnYmEoMCwwLDAsMCkpLGNvbG9yc3RvcCgwLjUscmdiYSgyNTUsMjU1LDI1NSwwKSksY29sb3JzdG9wKDEscmdiYSgyNTUsMjU1LDI1NSwuMSkpKTtiYWNrZ3JvdW5kLWltYWdlOi13ZWJraXQtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDAsMCwwLC4zKSAwLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW1vei1saW5lYXItZ3JhZGllbnQodG9wLHJnYmEoMCwwLDAsLjMpIDAscmdiYSgwLDAsMCwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwwKSA1MCUscmdiYSgyNTUsMjU1LDI1NSwuMSkgMTAwJSk7YmFja2dyb3VuZC1pbWFnZTotbXMtbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDAsMCwwLC4zKSAwLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsLjEpIDEwMCUpO2JhY2tncm91bmQtaW1hZ2U6LW8tbGluZWFyLWdyYWRpZW50KHRvcCxyZ2JhKDAsMCwwLC4zKSAwLHJnYmEoMCwwLDAsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsMCkgNTAlLHJnYmEoMjU1LDI1NSwyNTUsLjEpIDEwMCUpfS5udWktc2xkLWdydntiYWNrZ3JvdW5kLWNvbG9yOiM5OTk7bGVmdDo5cHg7cmlnaHQ6OXB4O3RvcDo1cHh9Lm51aS1zbGQtdHRse2ZvbnQtd2VpZ2h0OjcwMH0ubnVpLXN0ciBne2ZpbGw6I2VlZX0ubnVpLXRhYi1ocnogLm51aS10YWJ7Ym9yZGVyLWxlZnQtc3R5bGU6bm9uZX0ubnVpLXRhYi1ocnogLm51aS10YWI6Zmlyc3QtY2hpbGR7Ym9yZGVyLWxlZnQtc3R5bGU6c29saWQ7LXdlYmtpdC1ib3JkZXItcmFkaXVzOi40ZW0gMCAwIC40ZW07LW1vei1ib3JkZXItcmFkaXVzOi40ZW0gMCAwIC40ZW07Ym9yZGVyLXJhZGl1czouNGVtIDAgMCAuNGVtfS5udWktdGFiLWhyeiAubnVpLXRhYjpsYXN0LWNoaWxkey13ZWJraXQtYm9yZGVyLXJhZGl1czowIC40ZW0gLjRlbSAwOy1tb3otYm9yZGVyLXJhZGl1czowIC40ZW0gLjRlbSAwO2JvcmRlci1yYWRpdXM6MCAuNGVtIC40ZW0gMH0ubnVpLXRhYi12cnQgLm51aS10YWJ7Ym9yZGVyLXRvcC1zdHlsZTpub25lO2Rpc3BsYXk6YmxvY2s7d2lkdGg6MTAwJX0ubnVpLXRhYi12cnQgLm51aS10YWI6Zmlyc3QtY2hpbGR7Ym9yZGVyLXRvcC1zdHlsZTpzb2xpZH0ubnVpLXRhYi12cnQgLm51aS10YWI6bGFzdC1jaGlsZCwubnVpLXRyeXstd2Via2l0LWJvcmRlci1yYWRpdXM6MCAwIC40ZW0gLjRlbTstbW96LWJvcmRlci1yYWRpdXM6MCAwIC40ZW0gLjRlbTtib3JkZXItcmFkaXVzOjAgMCAuNGVtIC40ZW19Lm51aS10cnl7Ym9yZGVyLWJvdHRvbS1jb2xvcjojY2NjO2JvcmRlci10b3Atc3R5bGU6bm9uZX0ubnVpLWl0bS5udWktaHZyLC5udWktc2xjLC5udWktc2xkLWx2bHtiYWNrZ3JvdW5kLWNvbG9yOiMwNmN9Lm51aS1pdG0ubnVpLWh2ciwubnVpLXNsY3tib3JkZXItY29sb3I6IzA2Yztjb2xvcjojZmZmO3RleHQtc2hhZG93OjAgLTFweCAxcHggIzA2Y30ubnVpLWl0bS5udWktaHZyIGcsLm51aS1zbGMgZ3tzdHJva2U6I2ZmZn0ubnVpLXBsY3tjb2xvcjojOTk5fS5udWktc2xkLWJ0bi5udWktc2xje2JhY2tncm91bmQtY29sb3I6I2NjYztib3JkZXItY29sb3I6Izk5OX0ubnVpLXN0ci5udWktYXZnIGd7ZmlsbDojNjY2fS5udWktc3RyLm51aS1pbmQgZ3tmaWxsOiMwNmM7c3Ryb2tlOiMwMzl9Lm51aS1kc2IsLm51aS10YWIubnVpLXNsY3tjdXJzb3I6ZGVmYXVsdH0='
   }).appendTo('head');
 
   time = $.now();
@@ -134,7 +134,7 @@
         if ($object.is('.nui-atc')) {
           $object.find('.nui-icn[aria-label=spin]').hide();
         }
-        if (options.choices.length) {
+        if (options.values.length) {
           $object.bind({
             'delist.ninja': function () {
               $(document).unbind('click.ninja keydown.ninja keyup.ninja');
@@ -188,7 +188,7 @@
             }
           });
           if (options.query) {
-            options.choices = $.map(options.choices, function (item) {
+            options.values = $.map(options.values, function (item) {
               item.value = item.value  || item.html || item;
               if (item.html) {
                 item.html = item.html.toString().replace(new RegExp(options.query, 'gi'), '<b>' + options.query + '</b>');
@@ -196,17 +196,17 @@
               return item;
             });
           }
-          $.each(options.choices, function (i, choice) {
-            var $choice;
-            if (choice.spacer) {
-              $choice = $('<div/>', {
+          $.each(options.values, function (i, value) {
+            var $value;
+            if (value.rule) {
+              $value = $('<div/>', {
                 'class': 'nui-rul'
               });
             } else {
-              $choice = $('<button/>', {
+              $value = $('<button/>', {
                 'class': 'nui-itm'
               });
-              $choice.bind({
+              $value.bind({
                 'mouseleave.ninja': function () {
                   $hover.removeClass('nui-hvr');
                 },
@@ -215,10 +215,10 @@
                     $button.focus();
                   }
                   if ($input) {
-                    $input.val(choice.value || choice.html || choice).focus();
+                    $input.val(value.value || value.html || value).focus();
                   }
-                  if ($.isFunction(choice.select)) {
-                    choice.select();
+                  if ($.isFunction(value.select)) {
+                    value.select();
                   }
                 },
                 'mouseenter.ninja': function () {
@@ -228,11 +228,11 @@
                   if ($hover) {
                     $hover.trigger('mouseleave.ninja');
                   }
-                  $hover = $choice.addClass('nui-hvr');
+                  $hover = $value.addClass('nui-hvr');
                 }
               });
             }
-            $choice.html(choice.html || choice).appendTo($list);
+            $value.html(value.html || value).appendTo($list);
           });
           if (($list.offset().top + $list.outerHeight()) > ($(window).scrollTop() + $(window).height())) {
             $list.css({
@@ -297,13 +297,13 @@
       });
     },
 
-    source: function (callback) {
+    values: function (callback) {
       return this.each(function () {
         var $object = $(this).ninja();
         if ($.isFunction(callback)) {
-          $object.bind('source.ninja', callback);
+          $object.bind('values.ninja', callback);
         } else if ($object.val() !== '') {
-          $object.trigger('source.ninja');
+          $object.trigger('values.ninja');
         }
       });
     }
@@ -326,7 +326,7 @@
               event.html = $input.val();
             }
           },
-          'source.ninja': function (event) {
+          'values.ninja': function (event) {
             $input.delist();
             event.query = $input.val();
           }
@@ -343,10 +343,10 @@
                   $spin.show();
                 } else {
                   $.ninja.icon({
-                    name: 'spin'
+                    value: 'spin'
                   }).appendTo($autocomplete);
                 }
-                $input.source();
+                $input.values();
               }, 1000);
             }
           }
@@ -412,7 +412,7 @@
           html: options.html
         }),
         $button = $.ninja.icon({
-          name: 'X'
+          value: 'X'
         }).bind('click.ninja', function () {
           $dialog.detach();
         }).appendTo($dialog),
@@ -459,14 +459,14 @@
           html: options.html
         }).appendTo($drawer),
         $arrowDown = $.ninja.icon({
-          name: 'arrow-down'
+          value: 'arrow-down'
         }),
         $arrowRight = $.ninja.icon({
-          name: 'arrow-right'
+          value: 'arrow-right'
         }),
         $handle = $.ninja.button($.extend({}, options, {
           select: options.select,
-          html: options.title
+          html: options.value
         })).bind({
           'deselect.ninja': function () {
             $tray.slideUp('fast', function () {
@@ -491,7 +491,7 @@
 
     icon: function (options) {
       options = $.extend({}, defaults, {
-        name: 'spin'
+        value: 'spin'
       }, options);
       var
         $icon,
@@ -507,51 +507,51 @@
         onload = '',
         points = '',
         rotate = '';
-      if ($.inArray(options.name, ['arrow-down', 'arrow-right']) > -1) {
-        if (options.name === 'arrow-down') {
+      if ($.inArray(options.value, ['arrow-down', 'arrow-right']) > -1) {
+        if (options.value === 'arrow-down') {
           points = '4,4 12,4 8,12';
         } else {
           points = '4,4 12,8 4,12';
         }
         g = '<polygon points="' + points + '"/>';
-      } else if (options.name === 'camera') {
+      } else if (options.value === 'camera') {
         defs = '<defs><mask id="' + idMask + '">' + maskBackground + '<circle cx="8" cy="9" r="5"/></mask></defs>';
         g = '<rect x="0" y="4" width="16" height="11" rx="2" ry="2" mask="url(#' + idMask + ')"/><polygon points="4,8 4,4 6,1 10,1 12,4 12,8" mask="url(#' + idMask + ')"/><circle cx="8" cy="9" r="3"/>';
-      } else if ($.inArray(options.name, ['X', 'x', '-', '+']) > -1) {
-        if (options.name === '-') {
+      } else if ($.inArray(options.value, ['X', 'x', '-', '+']) > -1) {
+        if (options.value === '-') {
           mask = '<rect x="4" y="7" width="8" height="2"/>';
         } else {
-          if (options.name !== '+') {
+          if (options.value !== '+') {
             rotate = ' transform="rotate(45 8 8)"';
           }
           mask = '<polygon points="7,4 9,4 9,7 12,7 12,9 9,9 9,12 7,12 7,9 4,9 4,7 7,7"' + rotate + '/>';
         }
-        if (options.name === 'X') {
+        if (options.value === 'X') {
           g = '<circle cx="8" cy="8" r="7"/><polygon points="7,4 9,4 9,7 12,7 12,9 9,9 9,12 7,12 7,9 4,9 4,7 7,7"' + rotate + '/>';
         } else {
           defs = '<defs><mask id="' + idMask + '">' + maskBackground + mask + '</mask></defs>';
           g = '<circle cx="8" cy="8" mask="url(#' + idMask + ')" r="8"/>';
         }
-      } else if (options.name === 'email') {
+      } else if (options.value === 'email') {
         g = '<polygon points="0,2 8,10 16,2"/><polygon points="16,4 12,8 16,12"/><polygon points="0,14 5,9 8,12 11,9 16,14"/><polygon points="0,4 4,8 0,12"/>';
-      } else if (options.name === 'go') {
+      } else if (options.value === 'go') {
         g = '<circle' + border + ' cx="8" cy="8" r="7"/><circle cx="8" cy="8" r="5"/>';
-      } else if (options.name === 'home') {
+      } else if (options.value === 'home') {
         g = '<polygon points="0,10 0,8 8,0 16,8 16,10 14,10 14,16 10,16 10,10 6,10 6,16 2,16 2,10"/><rect x="11" y="16" width="4" height="8"/>';
-      } else if (options.name === 'search') {
+      } else if (options.value === 'search') {
         g = '<circle' + border + ' cx="7" cy="7" r="5"/><polygon points="9,11 11,9 16,14 14,16"/>';
-      } else if (options.name === 'star') {
+      } else if (options.value === 'star') {
         g = '<polygon points="0,6 6,6 8,0 10,6 16,6 11,10 13,16 8,12 3,16 5,10"/>';
-      } else if (options.name === 'stop') {
+      } else if (options.value === 'stop') {
         g = '<polygon' + border + ' points="1,11 1,5 5,1 11,1 15,5 15,11 11,15 5,15"/><polygon points="3,10 3,6 6,3 10,3 13,6 13,10 10,13 6,13"/>';
-      } else if (options.name === 'yield') {
+      } else if (options.value === 'yield') {
         g = '<polygon' + border + ' points="8,1 15,15 1,15"/><polygon points="8,5 12,13 4,13"/>';
-      } else if (options.name === 'spin') {
+      } else if (options.value === 'spin') {
         onload = ' onload="var frame=0;setInterval(function(){frame=frame+30;if(frame===360){frame=0}document.getElementById(\'' + idVector + '\').setAttributeNS(null,\'transform\',\'rotate(\'+frame+\' 8 8)\');},100)"';
         defs = '<defs><rect id="' + idSymbol + '" x="7" width="2" height="4"/></defs>';
         g = '<use xlink:href="#' + idSymbol + '" style="opacity:.1" transform="rotate(30 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.2" transform="rotate(60 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.3" transform="rotate(90 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.4" transform="rotate(120 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.5" transform="rotate(150 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.6" transform="rotate(180 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.7" transform="rotate(210 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.8" transform="rotate(240 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.9" transform="rotate(270 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.9.5" transform="rotate(300 8 8)"/><use xlink:href="#' + idSymbol + '" style="opacity:.9.75" transform="rotate(330 8 8)"/><use xlink:href="#' + idSymbol + '"/>';
       }
-      $icon = $('<svg aria-label="' + options.name + '" class="nui-icn" height="1" width="1"' + onload + ' role="img" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>' + options.name + '</title>' + defs + '<g id="' + idVector + '" stroke-width="0">' + g + '</g></svg>');
+      $icon = $('<svg aria-label="' + options.value + '" class="nui-icn" height="1" width="1"' + onload + ' role="img" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>' + options.value + '</title>' + defs + '<g id="' + idVector + '" stroke-width="0">' + g + '</g></svg>');
       if (options.css) {
         $icon.find('g').css(options.css);
       }
@@ -571,7 +571,7 @@
         }).deselect(function () {
           $menu.delist();
         }).append($.ninja.icon({
-          name: 'arrow-down'
+          value: 'arrow-down'
         }));
       $menu.bind({
         'delist.ninja': function () {
@@ -584,25 +584,25 @@
     rating: function (options) {
       options = $.extend({}, defaults, {
         average: 0,
-        select: 0,
-        stars: 5
+        individual: 0,
+        values: 5
       }, options);
       var
         i,
         $rating = $('<span/>', {
-          'class': 'nui-rating'
+          'class': 'nui-rtn'
         }).bind({
           'mouseleave.ninja': function () {
             $rating.find('.nui-str').each(function (ii, star) {
               var $star = $(star);
-              if (options.select === 0) {
+              if (options.individual === 0) {
                 if (ii < options.average) {
                   $star.addClass('nui-avg');
                 } else {
                   $star.removeClass('nui-avg');
                 }
               }
-              if (ii < options.select) {
+              if (ii < options.individual) {
                 $star.addClass('nui-ind');
               } else {
                 $star.removeClass('nui-ind');
@@ -610,11 +610,11 @@
             });
           }
         });
-      for (i = 0; i < options.stars; i++) {
+      for (i = 0; i < options.values; i++) {
         $('<button/>', {
           'class': 'nui-str',
           html: $.ninja.icon({
-            'name': 'star'
+            value: 'star'
           })
         }).appendTo($rating);
       }
@@ -623,10 +623,10 @@
         var $star = $(star);
         $star.bind({
           'click.ninja select.ninja': function () {
-            options.select = i;
+            options.individual = i;
             $rating.trigger('mouseleave.ninja').trigger({
               type: 'select',
-              stars: i
+              value: i
             });
           },
           'mouseenter.ninja': function () {
@@ -647,19 +647,19 @@
 
     slider: function (options) {
       options = $.extend({}, defaults, {
-        slot: 0,
+        value: 0,
         width: 200
       }, options);
       var
         drag = false,
         offsetX = 0,
         touch,
-        slots = options.choices.length - 1,
+        slots = options.values.length - 1,
         increment = options.width / slots,
-        left = options.slot * increment,
-        $choice = $('<span/>', {
-          'class': 'nui-sld-choice',
-          html: options.choices[options.slot].html
+        left = options.value * increment,
+        $value = $('<span/>', {
+          'class': 'nui-sld-value',
+          html: options.values[options.value].html
         }),
         $button = $('<button/>', {
           'class': 'nui-sld-btn',
@@ -682,18 +682,18 @@
             } else {
               slot = event.sliderX;
             }
-            event.choice = options.choices[slot];
-            $choice.html(event.choice.html);
+            event.value = options.values[slot];
+            $value.html(event.value.html);
             left = slot * increment;
             $button.css({ left: left });
             $level.css({ width: left });
           },
           'select.ninja': function (event) {
-            if (event.choice.select) {
-              event.choice.select(event);
+            if (event.value.select) {
+              event.value.select(event);
             }
           }
-        }).append($choice),
+        }).append($value),
         $track = $('<div/>', {
           'class': 'nui-sld-trk',
           css: { width: trackWidth }
@@ -707,25 +707,25 @@
           });
         });
       $track.append($groove.append($level), $button);
-      if (options.title) {
-        $choice.before($('<span/>', {
+      if (options.html) {
+        $value.before($('<span/>', {
           'class': 'nui-sld-ttl',
-          text: options.title + ': '
+          html: options.html + ': '
         }));
       }
       $button.bind({
         'keyup.ninja': function (event) {
           if ($.inArray(event.keyCode, [37, 39]) > -1) {/* right or left */
             var
-              choice,
+              value,
               slot = Math.round($button.position().left / increment);
             if (slot > 0 && event.keyCode === 37) {/* left arrow */
               slot--;
             } else if (slot < slots && event.keyCode === 39) {/* right arrow */
               slot++;
             }
-            choice = options.choices[slot];
-            $choice.html(choice.html);
+            value = options.values[slot];
+            $value.html(value.html);
             left = slot * increment;
             $button.css({ left: left });
             $level.css({ width: left });
@@ -789,7 +789,7 @@
 
     tabs: function (options) {
       options = $.extend({}, defaults, {
-        choice: 1
+        value: 1
       }, options);
       var $tabs = $('<span/>');
       if (options.vertical) {
@@ -797,11 +797,11 @@
       } else {
         $tabs.addClass('nui-tab-hrz');
       }
-      $.each(options.choices, function (i, choice) {
+      $.each(options.values, function (i, value) {
         var $tab = $('<button/>', {
           'class': 'nui-tab',
           css: options.css,
-          html: choice.html || choice
+          html: value.html || value
         }).bind({
           'click.ninja': function () {
             if (!$tab.is('.nui-dsb') && !$tab.is('.nui-slc')) {
@@ -821,12 +821,12 @@
           'select.ninja': function () {
             $tabs.children().not($tab).removeClass('nui-slc');
             $tab.addClass('nui-slc');
-            if ($.isFunction(choice.select)) {
-              choice.select();
+            if ($.isFunction(value.select)) {
+              value.select();
             }
           }
         }).appendTo($tabs);
-        if (i === options.choice - 1) {
+        if (i === options.value - 1) {
           $tab.select();
         }
       });

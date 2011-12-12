@@ -180,25 +180,41 @@
           <p id="autocompleteExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css: {}</li>
-            <li>html: ''</li>
-            <li>placeholder</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>placeholder: '<i>string</i>'</li>
+            <li>values: {<i>hash</i>} | [<i>array</i>]</li>
+            <ul>
+              <li>html: '<i>string</i>'</li>
+              <li>value: '<i>string</i>'</li>
+              <li>select: <i>function()</i></li>
+            </ul>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
+            <li>values(<i>function(event)</i></li>
+            <ul>
+              <li>event.query = input.val()</li>
+            </ul>
+          </ul>
+          <h5>Methods:</h5>
+          <ul>
             <li>list()</li>
             <ul>
-              <li>choices</li>
-              <li>query</li>
+              <li>values: {<i>hash</i>} | [<i>array</i>]</li>
+              <ul>
+                <li>html: '<i>string</i>'</li>
+                <li>value: '<i>string</i>'</li>
+                <li>select: <i>function()</i></li>
+              </ul>
+              <li>query: '<i>string</i>'</li>
             </ul>
-            <li>source(event.query)</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
 var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong>({
   <strong>placeholder</strong>: 'United States Cities'
-}).<strong>source</strong>(function (event) {
+}).<strong>values</strong>(function (event) {
   $.ajax({
     url: 'http://ws.geonames.org/searchJSON',
     dataType: 'jsonp',
@@ -211,7 +227,7 @@ var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong
     },
     success: function (data) {
       $autocompleteExample.<strong>list</strong>({
-        <strong>choices</strong>: $.map(data.geonames, function (item) {
+        <strong>values</strong>: $.map(data.geonames, function (item) {
           return {
             <strong>html</strong>: item.name + ', ' + item.adminName1,
             <strong>value</strong>: item.name + ', ' + item.adminCode1
@@ -223,7 +239,7 @@ var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong
     error: function (request, status, message) {
       $.error(message);
     }
-  });```
+  });
 });</pre>
         </div>
 
@@ -233,17 +249,17 @@ var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong
           <p id="buttonExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css: {}</li>
-            <li>disable: true | false</li>
-            <li>html: ''</li>
-            <li>select: true | false</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>disable: <i>true</i> | <i>false</i></li>
+            <li>html: '<i>string</i>'</li>
+            <li>select: <i>true</i> | <i>false</i></li>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
-            <li>deselect()</li>
-            <li>disable()</li>
-            <li>enable()</li>
-            <li>select()</li>
+            <li>deselect(<i>function()</i>)</li>
+            <li>disable(<i>function()</i>)</li>
+            <li>enable(<i>function()</i>)</li>
+            <li>select(<i>function()</i>)</li>
           </ul>
         </div>
 
@@ -275,8 +291,14 @@ var
   });</pre>
         </div>
 
-        <div class="grid-one-third" id="buttonExamplesRemote">
-          <h5>Button Remote Control</h5>
+        <div class="grid-one-third" id="buttonExamplesMethods">
+          <h5>Methods:</h5>
+          <ul>
+            <li>deselect()</li>
+            <li>disable()</li>
+            <li>enable()</li>
+            <li>select()</li>
+          </ul>
         </div>
 
         <div class="grid-two-thirds">
@@ -308,10 +330,15 @@ $buttonExampleCheckboxDisable = $('&lt;input/>', {
           <p id="dialogExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css: {}</li>
-            <li>html: ''</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>html: '<i>string</i>'</li>
           </ul>
           <h5>Callbacks:</h5>
+          <ul>
+            <li>attach(<i>function()</i>)</li>
+            <li>detach(<i>function()</i>)</li>
+          </ul>
+          <h5>Methods:</h5>
           <ul>
             <li>attach()</li>
             <li>detach()</li>
@@ -351,12 +378,17 @@ $dialogExampleCheckbox = $('&lt;input/>', {
           <p id="drawerExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css: {}</li>
-            <li>html: ''</li>
-            <li>select: true | false</li>
-            <li>title: ''</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>html: '<i>string</i>'</li>
+            <li>select: <i>true</i> | <i>false</i></li>
+            <li>value: '<i>string</i>'</li>
           </ul>
           <h5>Callbacks:</h5>
+          <ul>
+            <li>deselect(<i>function()</i>)</li>
+            <li>select(<i>function()</i>)</li>
+          </ul>
+          <h5>Method:</h5>
           <ul>
             <li>deselect()</li>
             <li>select()</li>
@@ -366,13 +398,13 @@ $dialogExampleCheckbox = $('&lt;input/>', {
           <pre>
 $drawerExample = $.<strong>ninja</strong>.<strong>drawer</strong>({
   <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
-  <strong>title</strong>: 'Drawer'
+  <strong>value</strong>: 'Drawer'
 }),
 
 $drawerExampleSelect = $.<strong>ninja</strong>.<strong>drawer</strong>({
   <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
   <strong>select</strong>: true,
-  <strong>title</strong>: '&lt;i>Selected&lt;/i> Drawer'
+  <strong>value</strong>: 'Select'
 )};</pre>
         </div>
 
@@ -382,23 +414,23 @@ $drawerExampleSelect = $.<strong>ninja</strong>.<strong>drawer</strong>({
           <p id="iconExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css: {}</li>
+            <li>css: {<i>hash</i>}</li>
             <ul>
-              <li>fill: ''</li>
-              <li>stroke: ''</li>
+              <li>fill: '<i>CSS color</i>'</li>
+              <li>stroke: '<i>CSS color</i>'</li>
             </ul>
-            <li>name: ''</li>
+            <li>value: '<i>- | + | camera | email | go | home | search | spin | star | stop | x</i>'</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
 var
   $iconExample = $.<strong>ninja</strong>.<strong>icon</strong>({
-    <strong>name</strong>: 'star'
+    <strong>value</strong>: 'star'
   }),
 
   $iconExampleSpin = $.<strong>ninja</strong>.<strong>icon</strong>({
-    <strong>name</strong>: 'spin'
+    <strong>value</strong>: 'spin'
   }),
 
   $iconExampleStop = $.<strong>ninja</strong>.<strong>icon</strong>({
@@ -406,7 +438,7 @@ var
       <strong>fill</strong>: '#c00',
       <strong>stroke</strong>: '#c00'
     },
-    <strong>name</strong>: stop
+    <strong>value</strong>: stop
   });</pre>
         </div>
 
@@ -416,18 +448,14 @@ var
           <p id="menuExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>choices: []</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>html: '<i>string</i>'</li>
+            <li>values: [<i>array</i>]</li>
             <ul>
-              <li>html: ''</li>
-              <li>spacer: true | false</li>
-              <li>select()</li>
+              <li>html: '<i>string</i>'</li>
+              <li>rule: <i>true</i> | <i>false</i></li>
+              <li>select: <i>function()</i></li>
             </ul>
-            <li>css: {}</li>
-            <li>html: ''</li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>select()</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
@@ -438,7 +466,8 @@ var
   }),
 
   $menuExample = $.<strong>ninja</strong>.<strong>menu</strong>({
-    <strong>choices</strong>: [
+    <strong>html</strong>: 'Menu',
+    <strong>values</strong>: [
       {
         <strong>html</strong>: 'Mo',
         <strong>select</strong>: function () {
@@ -476,8 +505,7 @@ var
           $menuExampleOutput.html(':( Try again.');
         }
       }
-    ],
-    <strong>html</strong>: 'Menu'
+    ]
   });</pre>
         </div>
 
@@ -487,13 +515,17 @@ var
           <p id="ratingExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>css: {}</li>
-            <li>average: 0-5</li>
-            <li>select: 0-5</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>average: <i>integer</i></li>
+            <li>individual: <i>integer</i></li>
+            <li>values: <i>integer</i></li>
           </ul>
           <h5>Callbacks:</h5>
           <ul>
-            <li>select(event.stars)</li>
+            <li>select(<i>function(event)</i></li>
+            <ul>
+              <li><i>event.value</i></li>
+            </ul>
           </ul>
         </div>
         <div class="grid-two-thirds">
@@ -504,7 +536,7 @@ var
   $ratingExample = $.<strong>ninja</strong>.<strong>rating</strong>({
     <strong>average</strong>: 3
   }).<strong>select</strong>(function (event) {
-    $ratingExampleOutput.html('New rating: ' + event.<strong>stars</strong> + ' stars');
+    $ratingExampleOutput.html('New rating: ' + event.<strong>value</strong> + ' stars');
   });</pre>
         </div>
 
@@ -514,26 +546,23 @@ var
           <p id="sliderExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>choices: []</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>html: '<i>string</i>'</li>
+            <li>value: <i>integer</i></li>
+            <li>values: [<i>array</i>]</li>
             <ul>
-              <li>html: ''</li>
-              <li>select()</li>
+              <li>html: '<i>string</i>'</li>
+              <li>select: <i>function()</i></li>
             </ul>
-            <li>css: {}</li>
-            <li>html: ''</li>
-            <li>slot</li>
-            <li>title</li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>select()</li>
           </ul>
         </div>
         <div class="grid-two-thirds">
           <pre>
   var
     $sliderExample = $.<strong>ninja</strong>.<strong>slider</strong>({
-      <strong>choices</strong>: [
+      <strong>html</strong>: 'Volume',
+      <strong>value</strong>: 3,
+      <strong>values</strong>: [
         { <strong>html</strong>: '&lt;span title="Silence">0 dB&lt;/span>' },
         { <strong>html</strong>: '&lt;span title="Light leaf rustling, calm breathing">10 dB&lt;/span>' },
         { <strong>html</strong>: '&lt;span title="Very calm room">20-30 dB&lt;/span>' },
@@ -547,9 +576,7 @@ var
         { <strong>html</strong>: '&lt;span title="Threshold of pain">130 dB&lt;/span>' },
         { <strong>html</strong>: '&lt;span title="Jet engine at 30 m">150 dB&lt;/span>' },
         { <strong>html</strong>: '&lt;span title="M1 Garand rifle being fired at 1 m">168 dB&lt;/span>' }
-      ],
-      <strong>slot</strong>: 3,
-      <strong>title</strong>: 'Volume'
+      ]
     });
 </pre>
         </div>
@@ -560,15 +587,14 @@ var
           <p id="tabsExamples"></p>
           <h5>Options:</h5>
           <ul>
-            <li>choice: 2-x</li>
-            <li>choices: []</li>
+            <li>css: {<i>hash</i>}</li>
+            <li>value: <i>integer</i></li>
+            <li>values: [<i>array</i>]</li>
             <ul>
-              <li>html: ''</li>
-              <li>select()</li>
+              <li>html: '<i>string</i>'</li>
+              <li>select: <i>function()</i></li>
             </ul>
-            <li>css: {}</li>
-            <li>html: ''</li>
-            <li>vertical: true | false</li>
+            <li>vertical: <i>true</i> | <i>false</i></li>
           </ul>
         </div>
         <div class="grid-two-thirds">
@@ -581,7 +607,7 @@ var
   },
 
   $tabsExample = $.<strong>ninja</strong>.<strong>tabs</strong>({
-    <strong>choices</strong>: [
+    <strong>values</strong>: [
       {
         <strong>html</strong>: 'Gold',
         <strong>select</strong>: function () {
@@ -601,7 +627,32 @@ var
         }
       }
     ]
-  }),</pre>
+  }),
+
+  $tabsExampleVertical = $.<strong>ninja</strong>.<strong>tabs</strong>({
+    <strong>value</strong>: 2,
+    <strong>values</strong>: [
+      {
+        <strong>html</strong>: 'Gold',
+        <strong>select</strong>: function () {
+          poorly();
+        }
+      },
+      {
+        <strong>html</strong>: 'Silver',
+        <strong>select</strong>: function () {
+          poorly();
+        }
+      },
+      {
+        <strong>html</strong>: 'Wood',
+        <strong>select</strong>: function () {
+          $tabsExampleOutput.html('You have chosen... wisely.');
+        }
+      }
+    ],
+    <strong>vertical</strong>: true
+  });</pre>
         </div>
       </div>
 
@@ -635,6 +686,7 @@ var
       <div class="section" id="license">
         <div class="grid-three-quarters">
           <h2>License</h2>
+          <h3>Open Source</h3>
         </div>
         <div class="grid-one-quarter">
           <img alt="kakejiku" src="/img/license.png"/>
