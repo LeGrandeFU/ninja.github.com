@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Ninja UI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css"/>
+  </head>
+  <body onLoad="setTimeout('redirect()', 10000)">
+    <ul class="nui-thm-dojo" id="navigation">
+      <li><a href="/">Ninja UI</a></li>
+      <li><a href="/#usage">Usage</a></li>
+      <li><a href="/#examples">Examples</a></li>
+      <li><a href="/#themes">Themes</a></li>
+      <li class="active"><a href="#">404</a></li>
+    </ul>
+    <div id="header">
+      <table id="logo">
+        <tr>
+          <td>
+            <img height="128" src="img/logo.png" width="128"/>
+          </td>
+          <td>
+            <h1>Ninja</h1>
+            <h2>User Interface</h2>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h3>the jQuery plugin for <strong>lethal</strong> interaction</h3>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="grid">
+
+      <div class="section">
+        <div class="grid-three-quarters">
+          <h2>404</h2>
+          <h3>Outdated Page</h3>
+        </div>
+        <div class="grid-one-quarter">
+          <img alt="lantern" src="/img/error.png"/>
+        </div>
+        <p>Please update your bookmark, this page no longer exists.</p>
+        <p>Redirecting you to the top of our web site in 10 seconds...</p>
+        <p><a href="/">Go There Now</a></p>
+      </div>
+
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p>&copy; 2008-2011 Jamie Hoover</p>
+        <p>Bonsai, kakejiku, katana, kimono and shodou illustrations used with permission by <a href="http://www.pixelpressicons.com/">Gary Gehiere</a>.</p>
+        <p>Thank you Rachel Hoover, <a href="http://paulirish.com/">Paul Irish</a>, <a href="http://peter.sh/">Peter Beverloo</a>, <a href="http://yehudakatz.com/">Yehuda Katz</a>, <a href="http://langworth.com/">Ian Langworth</a>, and <a href="http://www.yummly.com/">Yummly</a> for your generous time.</p>
+        <p>Ninja UI 1.0 is dedicated to the memory of <a href="/img/peanut.jpg">Peanut</a>.</p>
+      </div>
+    </div>
+
+  <script>
+    function redirect() {
+      window.location = '/'
+    }
+  </script>
+  </body>
+</html>
