@@ -1,3 +1,5 @@
+/*globals gapi: false*/
+
 /*jshint bitwise: true, browser: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 2, jquery: true, maxerr: 3, newcap: true, noarg: true, noempty: true, nomen: true, nonew: true, onevar: true, plusplus: false, regexp: true, strict: true, undef: true, white: true*/
 
 (function ($) {
@@ -5,10 +7,21 @@
   'use strict';
 
   var
-    $menuIcon = $.ninja.icon({
-      value: 'arrow-down'
+    $github = $.ninja.button({
+      css: {
+        borderColor: '#ccc',
+        padding: '2px 4px'
+      },
+      html: '<img height="14" id="githubLogo" src="img/github.png" width="33"/><b>repository</b>'
+    }).deselect(function () {
+      $github.find('#githubLogo').attr('src', 'img/github.png');
+      window.setTimeout(function () {
+        window.location.href = window.location.href;
+      }, 10);
+    }).select(function () {
+      $github.find('#githubLogo').attr('src', 'img/github-select.png');
+      window.location = 'https://github.com/ninja/ui/';
     }),
-
     $usageDialog,
 
     $usageButton = $.ninja.button({
@@ -99,7 +112,7 @@
 
     iconNames = ['spin', 'stop', 'yield', 'go', 'x', '-', '+', 'camera', 'home', 'email', 'search', 'star'],
 
-    $iconExamples = $('<span/>'),
+    $iconExamples = $('<span>'),
 
     $menuExampleOutput = $('<textarea/>', {
       html: 'Choose a stooge.'
@@ -301,7 +314,7 @@
         value: iconName
       });
     }
-    $exampleIcon = $('<span/>', {
+    $exampleIcon = $('<span>', {
       'class': 'icon-example'
     }).append($icon, ' ', iconName).appendTo($iconExamples);
   });
@@ -313,9 +326,7 @@
       $downloadMenu = $('#downloadMenu'),
       $examplesMenu = $('#examplesMenu');
 
-    $downloadMenu.find('span').append($menuIcon.clone());
-
-    $examplesMenu.find('a').append($menuIcon.clone());
+    $('#github').append($github, '<span id="githubWatchers"> watchers<span id="githubWatchersLeft"></span><span id="githubWatchersRight"></span></span>');
 
     $downloadMenu.toggle(
       function () {
@@ -325,19 +336,19 @@
         $downloadMenu.ninja().list({
           values: [
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: downloadFileNameMinified
               }),
               select: function () {
-                window.location = 'cdn/' + $.ninja.version() + '/' + downloadFileNameMinified;
+                window.location = '/cdn/' + $.ninja.version() + '/' + downloadFileNameMinified;
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: downloadFileName
               }),
               select: function () {
-                window.location = 'cdn/' + $.ninja.version() + '/' + downloadFileName;
+                window.location = '/cdn/' + $.ninja.version() + '/' + downloadFileName;
               }
             }
           ]
@@ -353,75 +364,75 @@
         $examplesMenu.ninja().list({
           values: [
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Autocomplete'
               }),
               select: function () {
-                window.location = '#autocomplete';
+                window.location = '/#autocomplete';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Button'
               }),
               select: function () {
-                window.location = '#button';
+                window.location = '/#button';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Dialog'
               }),
               select: function () {
-                window.location = '#dialog';
+                window.location = '/#dialog';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Drawer'
               }),
               select: function () {
-                window.location = '#drawer';
+                window.location = '/#drawer';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Icons'
               }),
               select: function () {
-                window.location = '#icons';
+                window.location = '/#icons';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Menu'
               }),
               select: function () {
-                window.location = '#menu';
+                window.location = '/#menu';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Rating'
               }),
               select: function () {
-                window.location = '#rating';
+                window.location = '/#rating';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Slider'
               }),
               select: function () {
-                window.location = '#slider';
+                window.location = '/#slider';
               }
             },
             {
-              html: $('<div/>', {
+              html: $('<div>', {
                 html: 'Tabs'
               }),
               select: function () {
-                window.location = '#tabs';
+                window.location = '/#tabs';
               }
             }
           ]
@@ -455,11 +466,11 @@
     $('.theme-examples').each(function () {
       var
         $autocomplete,
-        $dialog = $('<span/>', {
+        $dialog = $('<span>', {
           'class': 'nui-dlg',
           text: 'Dialog'
         }),
-        $icons = $('<div/>');
+        $icons = $('<div>');
 
       $.ninja.icon({
         value: 'X'
@@ -558,12 +569,17 @@
       url: 'https://api.github.com/repos/ninja/ui',
       dataType: 'jsonp',
       error: function () {
-        $('#githubWatchersCount').prepend(' 191');
+        $('#githubWatchers').prepend('196');
       },
       success: function (object) {
-        $('#githubWatchersCount').prepend(object.data.watchers + ' ');
+        $('#githubWatchers').prepend(object.data.watchers);
       },
       timeout: 3000
+    });
+
+    gapi.plusone.render('plusone', {
+      href: 'http://ninjaui.com/',
+      size: 'small'
     });
 
     $navigation.scrollSpy();

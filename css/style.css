@@ -194,14 +194,13 @@ body {
   color: #333;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
-  margin-top: 0;
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
 }
 p,
 pre {
-  margin-bottom: 1em;
-  margin-top: 0;
+  display: block;
+  margin: 0 0 0.5em 0;
 }
 pre,
 .theme-examples {
@@ -244,8 +243,41 @@ small {
   margin-top: 60px;
   padding: 60px;
 }
-#githubWatchers {
+#github {
   font-size: 11px;
+}
+#github b {
+  display: inline-block;
+  vertical-align: middle;
+}
+#githubLogo {
+  margin-right: 0.25em;
+  vertical-align: middle;
+}
+#githubWatchers {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 5px 0 7px;
+  position: relative;
+  vertical-align: middle;
+}
+#githubWatchersLeft,
+#githubWatchersRight {
+  background: url('/img/github-bubble.png') no-repeat;
+  display: block;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  z-index: -1;
+}
+#githubWatchersLeft {
+  left: 0;
+}
+#githubWatchersRight {
+  background-position: -7px;
+  right: 0;
 }
 #header {
   background: #222 no-repeat;
@@ -265,7 +297,6 @@ small {
 #logo h1,
 #logo h2,
 #logo h3 {
-  margin: 0;
   text-align: right;
 }
 #logo h1 {
@@ -312,21 +343,25 @@ small {
   z-index: 3;
 }
 #navigation li {
+  border: 0;
   display: inline-block;
+  margin: 0;
+  outline: 0;
+  padding: 0;
 }
-#navigation a,
-#navigation span {
+#navigation a {
+  border: 0;
   color: #fff;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   height: 30px;
   line-height: 30px;
+  margin: 0;
   padding: 0 10px;
   text-decoration: none;
 }
-#navigation li.active a,
-#navigation li.activeMenu a,
-#navigation li.activeMenu span {
+#navigation .active a,
+#navigation .activeMenu a {
   background-color: #c00;
   background-image: -webkit-gradient(linear, left top, left bottom, colorstop(0, rgba(0,0,0,0.3)), colorstop(0.5, rgba(0,0,0,0)), colorstop(0.5, rgba(255,255,255,0)), colorstop(1, rgba(255,255,255,0.1)));
   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
@@ -334,6 +369,9 @@ small {
   background-image: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
   background-image: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
   background-image: linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%);
+}
+#plusone {
+  margin: 6px 0 0 0 !important;
 }
 .icon-example {
   display: inline-block;
@@ -370,6 +408,20 @@ small {
 .grid-two-thirds {
   width: 64%;
 }
+.news {
+  margin-right: 3%;
+}
+.news h2,
+.section h2,
+.subsection h5 {
+  border-bottom: 1px solid #ccc;
+}
+.news h3 {
+  color: #999;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
 .section {
   padding-top: 30px;
 }
@@ -379,10 +431,6 @@ small {
 .section .grid-three-quarters,
 .section .grid-two-thirds {
   vertical-align: middle;
-}
-.section h2,
-.subsection h5 {
-  border-bottom: 1px solid #ccc;
 }
 .section h2 {
   font-size: 48px;
@@ -408,7 +456,7 @@ small {
   display: inline-block;
   margin: 0 3% 1em 0;
   vertical-align: top;
-  width: 240px;
+  width: 241px;
 }
 .theme-examples .nui-dlg {
   display: block;
@@ -427,16 +475,15 @@ small {
   #examplesMenu button {
     line-height: 13px;
   }
-  #navigation a,
-  #navigation span {
-    padding: 0 5px;
-  }
   .grid-one-half,
   .grid-one-quarter,
   .grid-one-third,
   .grid-three-quarters,
   .grid-two-thirds {
     width: 45%;
+  }
+  .navigationTab {
+    padding: 0 5px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {

@@ -1,726 +1,725 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>Ninja UI</title>
-    <meta name="description" content="Ninja User Interface"/>
-    <meta name="author" content="Jamie Hoover"/>
-    <meta name="keywords" content="ui, interface, button, icon, slider, popup, window, menu, tab, drawer, list, rating, autocomplete, jquery, plugin, css, svg, base64"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/themes.css"/>
-  </head>
-  <body>
-    <ul class="nui-thm-dojo" id="navigation" data-scrollspy="scrollspy" >
-      <li class="active"><a href="#header">Ninja UI</a></li>
-      <li><a href="#usage">Usage</a></li>
-      <li id="examplesMenu"><a href="#examples">Examples</a></li>
-      <li><a href="#themes">Themes</a></li>
-      <li id="downloadMenu"><span>Download</span></li>
-    </ul>
-    <div id="header">
-      <table id="logo">
-        <tr>
-          <td>
-            <img height="128" src="img/logo.png" width="128"/>
-          </td>
-          <td>
-            <h1>Ninja</h1>
-            <h2>User Interface</h2>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <h3>the jQuery plugin for <strong>lethal</strong> interaction</h3>
-          </td>
-        </tr>
-      </table>
+---
+layout: index
+title: Ninja UI
+version: 1.0.0rc3
+---
+<ul class="nui-thm-dojo" id="navigation" data-scrollspy="scrollspy">
+  <li class="active"><a href="#header"><b>Ninja UI</b></a></li>
+  <li id="examplesMenu"><a href="#examples">Examples</a></li>
+  <li><a href="#themes">Themes</a></li>
+  <!-- <li><a href="news.html">News</a></li> -->
+  <li id="downloadMenu"><a>Download</a></li>
+</ul>
+<div id="header">
+  <table id="logo">
+    <tr>
+      <td>
+        <img height="128" src="img/logo.png" width="128"/>
+      </td>
+      <td>
+        <h1>Ninja</h1>
+        <h2>User Interface</h2>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h3>the jQuery plugin for <strong>lethal</strong> interaction</h3>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="grid">
+
+  <div class="section">
+    <div class="grid-three-quarters">
+      <h2>About</h2>
+      <h3>忍者 UI</h3>
     </div>
-    <div class="grid">
+    <div class="grid-one-quarter">
+      <img alt="bonsai" src="/img/about.png"/>
+    </div>
+  </div>
 
-      <div class="section">
-        <div class="grid-three-quarters">
-          <h2>About</h2>
-          <h3>忍者 UI</h3>
-        </div>
-        <div class="grid-one-quarter">
-          <img alt="bonsai" src="/img/about.png"/>
-        </div>
+  <div class="grid-one-third">
+    <h3>Intuitive</h3>
+    <p>Clear syntax, extending what you already know and love about jQuery.</p>
+    <h3>Usable</h3>
+    <p>Keyboard, touch and speech accessible.</p>
+    <h3>Fast</h3>
+    <p><strong>Network-connection-free</strong> assets are embedded inside the <strong>7k</strong>* JavaScript.</p>
+    <p><small>* 6,841 bytes minified and gzipped</small></p>
+  </div>
+  <div class="grid-one-third">
+    <h3>Compatible</h3>
+    <p>Ninja UI works with jQuery back to v1.4.3 and HTML5 browsers: Chrome, Safari, Firefox, Internet Explorer*, and Opera.</p>
+    <p><img src="/img/browsers.png" alt="Chrome, Safari, Firefox, Internet Explorer, and Opera"/></p>
+    <p><small>* IE 9 does not support gradients. IE 6-8 do not support transparent backgrounds nor rounded corners. Full HTML5 compatibility for these browsers are possible with <a href="http://www.chromium.org/developers/how-tos/chrome-frame-getting-started">Google Chrome Frame</a>.</small></p>
+  </div>
+  <div class="grid-one-third">
+    <!--
+    <h3>Latest Release</h3>
+    <p>
+      <small><a href="news.html">{{ page.version }} Release Notes</a></small>
+    </p>
+    -->
+    <h3>Open Source Code</h3>
+    <p>
+      <div id="github"></div>
+    </p>
+    <h3>Tell Your Friends</h3>
+    <p>
+      <div>
+        <a href="https://twitter.com/ninjaui" class="twitter-follow-button">Follow @ninjaui</a>
       </div>
+    </p>
+    <p>
+      <div class="fb-like" data-href="http://ninjaui.com" data-send="false" data-layout="button_count" data-show-faces="true"></div>
+      <div id="plusone"></div>
+    </p>
+    <h3>Authors</h3>
+    <p>
+      <small><a href="https://github.com/uipoet">Jamie R. Hoover</a> and <a href="https://github.com/faisal">Faisal N. Jawdat</a></small>
+    </p>
+  </div>
 
-      <div class="grid-one-third">
-        <h3>Intuitive</h3>
-        <p>Clear syntax, extending what you already know and love about jQuery.</p>
-        <h3>Usable</h3>
-        <p>Keyboard, touch and speech accessible.</p>
-        <h3>Fast</h3>
-        <p><strong>Network-connection-free</strong> assets are embedded inside the <strong>21k</strong> JavaScript file. Icons are Scalable Vector Graphics and Cascading Style Sheet is base64 encoded.</p>
-      </div>
-      <div class="grid-one-third">
-        <h3>Compatible</h3>
-        <p>Ninja UI works with jQuery back to v1.4.3 and HTML5 browsers: Chrome, Safari, Firefox, Internet Explorer*, and Opera.</p>
-        <p><img src="/img/browsers.png" alt="Chrome, Safari, Firefox, Internet Explorer, and Opera"/></p>
-        <p><small>* Internet Explorer 9 does not support CSS3 background-gradient. IE 6-8 do not support SVG icons, RGB alpha transparent backgrounds, nor CSS3 border-radius. Full HTML5 compatibility for these browsers are possible with <a href="http://www.chromium.org/developers/how-tos/chrome-frame-getting-started">Google Chrome Frame</a>.</small></p>
-      </div>
-      <div class="grid-one-third">
-        <h3>Open Source Code</h3>
-        <p>
-          <a href="https://github.com/ninja/ui/">Github repository</a>
-          <span id="githubWatchers">· <span id="githubWatchersCount"></span> watchers</span>
-        </p>
-        <p>
-          <a href="#license">License</a>
-        </p>
-        <h3>Tweets</h3>
-        <p>
-          <a href="https://twitter.com/ninjaui" class="twitter-follow-button">Follow @ninjaui</a>
-        </p>
-        <h3>Authors</h3>
-        <p><a href="https://github.com/uipoet">Jamie R. Hoover</a> and <a href="https://github.com/faisal">Faisal N. Jawdat</a></p>
-      </div>
+  <div class="section">
+    <div class="grid-three-quarters">
+      <h2>Usage</h2>
+      <h3>Getting Started</h3>
+    </div>
+    <div class="grid-one-quarter">
+      <img alt="katana" src="/img/usage.png"/>
+    </div>
+  </div>
 
-      <div class="section" id="usage">
-        <div class="grid-three-quarters">
-          <h2>Usage</h2>
-          <h3>Getting Started</h3>
-        </div>
-        <div class="grid-one-quarter">
-          <img alt="katana" src="/img/usage.png"/>
-        </div>
-      </div>
+  <div class="grid-one-third">
+    <p>Mark a position where you want to have a Ninja button.</p>
+  </div>
 
-      <div class="grid-one-third">
-        <p>Mark a position where you want to have a Ninja button.</p>
-      </div>
-
-      <div class="grid-two-thirds">
-        <pre>
+  <div class="grid-two-thirds">
+    <pre>
 &lt;body>
-  ...
-  &lt;div id="usageButton">&lt;/div>
-  ...</pre>
-      </div>
+...
+&lt;div id="usageButton">&lt;/div>
+...</pre>
+  </div>
 
-      <div class="grid-one-third">
-        <p>Load the Ninja UI plugin, after jQuery of course.
-      </div>
+  <div class="grid-one-third">
+    <p>Load the Ninja UI plugin, after jQuery of course.
+  </div>
 
-      <div class="grid-two-thirds">
-        <pre>
-  &lt;script src="//code.jquery.com/jquery-1.7.1.min.js">&lt;/script>
-  &lt;script src="//ninjaui.com/cdn/1.0.0rc2/jquery.ninjaui.min.js">&lt;/script></pre>
-      </div>
+  <div class="grid-two-thirds">
+    <pre>
+&lt;script src="//code.jquery.com/jquery-1.7.1.min.js">&lt;/script>
+&lt;script src="//ninjaui.com/cdn/{{ page.version }}/jquery.ninjaui.min.js">&lt;/script></pre>
+  </div>
 
-      <div class="grid-one-third">
-        <p>Create the Ninja button and dialog variables before the document finishes loading.</p>
-      </div>
+  <div class="grid-one-third">
+    <p>Create the Ninja button and dialog variables before the document finishes loading.</p>
+  </div>
 
-      <div class="grid-two-thirds">
-        <pre>
-  &lt;script>
-    (function ($) {
-      var
-        $dialog,
-        $button = $.<strong>ninja</strong>.<strong>button</strong>({
-          <strong>html</strong>: '&lt;b>Ninja&lt;/b> star...'
-        }).<strong>select</strong>(function () {
-          $dialog.<strong>attach</strong>();
-        });
-      $dialog = $.<strong>ninja</strong>.<strong>dialog</strong>({
-        <strong>html</strong>: '&lt;img src="/img/logo.png"/>'
-      }).<strong>detach</strong>(function () {
-        $button.<strong>deselect</strong>();
-      });</pre>
+  <div class="grid-two-thirds">
+    <pre>
+&lt;script>
+(function ($) {
+  var
+    $dialog,
+    $button = $.<strong>ninja</strong>.<strong>button</strong>({
+      <strong>html</strong>: '&lt;b>Ninja&lt;/b> star...'
+    }).<strong>select</strong>(function () {
+      $dialog.<strong>attach</strong>();
+    });
+  $dialog = $.<strong>ninja</strong>.<strong>dialog</strong>({
+    <strong>html</strong>: '&lt;img src="/img/logo.png"/>'
+  }).<strong>detach</strong>(function () {
+    $button.<strong>deselect</strong>();
+  });</pre>
+</div>
+
+  <div class="grid-one-third">
+    <p>When the document is ready, append the Ninja button.</p>
+  </div>
+
+  <div class="grid-two-thirds">
+    <pre>
+  $(document).ready(function () {
+    $('#usageButton').append($button);
+  });
+}(jQuery));
+&lt;/script>
+&lt;/body></pre>
+  </div>
+
+  <div class="grid-one-third">
+    <p>The Ninja button is ready for action!</p>
+  </div>
+
+  <div class="grid-two-thirds">
+    <p id="usageButton"></p>
+  </div>
+
+  <p><strong>Wait...don't I have to learn some ugly html patterns that will restyle as the page loads?</strong></p>
+
+  <p>Nope. :)</p>
+
+  <div class="section" id="examples">
+    <div class="grid-three-quarters">
+      <h2>Examples</h2>
+      <h3>Documentation</h3>
+    </div>
+    <div class="grid-one-quarter">
+      <img alt="shodou" src="/img/examples.png"/>
+    </div>
+  </div>
+
+  <p>Here are demos for each object and method of Ninja UI.</p>
+
+  <div class="subsection">
+
+    <h4 id="autocomplete">Autocomplete</h4>
+
+    <div class="grid-one-third">
+      <p id="autocompleteExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>placeholder: '<i>string</i>'</li>
+        <li>values: {<i>hash</i>} | [<i>array</i>]</li>
+        <ul>
+          <li>html: '<i>string</i>'</li>
+          <li>value: '<i>string</i>'</li>
+          <li>select: <i>function()</i></li>
+        </ul>
+      </ul>
+      <h5>Callbacks:</h5>
+      <ul>
+        <li>values(<i>function(event)</i></li>
+        <ul>
+          <li>event.query = input.val()</li>
+        </ul>
+      </ul>
+      <h5>Methods:</h5>
+      <ul>
+        <li>list()</li>
+        <ul>
+          <li>values: {<i>hash</i>} | [<i>array</i>]</li>
+          <ul>
+            <li>html: '<i>string</i>'</li>
+            <li>value: '<i>string</i>'</li>
+            <li>select: <i>function()</i></li>
+          </ul>
+          <li>query: '<i>string</i>'</li>
+        </ul>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
+var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong>({
+<strong>placeholder</strong>: 'United States Cities'
+}).<strong>values</strong>(function (event) {
+$.ajax({
+url: 'http://ws.geonames.org/searchJSON',
+dataType: 'jsonp',
+data: {
+  country: 'US',
+  featureClass: 'P',
+  fuzzy: 0,
+  maxRows: 10,
+  q: event.query
+},
+success: function (data) {
+  $autocompleteExample.<strong>list</strong>({
+    <strong>values</strong>: $.map(data.geonames, function (item) {
+      return {
+        <strong>html</strong>: item.name + ', ' + item.adminName1,
+        <strong>value</strong>: item.name + ', ' + item.adminCode1
+      };
+    }),
+    <strong>query</strong>: event.query
+  });
+},
+error: function (request, status, message) {
+  $.error(message);
+}
+});
+});</pre>
     </div>
 
-      <div class="grid-one-third">
-        <p>When the document is ready, append the Ninja button.</p>
-      </div>
+    <h4 id="button">Button</h4>
 
-      <div class="grid-two-thirds">
-        <pre>
-      $(document).ready(function () {
-        $('#usageButton').append($button);
-      });
-    }(jQuery));
-  &lt;/script>
-&lt;/body></pre>
-      </div>
+    <div class="grid-one-third">
+      <p id="buttonExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>disable: <i>true</i> | <i>false</i></li>
+        <li>html: '<i>string</i>'</li>
+        <li>select: <i>true</i> | <i>false</i></li>
+      </ul>
+      <h5>Callbacks:</h5>
+      <ul>
+        <li>deselect(<i>function()</i>)</li>
+        <li>disable(<i>function()</i>)</li>
+        <li>enable(<i>function()</i>)</li>
+        <li>select(<i>function()</i>)</li>
+      </ul>
+    </div>
 
-      <div class="grid-one-third">
-        <p>The Ninja button is ready for action!</p>
-      </div>
-
-      <div class="grid-two-thirds">
-        <p id="usageButton"></p>
-      </div>
-
-      <p><strong>Wait...don't I have to learn some ugly html patterns that will restyle as the page loads?</strong></p>
-
-      <p>Nope. :)</p>
-
-      <div class="section" id="examples">
-        <div class="grid-three-quarters">
-          <h2>Examples</h2>
-          <h3>Documentation</h3>
-        </div>
-        <div class="grid-one-quarter">
-          <img alt="shodou" src="/img/examples.png"/>
-        </div>
-      </div>
-
-      <p>Here are demos for each object and method of Ninja UI.</p>
-
-      <div class="subsection">
-
-        <h4 id="autocomplete">Autocomplete</h4>
-
-        <div class="grid-one-third">
-          <p id="autocompleteExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>placeholder: '<i>string</i>'</li>
-            <li>values: {<i>hash</i>} | [<i>array</i>]</li>
-            <ul>
-              <li>html: '<i>string</i>'</li>
-              <li>value: '<i>string</i>'</li>
-              <li>select: <i>function()</i></li>
-            </ul>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>values(<i>function(event)</i></li>
-            <ul>
-              <li>event.query = input.val()</li>
-            </ul>
-          </ul>
-          <h5>Methods:</h5>
-          <ul>
-            <li>list()</li>
-            <ul>
-              <li>values: {<i>hash</i>} | [<i>array</i>]</li>
-              <ul>
-                <li>html: '<i>string</i>'</li>
-                <li>value: '<i>string</i>'</li>
-                <li>select: <i>function()</i></li>
-              </ul>
-              <li>query: '<i>string</i>'</li>
-            </ul>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
-var $autocompleteExample = $.<strong>ninja</strong>.<strong>autocomplete</strong>({
-  <strong>placeholder</strong>: 'United States Cities'
-}).<strong>values</strong>(function (event) {
-  $.ajax({
-    url: 'http://ws.geonames.org/searchJSON',
-    dataType: 'jsonp',
-    data: {
-      country: 'US',
-      featureClass: 'P',
-      fuzzy: 0,
-      maxRows: 10,
-      q: event.query
-    },
-    success: function (data) {
-      $autocompleteExample.<strong>list</strong>({
-        <strong>values</strong>: $.map(data.geonames, function (item) {
-          return {
-            <strong>html</strong>: item.name + ', ' + item.adminName1,
-            <strong>value</strong>: item.name + ', ' + item.adminCode1
-          };
-        }),
-        <strong>query</strong>: event.query
-      });
-    },
-    error: function (request, status, message) {
-      $.error(message);
-    }
-  });
-});</pre>
-        </div>
-
-        <h4 id="button">Button</h4>
-
-        <div class="grid-one-third">
-          <p id="buttonExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>disable: <i>true</i> | <i>false</i></li>
-            <li>html: '<i>string</i>'</li>
-            <li>select: <i>true</i> | <i>false</i></li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>deselect(<i>function()</i>)</li>
-            <li>disable(<i>function()</i>)</li>
-            <li>enable(<i>function()</i>)</li>
-            <li>select(<i>function()</i>)</li>
-          </ul>
-        </div>
-
-        <div class="grid-two-thirds">
-          <pre>
+    <div class="grid-two-thirds">
+      <pre>
 var
-  $buttonExampleCheckboxSelect, $buttonExampleCheckboxDisable,
+$buttonExampleCheckboxSelect, $buttonExampleCheckboxDisable,
 
-  $buttonExample = $.<strong>ninja</strong>.<strong>button</strong>({
-    <strong>html</strong>: 'Button'
-  }).<strong>disable</strong>(function () {
-    $buttonExampleCheckboxSelect.attr({ disabled: 'disabled' });
-  }).<strong>enable</strong>(function () {
-    $buttonExampleCheckboxSelect.attr({ disabled: false });
-  }).<strong>select</strong>(function () {
-    $buttonExampleCheckboxSelect.attr({ checked: 'checked' });
-  }).<strong>deselect</strong>(function () {
-    $buttonExampleCheckboxSelect.attr({ checked: false });
-  }),
+$buttonExample = $.<strong>ninja</strong>.<strong>button</strong>({
+<strong>html</strong>: 'Button'
+}).<strong>disable</strong>(function () {
+$buttonExampleCheckboxSelect.attr({ disabled: 'disabled' });
+}).<strong>enable</strong>(function () {
+$buttonExampleCheckboxSelect.attr({ disabled: false });
+}).<strong>select</strong>(function () {
+$buttonExampleCheckboxSelect.attr({ checked: 'checked' });
+}).<strong>deselect</strong>(function () {
+$buttonExampleCheckboxSelect.attr({ checked: false });
+}),
 
-  $buttonExampleSelect = $.<strong>ninja</strong>.<strong>button</strong>({
-    <strong>html</strong>: 'Selected',
-    <strong>select</strong>: true
-  }),
+$buttonExampleSelect = $.<strong>ninja</strong>.<strong>button</strong>({
+<strong>html</strong>: 'Selected',
+<strong>select</strong>: true
+}),
 
-  $buttonExampleDisable = $.<strong>ninja</strong>.<strong>button</strong>({
-    <strong>html</strong>: 'Disabled',
-    <strong>disable</strong>: true
-  });</pre>
-        </div>
+$buttonExampleDisable = $.<strong>ninja</strong>.<strong>button</strong>({
+<strong>html</strong>: 'Disabled',
+<strong>disable</strong>: true
+});</pre>
+    </div>
 
-        <div class="grid-one-third" id="buttonExamplesMethods">
-          <h5>Methods:</h5>
-          <ul>
-            <li>deselect()</li>
-            <li>disable()</li>
-            <li>enable()</li>
-            <li>select()</li>
-          </ul>
-        </div>
+    <div class="grid-one-third" id="buttonExamplesMethods">
+      <h5>Methods:</h5>
+      <ul>
+        <li>deselect()</li>
+        <li>disable()</li>
+        <li>enable()</li>
+        <li>select()</li>
+      </ul>
+    </div>
 
-        <div class="grid-two-thirds">
-          <pre>
+    <div class="grid-two-thirds">
+      <pre>
 $buttonExampleCheckboxSelect = $('&lt;input/>', {
-  type: 'checkbox'
+type: 'checkbox'
 }).change(function () {
-  if ($buttonExampleCheckboxSelect.attr('checked')) {
-    $buttonExample.<strong>select</strong>();
-  } else {
-    $buttonExample.<strong>deselect</strong>();
-  }
+if ($buttonExampleCheckboxSelect.attr('checked')) {
+$buttonExample.<strong>select</strong>();
+} else {
+$buttonExample.<strong>deselect</strong>();
+}
 });
 
 $buttonExampleCheckboxDisable = $('&lt;input/>', {
-  type: 'checkbox'
+type: 'checkbox'
 }).change(function () {
-  if ($buttonExampleCheckboxDisable.attr('checked')) {
-    $buttonExample.<strong>disable</strong>();
-  } else {
-    $buttonExample.<strong>enable</strong>();
-  }
+if ($buttonExampleCheckboxDisable.attr('checked')) {
+$buttonExample.<strong>disable</strong>();
+} else {
+$buttonExample.<strong>enable</strong>();
+}
 });</pre>
-        </div>
+    </div>
 
-        <h4 id="dialog">Dialog</h4>
+    <h4 id="dialog">Dialog</h4>
 
-        <div class="grid-one-third">
-          <p id="dialogExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>html: '<i>string</i>'</li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>attach(<i>function()</i>)</li>
-            <li>detach(<i>function()</i>)</li>
-          </ul>
-          <h5>Methods:</h5>
-          <ul>
-            <li>attach()</li>
-            <li>detach()</li>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
+    <div class="grid-one-third">
+      <p id="dialogExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>html: '<i>string</i>'</li>
+      </ul>
+      <h5>Callbacks:</h5>
+      <ul>
+        <li>attach(<i>function()</i>)</li>
+        <li>detach(<i>function()</i>)</li>
+      </ul>
+      <h5>Methods:</h5>
+      <ul>
+        <li>attach()</li>
+        <li>detach()</li>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
 var
-  $dialogExampleCheckbox,
+$dialogExampleCheckbox,
 
-  $dialogExample = $.<strong>ninja</strong>.<strong>dialog</strong>({
-    <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>Sparta&lt;/b>!&lt;/div>'
-  }).<strong>attach</strong>(function () {
-    $dialogExampleCheckbox.attr({
-      checked: 'checked'
-    });
-  }).<strong>detach</strong>(function () {
-    $dialogExampleCheckbox.attr({
-      checked: false
-    });
-  });
+$dialogExample = $.<strong>ninja</strong>.<strong>dialog</strong>({
+<strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>Sparta&lt;/b>!&lt;/div>'
+}).<strong>attach</strong>(function () {
+$dialogExampleCheckbox.attr({
+  checked: 'checked'
+});
+}).<strong>detach</strong>(function () {
+$dialogExampleCheckbox.attr({
+  checked: false
+});
+});
 
 $dialogExampleCheckbox = $('&lt;input/>', {
-  type: 'checkbox'
+type: 'checkbox'
 }).change(function () {
-  if ($dialogExampleCheckbox.attr('checked')) {
-    $dialogExample.<strong>attach</strong>();
-  } else {
-    $dialogExample.<strong>detach</strong>();
-  }
+if ($dialogExampleCheckbox.attr('checked')) {
+$dialogExample.<strong>attach</strong>();
+} else {
+$dialogExample.<strong>detach</strong>();
+}
 });</pre>
-      </div>
+  </div>
 
-        <h4 id="drawer">Drawer</h4>
+    <h4 id="drawer">Drawer</h4>
 
-        <div class="grid-one-third">
-          <p id="drawerExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>html: '<i>string</i>'</li>
-            <li>select: <i>true</i> | <i>false</i></li>
-            <li>value: '<i>string</i>'</li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>deselect(<i>function()</i>)</li>
-            <li>select(<i>function()</i>)</li>
-          </ul>
-          <h5>Method:</h5>
-          <ul>
-            <li>deselect()</li>
-            <li>select()</li>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
+    <div class="grid-one-third">
+      <p id="drawerExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>html: '<i>string</i>'</li>
+        <li>select: <i>true</i> | <i>false</i></li>
+        <li>value: '<i>string</i>'</li>
+      </ul>
+      <h5>Callbacks:</h5>
+      <ul>
+        <li>deselect(<i>function()</i>)</li>
+        <li>select(<i>function()</i>)</li>
+      </ul>
+      <h5>Method:</h5>
+      <ul>
+        <li>deselect()</li>
+        <li>select()</li>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
 $drawerExample = $.<strong>ninja</strong>.<strong>drawer</strong>({
-  <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
-  <strong>value</strong>: 'Drawer'
+<strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
+<strong>value</strong>: 'Drawer'
 }),
 
 $drawerExampleSelect = $.<strong>ninja</strong>.<strong>drawer</strong>({
-  <strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
-  <strong>select</strong>: true,
-  <strong>value</strong>: 'Select'
+<strong>html</strong>: '&lt;div style="padding: 50px">This is &lt;b>HTML&lt;/b>.&lt;/div>',
+<strong>select</strong>: true,
+<strong>value</strong>: 'Select'
 )};</pre>
-        </div>
+    </div>
 
-        <h4 id="icons">Icons</h4>
+    <h4 id="icons">Icons</h4>
 
-        <div class="grid-one-third">
-          <p id="iconExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <ul>
-              <li>fill: '<i>CSS color</i>'</li>
-              <li>stroke: '<i>CSS color</i>'</li>
-            </ul>
-            <li>value: '<i>- | + | camera | email | go | home | search | spin | star | stop | x</i>'</li>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
+    <div class="grid-one-third">
+      <p id="iconExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <ul>
+          <li>fill: '<i>CSS color</i>'</li>
+          <li>stroke: '<i>CSS color</i>'</li>
+        </ul>
+        <li>value: '<i>- | + | camera | email | go | home | search | spin | star | stop | x</i>'</li>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
 var
-  $iconExample = $.<strong>ninja</strong>.<strong>icon</strong>({
-    <strong>value</strong>: 'star'
-  }),
+$iconExample = $.<strong>ninja</strong>.<strong>icon</strong>({
+<strong>value</strong>: 'star'
+}),
 
-  $iconExampleSpin = $.<strong>ninja</strong>.<strong>icon</strong>({
-    <strong>value</strong>: 'spin'
-  }),
+$iconExampleSpin = $.<strong>ninja</strong>.<strong>icon</strong>({
+<strong>value</strong>: 'spin'
+}),
 
-  $iconExampleStop = $.<strong>ninja</strong>.<strong>icon</strong>({
-    <strong>css</strong>: {
-      <strong>fill</strong>: '#c00',
-      <strong>stroke</strong>: '#c00'
-    },
-    <strong>value</strong>: stop
-  });</pre>
-        </div>
+$iconExampleStop = $.<strong>ninja</strong>.<strong>icon</strong>({
+<strong>css</strong>: {
+  <strong>fill</strong>: '#c00',
+  <strong>stroke</strong>: '#c00'
+},
+<strong>value</strong>: stop
+});</pre>
+    </div>
 
-        <h4 id="menu">Menu</h4>
+    <h4 id="menu">Menu</h4>
 
-        <div class="grid-one-third">
-          <p id="menuExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>html: '<i>string</i>'</li>
-            <li>values: [<i>array</i>]</li>
-            <ul>
-              <li>html: '<i>string</i>'</li>
-              <li>rule: <i>true</i> | <i>false</i></li>
-              <li>select: <i>function()</i></li>
-            </ul>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
+    <div class="grid-one-third">
+      <p id="menuExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>html: '<i>string</i>'</li>
+        <li>values: [<i>array</i>]</li>
+        <ul>
+          <li>html: '<i>string</i>'</li>
+          <li>rule: <i>true</i> | <i>false</i></li>
+          <li>select: <i>function()</i></li>
+        </ul>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
 var
-  $menuExampleOutput = $('&lt;textarea/>', {
-    html: 'Choose a stooge.'
-  }),
+$menuExampleOutput = $('&lt;textarea/>', {
+html: 'Choose a stooge.'
+}),
 
-  $menuExample = $.<strong>ninja</strong>.<strong>menu</strong>({
-    <strong>html</strong>: 'Menu',
-    <strong>values</strong>: [
-      {
-        <strong>html</strong>: 'Mo',
-        <strong>select</strong>: function () {
-          $menuExampleOutput.html('Oh, a wise guy eh?');
-        }
-      },
-      {
-        <strong>html</strong>: 'Larry',
-        <strong>select</strong>: function () {
-          $menuExampleOutput.html('Cut it out, ya puddinhead!');
-        }
-      },
-      {
-        <strong>html</strong>: 'Curly',
-        <strong>select</strong>: function () {
-          $menuExampleOutput.html('Hey, Mo!');
-        }
-      },
-      { <strong>spacer</strong>: true },
-      {
-        <strong>html</strong>: 'Shemp',
-        <strong>select</strong>: function () {
-          $menuExampleOutput.html(':( Try again.');
-        }
-      },
-      {
-        <strong>html</strong>: 'Joe',
-        <strong>select</strong>: function () {
-          $menuExampleOutput.html(':( Try again.');
-        }
-      },
-      {
-        <strong>html</strong>: 'Curly Joe',
-        <strong>select</strong>: function () {
-          $menuExampleOutput.html(':( Try again.');
-        }
-      }
-    ]
-  });</pre>
-        </div>
-
-        <h4 id="rating">Rating</h4>
-
-        <div class="grid-one-third">
-          <p id="ratingExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>average: <i>integer</i></li>
-            <li>individual: <i>integer</i></li>
-            <li>values: <i>integer</i></li>
-          </ul>
-          <h5>Callbacks:</h5>
-          <ul>
-            <li>select(<i>function(event)</i></li>
-            <ul>
-              <li><i>event.value</i></li>
-            </ul>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
-var
-  $ratingExampleOutput = $('&lt;textarea/>'),
-
-  $ratingExample = $.<strong>ninja</strong>.<strong>rating</strong>({
-    <strong>average</strong>: 3
-  }).<strong>select</strong>(function (event) {
-    $ratingExampleOutput.html('New rating: ' + event.<strong>value</strong> + ' stars');
-  });</pre>
-        </div>
-
-        <h4 id="slider">Slider</h4>
-
-        <div class="grid-one-third">
-          <p id="sliderExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>html: '<i>string</i>'</li>
-            <li>value: <i>integer</i></li>
-            <li>values: [<i>array</i>]</li>
-            <ul>
-              <li>html: '<i>string</i>'</li>
-              <li>select: <i>function()</i></li>
-            </ul>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
-  var
-    $sliderExample = $.<strong>ninja</strong>.<strong>slider</strong>({
-      <strong>html</strong>: 'Volume',
-      <strong>value</strong>: 3,
-      <strong>values</strong>: [
-        { <strong>html</strong>: '&lt;span title="Silence">0 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Light leaf rustling, calm breathing">10 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Very calm room">20-30 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Normal conversation at 1 m">40-60 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="TV set at home level at 1 m">60 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Passenger car at 10 m">60-80 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Hearing damage over long-term exposure">78 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Traffic on a busy roadway at 10 m">80-90 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Jack hammer at 1 m">100 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Hearing damage immediately possible">120 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Threshold of pain">130 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="Jet engine at 30 m">150 dB&lt;/span>' },
-        { <strong>html</strong>: '&lt;span title="M1 Garand rifle being fired at 1 m">168 dB&lt;/span>' }
-      ]
-    });
-</pre>
-        </div>
-
-        <h4 id="tabs">Tabs</h4>
-
-        <div class="grid-one-third">
-          <p id="tabsExamples"></p>
-          <h5>Options:</h5>
-          <ul>
-            <li>css: {<i>hash</i>}</li>
-            <li>value: <i>integer</i></li>
-            <li>values: [<i>array</i>]</li>
-            <ul>
-              <li>html: '<i>string</i>'</li>
-              <li>select: <i>function()</i></li>
-            </ul>
-            <li>vertical: <i>true</i> | <i>false</i></li>
-          </ul>
-        </div>
-        <div class="grid-two-thirds">
-          <pre>
-var
-  $tabsExampleOutput = $('&lt;textarea/>'),
-
-  poorly = function () {
-    $tabsExampleOutput.html('You have chosen... poorly.');
+$menuExample = $.<strong>ninja</strong>.<strong>menu</strong>({
+<strong>html</strong>: 'Menu',
+<strong>values</strong>: [
+  {
+    <strong>html</strong>: 'Mo',
+    <strong>select</strong>: function () {
+      $menuExampleOutput.html('Oh, a wise guy eh?');
+    }
   },
-
-  $tabsExample = $.<strong>ninja</strong>.<strong>tabs</strong>({
-    <strong>values</strong>: [
-      {
-        <strong>html</strong>: 'Gold',
-        <strong>select</strong>: function () {
-          poorly();
-        }
-      },
-      {
-        <strong>html</strong>: 'Silver',
-        <strong>select</strong>: function () {
-          poorly();
-        }
-      },
-      {
-        <strong>html</strong>: 'Wood',
-        <strong>select</strong>: function () {
-          $tabsExampleOutput.html('You have chosen... wisely.');
-        }
-      }
-    ]
-  }),
-
-  $tabsExampleVertical = $.<strong>ninja</strong>.<strong>tabs</strong>({
-    <strong>value</strong>: 2,
-    <strong>values</strong>: [
-      {
-        <strong>html</strong>: 'Gold',
-        <strong>select</strong>: function () {
-          poorly();
-        }
-      },
-      {
-        <strong>html</strong>: 'Silver',
-        <strong>select</strong>: function () {
-          poorly();
-        }
-      },
-      {
-        <strong>html</strong>: 'Wood',
-        <strong>select</strong>: function () {
-          $tabsExampleOutput.html('You have chosen... wisely.');
-        }
-      }
-    ],
-    <strong>vertical</strong>: true
-  });</pre>
-        </div>
-      </div>
-
-      <div class="section" id="themes">
-        <div class="grid-three-quarters">
-          <h2>Themes</h2>
-          <h3>Premade or Build Your Own</h3>
-        </div>
-        <div class="grid-one-quarter">
-          <img alt="kimono" src="/img/themes.png"/>
-        </div>
-      </div>
-
-      <div class="grid-one-third">
-        <h3>The Look You Want</h3>
-        <p>Ninja UI contains the default theme that you've seen demonstrated on our website. There are no stylesheets to load, because we've compiled the styles into the plugin itself.</p>
-        <h3>Dojo</h3>
-        <p>Included in our codebase is an example theme, called Dojo. Use it as is or as a template to build your own namespaced theme.</p>
-        <h3>More to Come</h3>
-        <p>We encourage the theming community to contribute more premade themes to our codebase. We may even feature them here! :)</p>
-      </div>
-
-      <div class="theme-examples">
-        <h3>Default</h3>
-      </div>
-
-      <div class="theme-examples nui-thm-dojo">
-        <h3>Dojo</h3>
-      </div>
-
-      <div class="section" id="license">
-        <div class="grid-three-quarters">
-          <h2>License</h2>
-          <h3>Open Source</h3>
-        </div>
-        <div class="grid-one-quarter">
-          <img alt="kakejiku" src="/img/license.png"/>
-        </div>
-      </div>
-
-      <p>Licensed under the Apache License, Version 2.0 (the "License");<br/>
-      you may not use this file except in compliance with the License.</p>
-
-      <p>You may obtain a copy of the License at</p>
-
-      <p>
-        <a href="/LICENSE.txt">ninjaui.com/LICENSE.txt</a>
-      </p>
-
-      <p>Unless required by applicable law or agreed to in writing, software
-      distributed under the License is distributed on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-      See the License for the specific language governing permissions and
-      limitations under the License.</p>
-
+  {
+    <strong>html</strong>: 'Larry',
+    <strong>select</strong>: function () {
+      $menuExampleOutput.html('Cut it out, ya puddinhead!');
+    }
+  },
+  {
+    <strong>html</strong>: 'Curly',
+    <strong>select</strong>: function () {
+      $menuExampleOutput.html('Hey, Mo!');
+    }
+  },
+  { <strong>spacer</strong>: true },
+  {
+    <strong>html</strong>: 'Shemp',
+    <strong>select</strong>: function () {
+      $menuExampleOutput.html(':( Try again.');
+    }
+  },
+  {
+    <strong>html</strong>: 'Joe',
+    <strong>select</strong>: function () {
+      $menuExampleOutput.html(':( Try again.');
+    }
+  },
+  {
+    <strong>html</strong>: 'Curly Joe',
+    <strong>select</strong>: function () {
+      $menuExampleOutput.html(':( Try again.');
+    }
+  }
+]
+});</pre>
     </div>
-    <div id="footer">
-      <div class="container">
-        <p>&copy; 2008-2011 Jamie Hoover</p>
-        <p>Bonsai, kakejiku, katana, kimono and shodou illustrations used with permission by <a href="http://www.pixelpressicons.com/">Gary Gehiere</a>.</p>
-        <p>Thank you Rachel Hoover, <a href="http://paulirish.com/">Paul Irish</a>, <a href="http://peter.sh/">Peter Beverloo</a>, <a href="http://yehudakatz.com/">Yehuda Katz</a>, <a href="http://langworth.com/">Ian Langworth</a>, and <a href="http://www.yummly.com/">Yummly</a> for your generous time.</p>
-        <p>Ninja UI 1.0 is dedicated to the memory of <a href="/img/peanut.jpg">Peanut</a>.</p>
-      </div>
+
+    <h4 id="rating">Rating</h4>
+
+    <div class="grid-one-third">
+      <p id="ratingExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>average: <i>integer</i></li>
+        <li>individual: <i>integer</i></li>
+        <li>values: <i>integer</i></li>
+      </ul>
+      <h5>Callbacks:</h5>
+      <ul>
+        <li>select(<i>function(event)</i></li>
+        <ul>
+          <li><i>event.value</i></li>
+        </ul>
+      </ul>
     </div>
-    <script src="/js/jquery-1.7.1.min.js"></script>
-    <script src="/cdn/1.0.0rc2/jquery.ninjaui.min.js"></script>
-    <script src="/js/bootstrap-scrollspy.min.js"></script>
-    <script src="/js/script.js"></script>
-    <script src="//platform.twitter.com/widgets.js"></script>
-  </body>
-</html>
+    <div class="grid-two-thirds">
+      <pre>
+var
+$ratingExampleOutput = $('&lt;textarea/>'),
+
+$ratingExample = $.<strong>ninja</strong>.<strong>rating</strong>({
+<strong>average</strong>: 3
+}).<strong>select</strong>(function (event) {
+$ratingExampleOutput.html('New rating: ' + event.<strong>value</strong> + ' stars');
+});</pre>
+    </div>
+
+    <h4 id="slider">Slider</h4>
+
+    <div class="grid-one-third">
+      <p id="sliderExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>html: '<i>string</i>'</li>
+        <li>value: <i>integer</i></li>
+        <li>values: [<i>array</i>]</li>
+        <ul>
+          <li>html: '<i>string</i>'</li>
+          <li>select: <i>function()</i></li>
+        </ul>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
+var
+$sliderExample = $.<strong>ninja</strong>.<strong>slider</strong>({
+  <strong>html</strong>: 'Volume',
+  <strong>value</strong>: 3,
+  <strong>values</strong>: [
+    { <strong>html</strong>: '&lt;span title="Silence">0 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Light leaf rustling, calm breathing">10 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Very calm room">20-30 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Normal conversation at 1 m">40-60 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="TV set at home level at 1 m">60 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Passenger car at 10 m">60-80 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Hearing damage over long-term exposure">78 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Traffic on a busy roadway at 10 m">80-90 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Jack hammer at 1 m">100 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Hearing damage immediately possible">120 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Threshold of pain">130 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="Jet engine at 30 m">150 dB&lt;/span>' },
+    { <strong>html</strong>: '&lt;span title="M1 Garand rifle being fired at 1 m">168 dB&lt;/span>' }
+  ]
+});
+</pre>
+    </div>
+
+    <h4 id="tabs">Tabs</h4>
+
+    <div class="grid-one-third">
+      <p id="tabsExamples"></p>
+      <h5>Options:</h5>
+      <ul>
+        <li>css: {<i>hash</i>}</li>
+        <li>value: <i>integer</i></li>
+        <li>values: [<i>array</i>]</li>
+        <ul>
+          <li>html: '<i>string</i>'</li>
+          <li>select: <i>function()</i></li>
+        </ul>
+        <li>vertical: <i>true</i> | <i>false</i></li>
+      </ul>
+    </div>
+    <div class="grid-two-thirds">
+      <pre>
+var
+$tabsExampleOutput = $('&lt;textarea/>'),
+
+poorly = function () {
+$tabsExampleOutput.html('You have chosen... poorly.');
+},
+
+$tabsExample = $.<strong>ninja</strong>.<strong>tabs</strong>({
+<strong>values</strong>: [
+  {
+    <strong>html</strong>: 'Gold',
+    <strong>select</strong>: function () {
+      poorly();
+    }
+  },
+  {
+    <strong>html</strong>: 'Silver',
+    <strong>select</strong>: function () {
+      poorly();
+    }
+  },
+  {
+    <strong>html</strong>: 'Wood',
+    <strong>select</strong>: function () {
+      $tabsExampleOutput.html('You have chosen... wisely.');
+    }
+  }
+]
+}),
+
+$tabsExampleVertical = $.<strong>ninja</strong>.<strong>tabs</strong>({
+<strong>value</strong>: 2,
+<strong>values</strong>: [
+  {
+    <strong>html</strong>: 'Gold',
+    <strong>select</strong>: function () {
+      poorly();
+    }
+  },
+  {
+    <strong>html</strong>: 'Silver',
+    <strong>select</strong>: function () {
+      poorly();
+    }
+  },
+  {
+    <strong>html</strong>: 'Wood',
+    <strong>select</strong>: function () {
+      $tabsExampleOutput.html('You have chosen... wisely.');
+    }
+  }
+],
+<strong>vertical</strong>: true
+});</pre>
+    </div>
+  </div>
+
+  <div class="section" id="themes">
+    <div class="grid-three-quarters">
+      <h2>Themes</h2>
+      <h3>Premade or Build Your Own</h3>
+    </div>
+    <div class="grid-one-quarter">
+      <img alt="kimono" src="/img/themes.png"/>
+    </div>
+  </div>
+
+  <div class="grid-one-third">
+    <h3>The Look You Want</h3>
+    <p>Ninja UI contains the default theme that you've seen demonstrated on our website. There are no stylesheets to load, because we've compiled the styles into the plugin itself.</p>
+    <h3>Dojo</h3>
+    <p>Included in our codebase is an example theme, called Dojo. Use it as is or as a template to build your own namespaced theme.</p>
+    <h3>More to Come</h3>
+    <p>We encourage the theming community to contribute more premade themes to our codebase. We may even feature them here! :)</p>
+  </div>
+
+  <div class="theme-examples">
+    <h3>Default</h3>
+  </div>
+
+  <div class="theme-examples nui-thm-dojo">
+    <h3>Dojo</h3>
+  </div>
+
+  <div class="section" id="license">
+    <div class="grid-three-quarters">
+      <h2>License</h2>
+      <h3>Open Source</h3>
+    </div>
+    <div class="grid-one-quarter">
+      <img alt="kakejiku" src="/img/license.png"/>
+    </div>
+  </div>
+
+  <p>Licensed under the Apache License, Version 2.0 (the "License");<br/>
+  you may not use this file except in compliance with the License.</p>
+
+  <p>You may obtain a copy of the License at</p>
+
+  <p>
+    <a href="/LICENSE.txt">ninjaui.com/LICENSE.txt</a>
+  </p>
+
+  <p>Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.</p>
+
+</div>
+<div id="fb-root"></div>
+<script async="true" src="https://platform.twitter.com/widgets.js"></script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=190527269112";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="//apis.google.com/js/plusone.js">
+  {"parsetags": "explicit"}
+</script>

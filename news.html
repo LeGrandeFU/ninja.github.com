@@ -1,0 +1,47 @@
+---
+layout: index
+title: Ninja UI News
+---
+<ul class="nui-thm-dojo" id="navigation" data-scrollspy="scrollspy" >
+  <li><a href="/"><b>Ninja UI</b></a></li>
+  <li id="examplesMenu"><a href="/#examples">Examples</a></li>
+  <li><a href="/#themes">Themes</a></li>
+  <li class="active"><a href="#header">News</a></li>
+  <li id="downloadMenu"><a>Download</a></li>
+</ul>
+<div id="header">
+  <table id="logo">
+    <tr>
+      <td>
+        <img height="128" src="img/logo.png" width="128"/>
+      </td>
+      <td>
+        <h1>Ninja</h1>
+        <h2>User Interface</h2>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h3>the jQuery plugin for <strong>lethal</strong> interaction</h3>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="grid">
+  <div class="section">
+    <div class="grid-three-quarters">
+      <h2>News</h2>
+      <h3>Announcements and Release Notes</h3>
+    </div>
+    <div class="grid-one-quarter">
+      <img alt="bonsai" src="/img/alert.png"/>
+    </div>
+  </div>
+  <div class="news">
+    {% for post in site.posts %}
+      <h2>{{ post.title }}</h2>
+      <h3>{{ post.date | date: "%A, %B %d, %Y" }}</h3>
+      {{ post.content }}
+    {% endfor %}
+  </div>
+</div>
