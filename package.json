@@ -1,0 +1,12 @@
+{
+  "name": "ninja.github.com",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninja/ninja.github.com.git"
+  },
+  "dependencies": {
+    "clean-css": "0.3.x",
+    "uglify-js": "1.2.x"
+  }
+}

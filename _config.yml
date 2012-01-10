@@ -3,3 +3,4 @@ auto:        false
 server:      false
 server_port: 4000
 baseurl:    /
+exclude: ['package.json', 'Jakefile.js', 'node_modules', 'src']
