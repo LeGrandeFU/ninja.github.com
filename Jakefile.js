@@ -14,7 +14,7 @@ var
   version = pkg.version;
 
 desc('Default task.');
-task('default', ['cdn/' + version, 'css/style.min.css', 'js/script.min.js', 'license'], function () {
+task('default', ['cdn/' + version, 'style.min.css', 'script.min.js', 'license'], function () {
   console.log(pkg.name + ' v' + version + ' website built.');
 });
 
@@ -28,35 +28,35 @@ directory('cdn/' + version);
 
 desc('Copy license.');
 task('license', function () {
-  exec('cp ../ui/LICENSE LICENSE.txt');
+  exec('cp ../ui/LICENSE.txt .');
 });
 
 desc('Minify CSS.');
-file('css/style.min.css', ['css/style.css', '../ui/themes/ninjaui.theme.dojo.css'], function () {
+file('style.min.css', ['src/css/style.css', '../ui/themes/ninjaui.theme.dojo.css'], function () {
   var
     cleanCSS = require('clean-css'),
-    css = cleanCSS.process(fs.readFileSync('css/style.css', 'utf8') + fs.readFileSync('../ui/themes/ninjaui.theme.dojo.css', 'utf8'));
-  fs.writeFileSync('css/style.min.css', css, 'utf8');
+    css = cleanCSS.process(fs.readFileSync('src/css/style.css', 'utf8') + fs.readFileSync('../ui/themes/ninjaui.theme.dojo.css', 'utf8'));
+  fs.writeFileSync('style.min.css', css, 'utf8');
 });
 
 desc('Build Ninja UI');
 task('build', function () {
-  exec('jake --directory cdn/' + version + ' --jakefile ../ui/jakefile.js', function () {
+  exec('jake --directory cdn/' + version + ' --jakefile ../ui/Jakefile.js', function () {
     complete();
   });
 }, true);
 
 desc('Minify JavaScript.');
-file('js/script.min.js', ['build', 'js/lib/jquery-1.7.1.min.js', 'cdn/' + version + '/jquery.ninjaui.min.js', 'js/lib/bootstrap-scrollspy.min.js'], function () {
+file('script.min.js', ['build', 'src/js/lib/jquery-1.7.1.min.js', 'cdn/' + version + '/jquery.ninjaui.min.js', 'src/js/lib/bootstrap-scrollspy.min.js'], function () {
   var
     uglify = require('uglify-js'),
-    js =  fs.readFileSync('js/lib/jquery-1.7.1.min.js', 'utf8') + fs.readFileSync('cdn/' + version + '/jquery.ninjaui.min.js', 'utf8') + fs.readFileSync('js/lib/bootstrap-scrollspy.min.js', 'utf8') + uglify(fs.readFileSync('js/script.js', 'utf8'));
-  fs.writeFileSync('js/script.min.js', js, 'utf8');
+    js =  fs.readFileSync('src/js/lib/jquery-1.7.1.min.js', 'utf8') + fs.readFileSync('cdn/' + version + '/jquery.ninjaui.min.js', 'utf8') + fs.readFileSync('src/js/lib/bootstrap-scrollspy.min.js', 'utf8') + uglify(fs.readFileSync('src/js/script.js', 'utf8'));
+  fs.writeFileSync('script.min.js', js, 'utf8');
 });
 
 desc('Remove generated files.');
 task('clean', function () {
-  exec('jake --directory cdn/' + version + ' --jakefile ../ui/jakefile.js clean');
-  fs.unlink('css/style.min.css');
-  fs.unlink('js/script.min.js');
+  exec('jake --directory cdn/' + version + ' --jakefile ../ui/Jakefile.js clean');
+  fs.unlink('style.min.css');
+  fs.unlink('script.min.js');
 });
