@@ -108,7 +108,7 @@ sub {
 ul,
 ol {
     margin-left: 0;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 20px;
 }
 dd {
     margin: 0 0 0 40px;
@@ -191,7 +191,7 @@ table {
 /* end normalizer */
 body {
   background-color: #fff;
-  color: #333;
+  color: #322;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
@@ -203,7 +203,7 @@ pre {
   margin: 0 0 0.5em 0;
 }
 pre,
-.theme-examples {
+.theme-samples {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
@@ -221,27 +221,26 @@ pre {
 pre strong {
   color: #c00;
 }
-small {
-  font-weight: normal;
-}
 #downloadMenu,
-#examplesMenu {
+#samplesMenu {
   position: relative;
 }
 #downloadMenu button ,
-#examplesMenu button {
+#samplesMenu button {
   line-height: 20px;
 }
 #downloadMenu {
   float: right;
 }
 #footer {
-  background: #eee;
-  border-top: 1px solid #ccc;
-  color: #666;
+  background-color: #322;
+  color: #fff;
   font-size: 80%;
   margin-top: 60px;
   padding: 60px;
+}
+#footer a {
+  color: #dcc;
 }
 #github {
   font-size: 11px;
@@ -280,13 +279,13 @@ small {
   right: 0;
 }
 #header {
-  background: #222 no-repeat;
-  background-image: -webkit-gradient(radial, center top, 0, center top, 320, from(#555), to(#222));
-  background-image: -webkit-radial-gradient(center top, 0, center top, 320, #555, #222);
-  background-image: -moz-radial-gradient(center top, 0, center top, 320, #555, #222);
-  background-image: -ms-radial-gradient(center top, 0, center top, 320, #555, #222);
-  background-image: -o-radial-gradient(center top, 0, center top, 320, #555, #222);
-  background-image: radial-gradient(center top, 0, center top, 320, #555, #222);
+  background: #100 no-repeat;
+  background-image: -webkit-gradient(radial, center top, 0, center top, 320, from(#644), to(#100));
+  background-image: -webkit-radial-gradient(center top, 0, center top, 320, #644, #100);
+  background-image: -moz-radial-gradient(center top, 0, center top, 320, #644, #100);
+  background-image: -ms-radial-gradient(center top, 0, center top, 320, #644, #100);
+  background-image: -o-radial-gradient(center top, 0, center top, 320, #644, #500);
+  background-image: radial-gradient(center top, 0, center top, 320, #644, #500);
   padding: 60px 0 30px 0;
 }
 #logo {
@@ -320,7 +319,7 @@ small {
   margin: 0 10px 0 0;
 }
 #navigation {
-  background-color: #333;
+  background-color: #322;
   background-image: -webkit-gradient(linear, left top, left bottom, colorstop(0, rgba(255,255,255,0.2)), colorstop(0.5, rgba(255,255,255,0)), colorstop(0.5, rgba(0,0,0,0)), colorstop(1, rgba(0,0,0,0.1)));
   background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 100%);
   background-image: -moz-linear-gradient(top, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 100%);
@@ -373,7 +372,45 @@ small {
 #plusone {
   margin: 6px 0 0 0 !important;
 }
-.icon-example {
+.flagpole,
+.grid-flex,
+.grid-one-half,
+.grid-one-quarter,
+.grid-one-third,
+.grid-three-quarters,
+.grid-two-thirds {
+  display: inline-block;
+  margin: 0 3% 1em 0;
+  vertical-align: top;
+}
+.flagpole {
+  border: 4px ridge #988;
+  border-bottom: none;
+  border-right: none;
+  padding: 0 6px 60px 0;
+  width: 180px;
+}
+.flag {
+  background: #c00 no-repeat;
+  background-image: -webkit-gradient(radial, center top, 0, center top, 180, from(#f00), to(#900));
+  background-image: -webkit-radial-gradient(center top, 0, center top, 180, #f00, #900);
+  background-image: -moz-radial-gradient(center top, 0, center top, 180, #f00, #900);
+  background-image: -ms-radial-gradient(center top, 0, center top, 180, #f00, #900);
+  background-image: -o-radial-gradient(center top, 0, center top, 180, #f00, #900);
+  background-image: radial-gradient(center top, 0, center top, 180, #f00, #900);
+  border: 4px dashed #fff;
+  border-bottom: none;
+  border-right: none;
+  padding: 30px 0 60px 0;
+  text-align: center;
+}
+.flag h2 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+  text-shadow: #600 0 2px 2px;
+}
+.icon-sample {
   display: inline-block;
   line-height: 2em;
   white-space: nowrap;
@@ -384,17 +421,8 @@ small {
   margin: 0 auto;
   padding-left: 3%;
 }
-.grid-one-half,
-.grid-one-quarter,
-.grid-one-third,
-.grid-three-quarters,
-.grid-two-thirds {
-  display: inline-block;
-  margin: 0 3% 1em 0;
-  vertical-align: top;
-}
 .grid-one-half {
-  width: 45%;
+  width: 43%;
 }
 .grid-one-quarter {
   width: 21%;
@@ -411,11 +439,6 @@ small {
 .news {
   margin-right: 3%;
 }
-.news h2,
-.section h2,
-.subsection h5 {
-  border-bottom: 1px solid #ccc;
-}
 .news h3 {
   color: #999;
   font-size: 12px;
@@ -423,23 +446,7 @@ small {
   margin-bottom: 1em;
 }
 .section {
-  padding-top: 30px;
-}
-.section .grid-one-half,
-.section .grid-one-quarter,
-.section .grid-one-third,
-.section .grid-three-quarters,
-.section .grid-two-thirds {
-  vertical-align: middle;
-}
-.section h2 {
-  font-size: 48px;
-  font-weight: 900;
-}
-.section h3 {
-  color: #999;
-  font-size: 24px;
-  font-weight: 300;
+  padding-top: 60px;
 }
 .subsection h4 {
   margin-bottom: 1em;
@@ -450,21 +457,17 @@ small {
   _font-family: 'courier new', monospace;
   font-size: 80%;
 }
-.theme-examples {
+.theme-samples {
   background-color: #fff;
   border-color: #ccc;
-  display: inline-block;
-  margin: 0 3% 1em 0;
-  vertical-align: top;
-  width: 241px;
 }
-.theme-examples .nui-dlg {
+.theme-samples .nui-dlg {
   display: block;
   padding: 1em;
   position: relative;
   z-index: auto;
 }
-.theme-examples.nui-thm-dojo {
+.theme-samples.nui-thm-dojo {
   background-color: #333;
   border-color: #666;
   color: #fff;
@@ -472,7 +475,7 @@ small {
 /* Mobile */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   #downloadMenu button ,
-  #examplesMenu button {
+  #samplesMenu button {
     line-height: 13px;
   }
   .grid-one-half,
@@ -480,13 +483,14 @@ small {
   .grid-one-third,
   .grid-three-quarters,
   .grid-two-thirds {
-    width: 45%;
+    width: 43%;
   }
   .navigationTab {
     padding: 0 5px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+  .grid-flex,
   .grid-one-half,
   .grid-one-quarter,
   .grid-one-third,

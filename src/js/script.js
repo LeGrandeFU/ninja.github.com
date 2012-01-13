@@ -30,7 +30,7 @@
       $usageDialog.attach();
     }),
 
-    $autocompleteExample = $.ninja.autocomplete({
+    $autocompleteSample = $.ninja.autocomplete({
       placeholder: 'United States Cities'
     }).values(function (event) {
       $.ajax({
@@ -44,7 +44,7 @@
           q: event.query
         },
         success: function (data) {
-          $autocompleteExample.list({
+          $autocompleteSample.list({
             values: $.map(data.geonames, function (item) {
               return {
                 html: item.name + ', ' + item.adminName1,
@@ -60,50 +60,50 @@
       });
     }),
 
-    $buttonExampleCheckboxSelect, $buttonExampleCheckboxDisable,
+    $buttonSampleCheckboxSelect, $buttonSampleCheckboxDisable,
 
-    $buttonExample = $.ninja.button({
+    $buttonSample = $.ninja.button({
       html: 'Button'
     }).disable(function () {
-      $buttonExampleCheckboxSelect.attr({ disabled: 'disabled' });
+      $buttonSampleCheckboxSelect.attr({ disabled: 'disabled' });
     }).enable(function () {
-      $buttonExampleCheckboxSelect.attr({ disabled: false });
+      $buttonSampleCheckboxSelect.attr({ disabled: false });
     }).select(function () {
-      $buttonExampleCheckboxSelect.attr({ checked: 'checked' });
+      $buttonSampleCheckboxSelect.attr({ checked: 'checked' });
     }).deselect(function () {
-      $buttonExampleCheckboxSelect.attr({ checked: false });
+      $buttonSampleCheckboxSelect.attr({ checked: false });
     }),
 
-    $buttonExampleSelect = $.ninja.button({
+    $buttonSampleSelect = $.ninja.button({
       html: 'Selected',
       select: true
     }),
 
-    $buttonExampleDisable = $.ninja.button({
+    $buttonSampleDisable = $.ninja.button({
       html: 'Disabled',
       disable: true
     }),
 
-    $dialogExampleCheckbox,
+    $dialogSampleCheckbox,
 
-    $dialogExample = $.ninja.dialog({
+    $dialogSample = $.ninja.dialog({
       html: '<div style="padding: 50px">This is <b>Sparta</b>!</div>'
     }).attach(function () {
-      $dialogExampleCheckbox.attr({
+      $dialogSampleCheckbox.attr({
         checked: 'checked'
       });
     }).detach(function () {
-      $dialogExampleCheckbox.attr({
+      $dialogSampleCheckbox.attr({
         checked: false
       });
     }),
 
-    $drawerExample = $.ninja.drawer({
+    $drawerSample = $.ninja.drawer({
       html: '<div style="padding: 50px">This is <b>HTML</b>.</div>',
       value: 'Drawer'
     }),
 
-    $drawerExampleSelect = $.ninja.drawer({
+    $drawerSampleSelect = $.ninja.drawer({
       html: '<div style="padding: 50px">This is <b>HTML</b>.</div>',
       select: true,
       value: 'Select'
@@ -112,91 +112,91 @@
 
     iconNames = ['spin', 'stop', 'yield', 'go', 'x', '-', '+', 'camera', 'home', 'email', 'search', 'star'],
 
-    $iconExamples = $('<span>'),
+    $iconSamples = $('<span>'),
 
-    $menuExampleOutput = $('<textarea/>', {
+    $menuSampleOutput = $('<textarea/>', {
       html: 'Choose a stooge.'
     }),
 
-    $menuExample = $.ninja.menu({
+    $menuSample = $.ninja.menu({
       values: [
         {
           html: '<div>Mo</div>',
           select: function () {
-            $menuExampleOutput.html('Oh, a wise guy eh?');
+            $menuSampleOutput.html('Oh, a wise guy eh?');
           }
         },
         {
           html: '<div>Larry</div>',
           select: function () {
-            $menuExampleOutput.html('Cut it out, ya puddinhead!');
+            $menuSampleOutput.html('Cut it out, ya puddinhead!');
           }
         },
         {
           html: '<div>Curly</div>',
           select: function () {
-            $menuExampleOutput.html('Hey, Mo!');
+            $menuSampleOutput.html('Hey, Mo!');
           }
         },
         { rule: true },
         {
           html: '<div>Shemp</div>',
           select: function () {
-            $menuExampleOutput.html(':( Try again.');
+            $menuSampleOutput.html(':( Try again.');
           }
         },
         {
           html: '<div>Joe</div>',
           select: function () {
-            $menuExampleOutput.html(':( Try again.');
+            $menuSampleOutput.html(':( Try again.');
           }
         },
         {
           html: '<div>Curly Joe</div>',
           select: function () {
-            $menuExampleOutput.html(':( Try again.');
+            $menuSampleOutput.html(':( Try again.');
           }
         }
       ],
       html: 'Menu'
     }),
 
-    $ratingExampleOutput = $('<textarea/>'),
+    $ratingSampleOutput = $('<textarea/>'),
 
-    $ratingExample = $.ninja.rating({
+    $ratingSample = $.ninja.rating({
       average: 3
     }).select(function (event) {
-      $ratingExampleOutput.html('New rating: ' + event.value + ' stars');
+      $ratingSampleOutput.html('New rating: ' + event.value + ' stars');
     }),
 
 
-    $sliderExample = $.ninja.slider({
+    $sliderSample = $.ninja.slider({
       html: 'Volume',
       value: 3,
       values: [
         { html: '<span title="Silence">0 dB</span>' },
-        { html: '<span title="Light leaf rustling, calm breathing">10 dB</span>' },
+        { html: '<span title="Calm breathing">10 dB</span>' },
         { html: '<span title="Very calm room">20-30 dB</span>' },
-        { html: '<span title="Normal conversation at 1 m">40-60 dB</span>' },
-        { html: '<span title="TV set at home level at 1 m">60 dB</span>' },
-        { html: '<span title="Passenger car at 10 m">60-80 dB</span>' },
-        { html: '<span title="Hearing damage over long-term exposure">78 dB</span>' },
-        { html: '<span title="Traffic on a busy roadway at 10 m">80-90 dB</span>' },
-        { html: '<span title="Jack hammer at 1 m">100 dB</span>' },
-        { html: '<span title="Hearing damage immediately possible">120 dB</span>' },
+        { html: '<span title="Normal conversation">40-60 dB</span>' },
+        { html: '<span title="TV set at home level">60 dB</span>' },
+        { html: '<span title="Passenger car">60-80 dB</span>' },
+        { html: '<span title="Hearing damage over time">78 dB</span>' },
+        { html: '<span title="Traffic on a busy roadway">80-90 dB</span>' },
+        { html: '<span title="Jack hammer">100 dB</span>' },
+        { html: '<span title="Hearing damage immediately">120 dB</span>' },
         { html: '<span title="Threshold of pain">130 dB</span>' },
-        { html: '<span title="Jet engine at 30 m">150 dB</span>' },
-        { html: '<span title="M1 Garand rifle being fired at 1 m">168 dB</span>' }
+        { html: '<span title="Jet engine">150 dB</span>' },
+        { html: '<span title="M1 Garand rifle">168 dB</span>' }
       ]
     }),
 
-    $tabsExampleOutput = $('<textarea/>'),
+    $tabsSampleOutput = $('<textarea/>'),
 
     poorly = function () {
-      $tabsExampleOutput.html('You have chosen... poorly.');
+      $tabsSampleOutput.html('You have chosen... poorly.');
     },
 
-    $tabsExample = $.ninja.tabs({
+    $tabsSample = $.ninja.tabs({
       values: [
         {
           html: 'Gold',
@@ -213,13 +213,13 @@
         {
           html: 'Wood',
           select: function () {
-            $tabsExampleOutput.html('You have chosen... wisely.');
+            $tabsSampleOutput.html('You have chosen... wisely.');
           }
         }
       ]
     }),
 
-    $tabsExampleVertical = $.ninja.tabs({
+    $tabsSampleVertical = $.ninja.tabs({
       value: 2,
       values: [
         {
@@ -237,7 +237,7 @@
         {
           html: 'Wood',
           select: function () {
-            $tabsExampleOutput.html('You have chosen... wisely.');
+            $tabsSampleOutput.html('You have chosen... wisely.');
           }
         }
       ],
@@ -250,41 +250,41 @@
     $usageButton.deselect();
   });
 
-  $buttonExampleCheckboxSelect = $('<input/>', {
-    id: 'buttonExampleCheckboxSelect',
+  $buttonSampleCheckboxSelect = $('<input/>', {
+    id: 'buttonSampleCheckboxSelect',
     type: 'checkbox'
   }).change(function () {
-    if ($buttonExampleCheckboxSelect.attr('checked')) {
-      $buttonExample.select();
+    if ($buttonSampleCheckboxSelect.attr('checked')) {
+      $buttonSample.select();
     } else {
-      $buttonExample.deselect();
+      $buttonSample.deselect();
     }
   });
 
-  $buttonExampleCheckboxDisable = $('<input/>', {
-    id: 'buttonExampleCheckboxDisable',
+  $buttonSampleCheckboxDisable = $('<input/>', {
+    id: 'buttonSampleCheckboxDisable',
     type: 'checkbox'
   }).change(function () {
-    if ($buttonExampleCheckboxDisable.attr('checked')) {
-      $buttonExample.disable();
+    if ($buttonSampleCheckboxDisable.attr('checked')) {
+      $buttonSample.disable();
     } else {
-      $buttonExample.enable();
+      $buttonSample.enable();
     }
   });
 
-  $dialogExampleCheckbox = $('<input/>', {
-    id: 'dialogExampleCheckbox',
+  $dialogSampleCheckbox = $('<input/>', {
+    id: 'dialogSampleCheckbox',
     type: 'checkbox'
   }).change(function () {
-    if ($dialogExampleCheckbox.attr('checked')) {
-      $dialogExample.attach();
+    if ($dialogSampleCheckbox.attr('checked')) {
+      $dialogSample.attach();
     } else {
-      $dialogExample.detach();
+      $dialogSample.detach();
     }
   });
 
   $.each(iconNames, function (i, iconName) {
-    var $exampleIcon, $icon;
+    var $sampleIcon, $icon;
     if (iconName === 'stop') {
       $icon = $.ninja.icon({
         css: {
@@ -314,9 +314,9 @@
         value: iconName
       });
     }
-    $exampleIcon = $('<span>', {
-      'class': 'icon-example'
-    }).append($icon, ' ', iconName).appendTo($iconExamples);
+    $sampleIcon = $('<span>', {
+      'class': 'icon-sample'
+    }).append($icon, ' ', iconName).appendTo($iconSamples);
   });
 
   $(document).ready(function () {
@@ -324,7 +324,7 @@
     var
       $navigation = $('#navigation'),
       $downloadMenu = $('#downloadMenu'),
-      $examplesMenu = $('#examplesMenu');
+      $samplesMenu = $('#samplesMenu');
 
     $('#github').append($github, '<span id="githubWatchers"> watchers<span id="githubWatchersLeft"></span><span id="githubWatchersRight"></span></span>');
 
@@ -359,9 +359,9 @@
       }
     );
 
-    $examplesMenu.toggle(
+    $samplesMenu.toggle(
       function () {
-        $examplesMenu.ninja().list({
+        $samplesMenu.ninja().list({
           values: [
             {
               html: $('<div>', {
@@ -439,31 +439,31 @@
         }).addClass('activeMenu');
       },
       function () {
-        $examplesMenu.delist().removeClass('activeMenu');
+        $samplesMenu.delist().removeClass('activeMenu');
       }
     );
 
     $('#usageButton').append($usageButton);
-    $('#autocompleteExamples').prepend($autocompleteExample);
+    $('#autocompleteSamples').prepend($autocompleteSample);
 
-    $('#buttonExamples').append($buttonExample, '<br/><br/>', $buttonExampleSelect, '<br/><br/>', $buttonExampleDisable);
-    $('#buttonExamplesMethods').prepend($buttonExampleCheckboxSelect, ' <label for="buttonExampleCheckboxSelect">Select</label> ', $buttonExampleCheckboxDisable, ' <label for="buttonExampleCheckboxDisable">Disable</label>', '<br/><br/>');
+    $('#buttonSamples').append($buttonSample, '<br/><br/>', $buttonSampleSelect, '<br/><br/>', $buttonSampleDisable);
+    $('#buttonSamplesMethods').prepend($buttonSampleCheckboxSelect, ' <label for="buttonSampleCheckboxSelect">Select</label> ', $buttonSampleCheckboxDisable, ' <label for="buttonSampleCheckboxDisable">Disable</label>', '<br/><br/>');
 
-    $('#dialogExamples').append($dialogExampleCheckbox, ' <label for="dialogExampleCheckbox">Attach Dialog</label>');
+    $('#dialogSamples').append($dialogSampleCheckbox, ' <label for="dialogSampleCheckbox">Attach Dialog</label>');
 
-    $('#drawerExamples').append($drawerExample, $drawerExampleSelect);
+    $('#drawerSamples').append($drawerSample, $drawerSampleSelect);
 
-    $('#iconExamples').append($iconExamples);
+    $('#iconSamples').append($iconSamples);
 
-    $('#menuExamples').append($menuExample, '<br/><br/>', $menuExampleOutput);
+    $('#menuSamples').append($menuSample, '<br/><br/>', $menuSampleOutput);
 
-    $('#ratingExamples').append($ratingExample, '<br/><br/>', $ratingExampleOutput);
+    $('#ratingSamples').append($ratingSample, '<br/><br/>', $ratingSampleOutput);
 
-    $('#sliderExamples').append($sliderExample);
+    $('#sliderSamples').append($sliderSample);
 
-    $('#tabsExamples').append($tabsExample, '<br/><br/>', $tabsExampleVertical, '<br/><br/>', $tabsExampleOutput);
+    $('#tabsSamples').append($tabsSample, '<br/><br/>', $tabsSampleVertical, '<br/><br/>', $tabsSampleOutput);
 
-    $('.theme-examples').each(function () {
+    $('.theme-samples').each(function () {
       var
         $autocomplete,
         $dialog = $('<span>', {
@@ -537,7 +537,7 @@
         $.ninja.rating({
           average: 3
         }).select(function (event) {
-          $ratingExampleOutput.html('New rating: ' + event.stars + ' stars');
+          $ratingSampleOutput.html('New rating: ' + event.stars + ' stars');
         }),
 
         '<br/></br/>',
