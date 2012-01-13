@@ -388,7 +388,7 @@ pre strong {
   border-bottom: none;
   border-right: none;
   padding: 0 6px 60px 0;
-  width: 180px;
+  width: 140px;
 }
 .flag {
   background: #c00 no-repeat;
@@ -405,10 +405,9 @@ pre strong {
   text-align: center;
 }
 .flag h2 {
-  color: #fff;
-  font-size: 36px;
+  color: #211;
+  font-size: 24px;
   font-weight: 900;
-  text-shadow: #600 0 2px 2px;
 }
 .icon-sample {
   display: inline-block;
