@@ -8,22 +8,26 @@
 
 /*jshint bitwise: true, browser: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 2, jquery: true, maxerr: 3, newcap: true, noarg: true, noempty: true, nomen: true, nonew: true, onevar: true, plusplus: false, regexp: true, strict: true, undef: true, white: true*/
 
+/*globals XMLSerializer*/
+
 (function ($, window, document, undefined) {
 
   'use strict';
 
   var
     defaults,
-    objects,
+    keyCodes,
     methods,
+    objects,
     svg,
     svgInline,
+    svgInlineMaskMissing,
     svgNamespace = 'http://www.w3.org/2000/svg',
-    time,
+    then,
     version = $.fn.jquery.split('.'),
     versionMinor = parseFloat(version[1]),
     versionIncrement = parseFloat(version[2] || '0'),
-    $test = $('<div>').append('body');
+    $test = $('<div>').appendTo('body');
 
   if (versionMinor === 4 && versionIncrement < 3 || versionMinor < 4) {
     $.error('Ninja UI requires jQuery 1.4.3 or higher.');
@@ -36,15 +40,41 @@
 
   $test.html('<svg>');
   svgInline = ($test.find('svg')[0] && $test.find('svg')[0].namespaceURI) === svgNamespace;
-  if (!svgInline) {
+  if (svgInline) {
+    svg = true;
+    if ($.browser.safari) {
+      svgInlineMaskMissing = $.browser.version < 535;
+    }
+  } else {
     svg = !!document.createElementNS && !!document.createElementNS(svgNamespace, 'svg').createSVGRect;
   }
   $test.remove();
 
-  time = $.now();
+  keyCodes = {
+    tab: 9,
+    enter: 13,
+    escape: 27,
+    arrowLeft: 37,
+    arrowUp: 38,
+    arrowRight: 39,
+    arrowDown: 40
+  };
+
+  function isKey(event, name) {
+    return event.keyCode === keyCodes[name];
+  }
+
+  function inKeys(event, names) {
+    var codes = $.map(names, function (name, i) {
+      return keyCodes[name];
+    });
+    return $.inArray(event.keyCode, codes) > -1;
+  }
+
+  then = $.now();
 
   function uniqueId() {
-    return time ++;
+    return then ++;
   }
 
   methods = {
@@ -143,25 +173,19 @@
           $object.append($list);
           $(document).bind({
             'keydown.ninja': function (event) {
-              if ($.inArray(event.keyCode, [9, 38, 40]) > -1) {
-                // tab, down or up
+              if (inKeys(event, ['arrowDown', 'arrowUp', 'tab'])) {
                 event.preventDefault();
-                // prevents page scrolling and tabbing when a list is active
               }
             },
             'keyup.ninja': function (event) {
-              if ($.inArray(event.keyCode, [9, 13, 27, 38, 40]) > -1) {
-                // tab, return, escape, down or up
-                if (event.keyCode === 13) {
-                  // return
+              if (inKeys(event, ['arrowDown', 'arrowUp', 'enter', 'escape', 'tab'])) {
+                if (isKey(event, 'enter')) {
                   if ($hover) {
                     $hover.click();
                   }
-                } else if (event.keyCode === 27) {
-                  //escape
+                } else if (isKey(event, 'escape')) {
                   $object.delist();
-                } else if ($.inArray(event.keyCode, [9, 40]) > -1 && !event.shiftKey) {
-                  // tab or down arrow
+                } else if (inKeys(event, ['arrowDown', 'tab']) && !event.shiftKey) {
                   if ($hover) {
                     if ($hover.nextAll('.nui-itm').length) {
                       $hover.nextAll('.nui-itm:first').trigger('mouseenter.ninja');
@@ -171,8 +195,7 @@
                   } else {
                     $list.find('.nui-itm:first').trigger('mouseenter.ninja');
                   }
-                } else if (event.keyCode === 38 || (event.shiftKey && event.keyCode === 9)) {
-                  // shift+tab or up arrow
+                } else if (isKey(event, 'arrowUp') || (event.shiftKey && isKey(event, 'tab'))) {
                   if ($hover) {
                     if ($hover.prevAll('.nui-itm').length) {
                       $hover.prevAll('.nui-itm:first').trigger('mouseenter.ninja');
@@ -319,6 +342,22 @@
       options = $.extend({}, defaults, options);
       var
         timer,
+        $spin = $.ninja.icon({
+          value: 'spin'
+        }).hide(),
+        $input = $('<input>', {
+          type: 'text'
+        }).bind({
+          'keyup.ninja': function (event) {
+            clearTimeout(timer);
+            if (!inKeys(event, ['arrowDown', 'arrowLeft', 'arrowRight', 'arrowUp', 'enter', 'escape', 'tab']) && $input.val() !== '') {
+              timer = setTimeout(function () {
+                $spin.show();
+                $input.values();
+              }, 1000);
+            }
+          }
+        }),
         $autocomplete = $('<span>', {
           'class': 'nui-atc'
         }).bind({
@@ -333,28 +372,8 @@
             $input.delist();
             event.query = $input.val();
           }
-        }),
-        $input = $('<input>', {
-          type: 'text'
-        }).bind({
-          'keyup.ninja': function (event) {
-            clearTimeout(timer);
-            if ($.inArray(event.keyCode, [9, 13, 27, 37, 38, 39, 40]) === -1 && $input.val() !== '') {
-              // not tab, return, escape, left , up, right or down
-              timer = setTimeout(function () {
-                var $spin = $autocomplete.find('.nui-icn[aria-label=spin]');
-                if ($spin.is(':hidden')) {
-                  $spin.show();
-                } else {
-                  $.ninja.icon({
-                    value: 'spin'
-                  }).appendTo($autocomplete);
-                }
-                $input.values();
-              }, 1000);
-            }
-          }
-        }).appendTo($autocomplete);
+        });
+      $autocomplete.append($input, $spin);
       if (options.placeholder) {
         $input.ninja().placeholder(options.placeholder);
       }
@@ -437,8 +456,7 @@
           });
           $(document).bind({
             'keyup.ninja': function (event) {
-              if (event.keyCode === 27) {
-                // escape
+              if (isKey(event, 'escape')) {
                 $dialog.detach();
               }
             }
@@ -456,8 +474,7 @@
       options = $.extend({}, defaults, options);
       var
         $drawer = $('<div>', {
-          'class': 'nui-drw',
-          css: options.css
+          'class': 'nui-drw'
         }),
         $tray = $('<div>', {
           'class': 'nui-try',
@@ -500,7 +517,8 @@
       }, options);
       var
         id = uniqueId(),
-        idMask = 'mask' + id ,
+        idMask = 'mask' + id,
+        mask,
         $circle = $('<circle>'),
         $defs = $('<defs>'),
         $g = $('<g>', {
@@ -524,9 +542,13 @@
           viewBox: '0 0 16 16',
           xmlns: 'http://www.w3.org/2000/svg'
         }).attr({
-          height: '16',
-          width: '16'
+          height: 16,
+          width: 16
         });
+      if ($.inArray(options.value, ['-', '+', 'camera', 'x']) > -1) {
+        mask = true;
+        $mask.appendTo($defs);
+      }
       if ($.inArray(options.value, ['arrow-down', 'arrow-right']) > -1) {
         if (options.value === 'arrow-down') {
           $polygon.attr('points', '4,4 12,4 8,12').appendTo($g);
@@ -538,7 +560,7 @@
           cx: 8,
           cy: 9,
           r: 5
-        }).appendTo($mask.appendTo($defs));
+        }).appendTo($mask);
         $rect.attr({
           height: 11,
           mask: 'url(#' + idMask + ')',
@@ -582,7 +604,6 @@
           });
           $polygon.clone().attr('fill', '#fff').appendTo($g);
         } else {
-          $mask.appendTo($defs);
           $circle.attr({
             mask: 'url(#' + idMask + ')',
             r: 8
@@ -705,7 +726,7 @@
         $g.css(options.css);
       }
       $svg.append('<title>' + options.value + '</title>', $defs, $g);
-      if (svgInline) {
+      if (svgInline && (!mask || mask && !svgInlineMaskMissing)) {
         $icon = $($('<div>').append($svg).html());
         if (options.value === 'spin') {
           $icon.bind({
@@ -714,7 +735,7 @@
               setInterval(function () {
                 frame = frame + 30;
                 if (frame === 360) {
-                  frame = 0
+                  frame = 0;
                 }
                 $icon.find('g').attr('transform', 'rotate(' + frame + ' 8 8)');
               }, 100);
@@ -833,6 +854,11 @@
         value: 0,
         width: 200
       }, options);
+      if (options.value < 0) {
+        options.value = 0;
+      } else if (options.value > (options.values.length - 1)) {
+        options.value = options.values.length - 1;
+      }
       var
         drag = false,
         offsetX = 0,
@@ -898,16 +924,13 @@
       }
       $button.bind({
         'keyup.ninja': function (event) {
-          if ($.inArray(event.keyCode, [37, 39]) > -1) {
-            // right or left
+          if (inKeys(event, ['arrowLeft', 'arrowRight'])) {
             var
               value,
               slot = Math.round($button.position().left / increment);
-            if (slot > 0 && event.keyCode === 37) {
-              // left arrow
+            if (slot > 0 && isKey(event, 'arrowLeft')) {
               slot--;
-            } else if (slot < slots && event.keyCode === 39) {
-              // right arrow
+            } else if (slot < slots && isKey(event, 'arrowRight')) {
               slot++;
             }
             value = options.values[slot];
