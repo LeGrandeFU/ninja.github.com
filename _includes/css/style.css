@@ -353,10 +353,10 @@ pre strong {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 20px;
   text-decoration: none;
 }
 #navigation .active a,
@@ -497,5 +497,13 @@ pre strong {
   .grid-two-thirds {
     display: block;
     width: auto;
+  }
+  #navigation a {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+  }
+  #downloadMenu a {
+    display: none;
   }
 }
