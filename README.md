@@ -6,23 +6,24 @@ Ninja User Interface Website
         brew install ruby node
         gem install jekyll
         git clone git://github.com/ninja/ui ~/Sites/ninja/ui
-        cd ~/Sites/ninjaui
+        cd ~/Sites/ninja/ui
         npm install
         git clone git://github.com/ninja/ninja.github.com ~/Sites/ninja/www
+        cd ~/Sites/ninja/www
+        npm install
 
 2. Configure:
 
         NINJA_PROJECT="~/Sites/ninja/ui"
         NINJA_SITE="~/Sites/ninja/www"
-        NINJA_CDN="$NINJA_SITE/cdn/`ninjabuild -vn`/"
 
-        alias ninjabuildwww="mkdir $NINJA_CDN; ninjabuild $NINJA_PROJECT -o $NINJA_CDN; cat $NINJA_PROJECT/themes/*.css | cleancss -o $NINJA_SITE/css/themes.css; cp $NINJA_PROJECT/LICENSE $NINJA_SITE/LICENSE.txt"
-
+        alias ninjabuild="jake --directory $NINJA_PROJECT --jakefile $NINJA_PROJECT/Jakefile.js"
+        alias ninjabuildwww="jake --directory $NINJA_SITE --jakefile $NINJA_SITE/Jakefile.js"
         alias ninjawww="ninjabuildwww; cd $NINJA_SITE; jekyll --auto --server"
 
 3. Development:
 
-        ninjawebserver
+        ninjawww
         open http://localhost:4000
 
 4. Deploy:
