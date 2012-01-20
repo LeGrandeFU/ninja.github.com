@@ -44,15 +44,15 @@ task('ninjaui', function () {
 });
 
 desc('Build themes.');
-file('_includes/css/themes.min.css', ['../ui/themes/bitmap.css', '../ui/themes/dojo.css'], function () {
+file('_includes/css/themes.min.css', ['../ui/themes/bitmap.css', '../ui/themes/yugen.css'], function () {
   var
     cleanCSS = require('clean-css'),
-    css = cleanCSS.process(fs.readFileSync('../ui/themes/dojo.css', 'utf8') + fs.readFileSync('../ui/themes/bitmap.css', 'utf8'));
+    css = cleanCSS.process(fs.readFileSync('../ui/themes/yugen.css', 'utf8') + fs.readFileSync('../ui/themes/bitmap.css', 'utf8'));
   fs.writeFileSync('_includes/css/themes.min.css', css, 'utf8');
 });
 
 desc('Remove generated files.');
 task('clean', function () {
   exec('jake --directory cdn/' + version + ' --jakefile ../ui/Jakefile.js clean');
-  fs.unlink('themes.min.css');
+  fs.unlink('_includes/css/themes.min.css');
 });

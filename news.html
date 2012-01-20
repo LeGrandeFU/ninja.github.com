@@ -29,15 +29,13 @@ title: Ninja UI News
 </div>
 <div class="grid">
   <div class="section">
-    <div class="grid-three-quarters">
+    <div class="grid-one-quarter">
       <div class="flagpole">
         <div class="flag">
-          <img alt="bonsai" src="/img/alert.png"/>
+          <img alt="chouchin" src="/img/alert.png"/>
           <h2>News</h2>
         </div>
       </div>
-    </div>
-    <div class="grid-one-quarter">
       <p>
         <div id="github"></div>
       </p>
@@ -51,12 +49,14 @@ title: Ninja UI News
         <div id="plusone"></div>
       </p>
     </div>
-  </div>
-  <div class="news">
-    {% for post in site.posts %}
-      <h2>{{ post.title }}</h2>
-      <h3>{{ post.date | date: "%A, %B %d, %Y" }}</h3>
-      {{ post.content }}
-    {% endfor %}
+    <div class="grid-three-quarters">
+      <div class="news">
+        {% for post in site.posts %}
+          <h2>{{ post.title }}</h2>
+          <h3>{{ post.date | date: "%A, %B %d, %Y" }}</h3>
+          {{ post.content }}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
